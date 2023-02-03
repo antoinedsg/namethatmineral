@@ -1,0 +1,121 @@
+/* Table Formatting */
+/* Table Formatting */
+/* Table Formatting */
+
+	table {
+    table-layout: fixed;
+
+}
+
+    table tr th:nth-child(1){
+    width: 125px;
+  }
+    table tr th:nth-child(2){
+    width: 135px;
+  }
+    table tr th:nth-child(3){
+    width: 140px;
+  }
+    table tr th:nth-child(4){
+    width: 103px;
+  }
+    table tr th:nth-child(5){
+    width: 200px;
+  }
+    table tr th:nth-child(6){
+    width: 116px;
+  }
+    table tr th:nth-child(7){
+    width: 110px;
+  }
+    table tr th:nth-child(8){
+    width: 125px;
+  }
+    table tr th:nth-child(9){
+    width: 125px;
+  }
+    table tr th:nth-child(10){
+    width: 185px;
+  }
+    table tr th:nth-child(11){
+    width: 152px;
+  }
+    table tr th:nth-child(12){
+    width: 163px;
+  }
+    table tr th:nth-child(13){
+    width: 152px;
+  }
+    table tr th:nth-child(14){
+    width: 160px;
+  }
+
+ 
+
+/* Hiding last 7 columns by default  */ 
+#datatable tr > *:nth-child(n+8) {
+    display: none;
+}
+  
+
+
+
+/* Dropdown Biref optgroup */
+
+
+
+/* Column colour stripes */
+  tbody tr td:nth-child(even) {
+    background-color: rgba(36, 79, 117, 0.3);
+  }
+
+/*Tooltips for mineral images*/
+.tooltipe {
+ position: relative; 
+  display: inline-block; 
+  z-index: 9999;
+}
+
+.tooltip_image {
+	position:relative; 
+	width: 90%; 
+	height: auto;
+	text-align: center;
+	z-index: 81; 
+}
+
+.tooltiptexte {
+  visibility: hidden;
+  width: 60vw;
+  left: 105%;
+	
+	height:50vh;
+	overflow: scroll;
+
+	
+  background-color: #202020;
+  color: #fcfcfc;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+	
+  position: absolute; 
+  z-index: 79; 
+  top: -200%;
+
+  transition: .25s all ease;
+  transition-delay: 0s;
+
+}
+
+.tooltipe:hover .tooltiptexte {
+/*  position: absolute; */
+  visibility: visible;
+  transition: .25s all ease;
+  transition-delay: 0s;
+  z-index: 80;
+
+  display: inline-block;
+}
+

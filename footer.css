@@ -1,0 +1,89 @@
+/* Footer */
+.lepied {
+	display: flex;
+	justify-content: space-between;
+	
+    /* Padding and margins, different left and right to have centre 4 words due to difference in length */ 
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 13%;
+    
+	font-family: "Roboto"; 
+	font-size: 14px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: bold; 
+	
+
+}
+
+@media screen and (max-width: 850px) {		
+.lepied {
+	display: flex;
+	justify-content: space-between;
+	
+    /* Padding and margins, different left and right to have centre 4 words due to difference in lenght */ 
+    margin-top: 15px;
+    margin-left: 18%;
+    margin-right: 6%;
+    
+	font-family: "Roboto"; 
+	font-size: 14px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: bold; 
+} 
+	}	
+
+@media screen and (max-width: 650px) {		
+.lepied {
+	display: flex;
+	justify-content: space-between;
+	
+    /* Padding and margins, different left and right to have centre 4 words due to difference in lenght */ 
+    margin-top: 15px;
+    margin-left: 17%;
+    margin-right: 9%;
+    
+	font-family: "Roboto"; 
+	font-size: 14px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: bold; 
+} 
+	}	
+
+@media screen and (max-width: 550px) {		
+.lepied {
+	display: flex;
+	justify-content: space-between;
+	
+    /* Padding and margins, different left and right to have centre 4 words due to difference in lenght */ 
+    margin-top: 15px;
+    margin-left: 14%;
+    margin-right: 9%;
+    
+	font-family: "Roboto"; 
+	font-size: 14px; 
+	font-style: normal; 
+	font-variant: normal; 
+	font-weight: bold; 
+} 
+	}	
+
+.footer-buttons {
+		   
+    text-decoration: none;
+	color:#495057;
+	
+}
+    
+footer {
+  background-color: #e9ecef;
+  color: black;
+  font-size: x-small;
+  padding-bottom: 1px;
+  padding-top: 1px; 
+  margin-top: 100px;
+
+}

@@ -1,0 +1,3175 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-GB"><head>
+<!-- Bootstrap 4 formatting -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+<!-- Import various packages -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	
+<link rel="stylesheet" type="text/css" href="template_Table.css" />
+<link rel="stylesheet" type="text/css" href="footer.css" />
+	
+<script src="https://kit.fontawesome.com/85c5677f85.js" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.gekoproject.com/cdn/sumoselect/sumoselect.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>	
+<link rel="stylesheet" type="text/css" href="reflected.css" />
+
+
+<!-- meta about the website -->
+<title>Reflected Light</title>
+<link rel="icon" href="biglogo.svg" type="image/gif" sizes="16x16">
+<meta name="author" content="Dylan Price">
+<meta name="author" content="Antoine de Saint Germain">
+<meta name="description" content="This page is dedicated to identifying minerals observed under the microscope in reflected light. You will find a large table of minerals, along with their observable properties. To navigate the table, choose the observed properties.">
+<meta name="keywords" content="reflected light mineral properties, minerals, identify, microscope, reflected, light, property, table">
+	
+	
+<!-- These scripts are location sensitive, so we place them at the head of the document -->
+<div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gekoproject.com/cdn/sumoselect/jquery.sumoselect.js"></script>
+</div>
+	
+	
+	
+	
+</head>
+
+
+
+
+
+<body>
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+
+	
+<!-- Top Navigation Bar -->	
+<div class="topnav" id="myTopnav">
+  <a href="https://www.namethatmineral.com/" rel="noopener" ><img alt="plagioclase thin section PPL and XP" class="homebutton" src="reflected_home.svg"></a>
+	
+  <a href="https://www.namethatmineral.com/transmitted" rel="noopener" title="thin sections mineral property identification transmitted" style="width: 158px">Transmitted Light</a>
+  <a href="https://www.namethatmineral.com/reflected" rel="noopener"  title="thin sections mineral property identification reflected" style="width: 142px">Reflected Light</a> 
+  <a href="https://www.namethatmineral.com/definitions" rel="noopener" title="thin sections mineral property and texture definition" style="width: 210px">Definitions of Properties</a>
+  <a href="https://www.namethatmineral.com/about" rel="noopener" title="thin section identification resources" style="width: 65px">About</a>
+  <a href="https://www.namethatmineral.com/contact" rel="noopener" style="width: 120px">Contact Us</a>
+
+  <a href="javascript:void(0);" class="icon" onclick="topbarFunction()">
+  <i class="fa fa-bars"></i>
+  </a>
+  <input type="search" id="mineral_search" onkeyup="mineralsearch()" placeholder="&#xF002; Search for a mineral.."> 
+	
+</div>
+
+
+<button onclick="topFunction()" id="topscroll" title="Go to top" style="background-color: #60BFBF"><i class="fas fa-angle-double-up"></i></button>
+<button onclick="fullScreen()" id="fullscreen" title="Fullscreen Table" value="fullscreen" style="background-color: #75afaf" ><i class="fas fa-expand"></i></button>
+
+
+<!-- Div for Area above Table --> 
+<div class="top_container" style="border-color: #60BFBF;">
+<div class="container-fluid" > 
+  <div class="header_text">Identify polished ore minerals under reflected light</div>   
+  <h1 class="body_text">Select below the properties that you can see under the microscope. The table will then display all the minerals that match that specific combination of properties.</h1>
+  <p>Properties in <strong>bold</strong> are particularly distinct for that mineral. Click on the mineral name to see pictures.</p>
+
+  <!-- Selection of Properties -->
+  <div class="row">
+      <div class="col-md-2 button-wrapper">
+          <select onchange="choicedropdown()" id="Colour" data-col="1" placeholder = "Colour">
+            <option></option>
+            <option>Gray</option>
+            <option>Yellow</option>
+            <option>Cream</option>
+  		      <option>White</option>
+            <option>Brown</option>
+            <option>Pink</option>
+            <option>Green</option>
+            <option>Blue</option>
+  		      <option>Purple</option>
+            <option>Violet</option>
+            <option>Orange</option>
+          </select>
+      </div>
+  		
+      <div class="col-md-2 button-wrapper">
+           <select onchange="choicedropdown()" id="Bireflectance" data-col="2" placeholder= "Bireflectance">
+            <option></option>
+            <option>None</option>
+            <option>Weak</option>
+  		      <option>Distinct</option>
+            <option>Strong</option>
+            <option>Gray</option>
+            <option>Yellow</option>
+            <option>Cream</option>
+  		      <option>White</option>
+            <option>Brown</option>
+            <option>Pink</option>
+            <option>Green</option>
+            <option>Blue</option>
+  		      <option>Purple</option>
+  		      <option>Violet</option>
+            <option>Orange</option>
+  		      <option>Red</option>
+           </select>
+      </div>	
+  	
+      <div class="col-md-2 button-wrapper">
+           <select onchange="choicedropdown()" id="Anisotropy" data-col="4" placeholer = "Anisotropy" >
+             <option></option>
+             <option>Isotropic</option>
+             <option>Weak</option>
+             <option>Distinct</option>
+             <option>Strong</option>
+             <option>Anomalous</option>
+             <option>Straight Extinction</option>
+             <option>Gray</option>
+             <option>Violet</option>
+             <option>Purple</option>
+             <option>Yellow</option>
+             <option>Brown</option>
+             <option>Blue</option>
+           </select>
+      </div>
+
+      <div id="thefourth" class="col-md-2 button-wrapper">
+          <select onchange="choicedropdown()" id="RelHard" data-col="3" multiple="multiple" >
+            <optgroup label="Harder than">
+            <!--<option value= "gt;Acanthite">Acanthite</option>-->
+            <option value="gt;Antimony"> Antimony </option>
+            <option value="gt;Argentite"> Argentite </option>
+            <option value="gt;Arsenopyrite"> Arsenopyrite </option>
+            <option value="gt;Bismuth"> Bismuth </option>
+            <option value="gt;Bornite"> Bornite </option>
+            <option value="gt;Breithauptite"> Breithauptite </option>
+            <option value="gt;Chalcocite"> Chalcocite </option>
+            <option value="gt;Chalcopyrite"> Chalcopyrite </option>
+            <option value="gt;Covellite"> Covellite </option>
+            <option value="gt;Galena"> Galena </option>
+            <option value="gt;Ilmenite"> Ilmenite </option>
+            <option value="gt;Iron"> Iron </option>
+            <option value="gt;Linnaeite"> Linnaeite </option>
+            <option value="gt;Magnetite"> Magnetite </option>
+            <option value="gt;Manganite"> Manganite </option>
+            <option value="gt;Marcasite"> Marcasite </option>
+            <option value="gt;Niccolite"> Niccolite </option>
+            <option value="gt;Orpiment"> Orpiment </option>
+            <option value="gt;Polybasite"> Polybasite </option>
+            <option value="gt;Proustite"> Proustite </option>
+            <option value="gt;Pyrargyrite"> Pyrargyrite </option>
+            <option value="gt;Pyrolusite"> Pyrolusite </option>
+            <option value="gt;Pyrrhotite"> Pyrrhotite </option>
+            <option value="gt;Rammelsbergite"> Rammelsbergite </option>
+            <option value="gt;Realgar"> Realgar </option>
+            <option value="gt;Safflorite"> Safflorite </option>
+            <option value="gt;Scheelite"> Scheelite </option>
+            <option value="gt;Silver"> Silver </option>
+            <option value="gt;Skutterudite"> Skutterudite </option>
+            <option value="gt;Sphalerite"> Sphalerite </option>
+            <option value="gt;Stibnite"> Stibnite </option>
+            <option value="gt;Tetrahedrite"> Tetrahedrite </option>
+
+            </optgroup>
+  			 
+
+
+            <optgroup label="Softer than">
+            <option value="lt;Arsenic"> Arsenic </option>
+            <option value="lt;Arsenopyrite"> Arsenopyrite </option>
+            <option value="lt;Bixbyite"> Bixbyite </option>
+            <option value="lt;Bornite"> Bornite </option>
+            <option value="lt;Braunite"> Braunite </option>
+            <option value="lt;Cassiterite"> Cassiterite </option>
+            <option value="lt;Chalcocite"> Chalcocite </option>
+            <option value="lt;Chalcopyrite"> Chalcopyrite </option>
+            <option value="lt;Cobaltite"> Cobaltite </option>
+            <option value="lt;Cohenite"> Cohenite </option>
+            <option value="lt;Cuprite"> Cuprite </option>
+            <option value="lt;Franklinite"> Franklinite </option>
+            <option value="lt;Galena"> Galena </option>
+            <option value="lt;Goethite"> Goethite </option>
+            <option value="lt;Hausmannite"> Hausmannite </option>
+            <option value="lt;Hematite"> Hematite </option>
+            <option value="lt;Ilmenite"> Ilmenite </option>
+            <option value="lt;Jacobsite"> Jacobsite </option>
+            <option value="lt;Loellingite"> Loellingite </option>
+            <option value="lt;Magnetite"> Magnetite </option>
+            <option value="lt;Niccolite"> Niccolite </option>
+            <option value="lt;Orpiment"> Orpiment </option>
+            <option value="lt;Pentlandite"> Pentlandite </option>
+            <option value="lt;Pyrargyrite"> Pyrargyrite </option>
+            <option value="lt;Pyrite"> Pyrite </option>
+            <option value="lt;Pyrrhotite"> Pyrrhotite </option>
+            <option value="lt;Safflorite"> Safflorite </option>
+            <option value="lt;Skutterudite"> Skutterudite </option>
+            <option value="lt;Sphalerite"> Sphalerite </option>
+            <option value="lt;Stephanite"> Stephanite </option>
+            <option value="lt;Tetrahedrite"> Tetrahedrite </option>
+            <option value="lt;Troilite"> Troilite </option>
+            <option value= "lt;Wolframite"> Wolframite </option>
+            </optgroup>
+          </select>
+  	   </div>	
+  	
+    	<div class="col-md-2 button-wrapper">
+             <select onchange="choicedropdown()" id="Habit" data-col="5" placeholer = "Habit">
+               <option></option>
+			   <option value="aggr">Aggregates</option>
+               <option value= "Anhedral" >Anhedral</option>
+				                <option value= "band" >Banded / Colloform</option>
+				                <option value= "blade" >Bladed</option>
+				                <option value= "botry" >Botryoidal</option>
+				                <option value= "Conc" >Concentric Textures</option>
+				          
+               <option value= "cub" >Cubic</option>
+				                <option value= "dendri" >Dendritic</option>
+				                <option value= "equa" >Equant</option>
+				                <option value= "Euhedral" >Euhedral</option>
+				                <option value= "exsolu" >Exsolution Textures</option>
+				                <option value= "fibr" >Fibrous</option>
+				                <option value= "gra" >Granular</option>
+				                <option value= "incl" >Inclusions</option>
+				        
+               <option value= "intergrow" >Intergrown</option>
+				                <option value= "lamell" >Lamellar</option>
+         
+               <option value= "lath" >Laths</option>
+				                <option value= "mass" >Mass</option>
+				                <option value= "needl" >Needles</option>
+				                <option value= "octah" >Octahedral</option>
+				                <option value= "plate" >Plates</option>
+				                <option value= "poro" >Porous</option>
+				                <option value= "prism" >Prismatic</option>
+				                <option value= "radia" >Radiating / Rosettes</option>
+				                <option value= "skelet" >Skeletal</option>
+				            
+               <option value= "tabular" >Tabular</option>
+				 
+				                <option value= "vein" >Assoc. with veins</option>
+				                <option value= "zon" >Zoned</option>
+        
+             </select>
+    	</div>
+    		
+    	<div class="col-md-2 button-wrapper">
+             <select onchange="choicedropdown()" id="Features" data-col="5"  placeholer = "Noteworthy Features">
+               <option></option>
+               <option value= "Cleav" >Cleavage</option>
+               <option value= "twin" >Twinning</option>
+               <option value= "zon" >Zoning</option>
+				 
+			   <option value="alter" >Alteration</option>
+			   <option value= "fluores" >Fluorescence</option>
+               <option value= "inclu" >Inclusions</option>			 
+               <option value= "intergrow" >Intergrowths</option>
+				<option value="refl">Internal Reflections</option>
+				 <option value= "exsolution" >Exsolution Textures</option>
+				   <option value= "meteorit" >Assoc. with Meteorites</option>
+				 <option value="oxid">Oxidised</option>
+				 <option value="pseudo">Pseudomorphous</option>
+               <option value= "triangular" >Triangular Pits</option>
+				  <option value= "undulose" >Undulose Extinction</option>
+				 <option value="vein">Assoc. with Veins</option>
+             </select>
+    	</div>
+  </div>	
+	
+  <!--Additional Properties-->
+  <div id="advanced_options" style="display: none">
+  <div class="row">
+      <div class="col-md-2 button-wrapper">
+           <select onchange="choicedropdown()" id="SvO" data-col="7" placeholer = "Oxide or Sulphide">
+             <option></option>
+             <option value="strong">Sulphide</option>
+      		   <option value="em">Oxide</option>
+      		   <option value="small">Native Element</option>
+            </select>
+      </div>
+  		
+    	<div id="theeighth" class="col-md-2 button-wrapper ">       
+        <select onchange="choicedropdown()" id="Associ" data-col="8" multiple="multiple">
+          <option value="Allemontite">Allemontite</option>
+          <option value="Anatase">Anatase</option>
+          <option value="Antimonides">Antimonides</option>
+          <option value="Antimony">Antimony</option>
+          <option value="Argentite">Argentite</option>
+          <option value="Arsenopyrite">Arsenopyrite</option>
+          <option value="Bismuth">Bismuth</option>
+          <option value="Bismuthinite">Bismuthinite</option>
+          <option value="Bixbyite">Bixbyite</option>
+          <option value="Bornite">Bornite</option>
+          <option value="Boulangerite">Boulangerite</option>
+          <option value="Braunite">Braunite</option>
+          <option value="Cassiterite">Cassiterite</option>
+          <option value="Cattierite">Cattierite</option>
+          <option value="Chalcocite">Chalcocite</option>
+          <option value="Chalcopyrite">Chalcopyrite</option>
+          <option value="Chromite">Chromite</option>
+          <option value="Cinnabar">Cinnabar</option>
+          <option value="Cobaltite">Cobaltite</option>
+          <option value="Coffinite">Coffinite</option>
+          <option value="Copper">Copper</option>
+          <option value="Covellite">Covellite</option>
+          <option value="Cubanite">Cubanite</option>
+          <option value="Cuprite">Cuprite</option>
+          <option value="Delafossite">Delafossite</option>
+          <option value="Dyscrasite">Dyscrasite</option>
+          <option value="Enargite">Enargite</option>
+          <option value="Ferberite">Ferberite</option>
+          <option value="Franklinite">Franklinite</option>
+          <option value="Galena">Galena</option>
+          <option value="Gersdorffite">Gersdorffite</option>
+          <option value="Glaucodot">Glaucodot</option>
+          <option value="Goethite">Goethite</option>
+          <option value="Gold">Gold</option>
+          <option value="Graphite">Graphite</option>
+          <option value="Gudmundite">Gudmundite</option>
+          <option value="Hausmannite">Hausmannite</option>
+          <option value="Hematite">Hematite</option>
+          <option value="Huebnerite">Huebnerite</option>
+          <option value="Ilmenite">Ilmenite</option>
+          <option value="Iron">Iron</option>
+          <option value="Jacobsite">Jacobsite</option>
+          <option value="Jamesonite">Jamesonite</option>
+          <option value="Kamacite">Kamacite</option>
+          <option value="Lepidocrocite">Lepidocrocite</option>
+          <option value="Limonite">Limonite</option>
+          <option value="Linnaeite">Linnaeite</option>
+          <option value="Loellingite">Loellingite</option>
+          <option value="Mackinawite">Mackinawite</option>
+          <option value="Magnetite">Magnetite</option>
+          <option value="Manganite">Manganite</option>
+          <option value="Marcasite">Marcasite</option>
+          <option value="Maucherite">Maucherite</option>
+          <option value="Millerite">Millerite</option>
+          <option value="Molybdenite">Molybdenite</option>
+          <option value="Niccolite">Niccolite</option>
+          <option value="Orpiment">Orpiment</option>
+          <option value="Pearcite">Pearcite</option>
+          <option value="Pentlandite">Pentlandite</option>
+          <option value="Pitchblende">Pitchblende</option>
+          <option value="Platinum">Platinum</option>
+          <option value="Polybasite">Polybasite</option>
+          <option value="Proustite">Proustite</option>
+          <option value="Psilomelane">Psilomelane</option>
+          <option value="Pyrargyrite">Pyrargyrite</option>
+          <option value="Pyrite">Pyrite</option>
+          <option value="Pyrolusite">Pyrolusite</option>
+          <option value="Pyrrhotite">Pyrrhotite</option>
+          <option value="Rammelsbergite">Rammelsbergite</option>
+          <option value="Realgar">Realgar</option>
+          <option value="Rutile">Rutile</option>
+          <option value="Safflorite">Safflorite</option>
+          <option value="Scheelite">Scheelite</option>
+          <option value="Schreibersite">Schreibersite</option>
+          <option value="Siegenite">Siegenite</option>
+          <option value="Silver">Silver</option>
+          <option value="Skutterudite">Skutterudite</option>
+          <option value="Sphalerite">Sphalerite</option>
+          <option value="Stannite">Stannite</option>
+          <option value="Stephanite">Stephanite</option>
+          <option value="Stibarsen">Stibarsen</option>
+          <option value="Stibnite">Stibnite</option>
+          <option value="Tantalite">Tantalite</option>
+          <option value="Tenorite">Tenorite</option>
+          <option value="Tennantite">Tennantite</option>
+          <option value="Tetrahedrite">Tetrahedrite</option>
+          <option value="Troilite">Troilite</option>
+          <option value="Tungsten">Tungsten</option>
+          <option value="Umenite">Umenite</option>
+          <option value="Uraninite">Uraninite</option>
+          <option value="Uranium">Uranium</option>
+          <option value="Vaesite">Vaesite</option>
+          <option value="Wolframite">Wolframite</option>
+        </select>
+        </div>
+    	
+    	
+
+    		
+        <div class="col-md-2 button-wrapper">
+             <select onchange="choicedropdown()" id="IR" data-col="9" placeholer ="Internal Reflections">
+               <option></option>
+               <option>None</option>
+    		   <option>Rare</option>
+               <option>Common</option>
+               <option>Red</option>
+    		   <option>Brown</option>
+               <option>Green</option>
+    			 <option>Gray</option>		
+    			<option>Blue</option>
+    			 <option>Yellow</option>	
+    			 
+    			 
+    			 
+             </select>
+    	</div>
+  	
+    	<div class="col-md-2 button-wrapper">
+          <select onchange="choicedropdown()" id="Reflectivity" data-col="10" placeholer = "Reflectivity">
+            <option></option>
+            <option value="Low">Low (up to 30%)</option>
+            <option value="Moderate">Moderate (30-50%)</option>
+    		    <option value="High">High (Over 50%)</option>
+          </select>
+    	</div>
+  	
+    	<div class="col-md-2 button-wrapper">
+          <select onchange="choicedropdown()" id="Hardness" data-col="11" placeholer = "Hardness" >
+            <option></option>
+            <option value="extra">Extra Soft (&lt;100 HV)</option>
+            <option value="soft">Soft (100-400 HV)</option>
+            <option value="moderate">Moderate (400-700 HV)</option>
+      		  <option value="hard">Hard (700-1000 HV)</option>
+            <option value="very">Very Hard (&gt;1000 HV)</option>
+          </select>
+    	</div>
+  	
+    	<div class="col-md-2 button-wrapper">
+          <select onchange="choicedropdown()" id="CSystem" data-col="12" placeholer = "Crystal System">
+            <option></option>
+            <option>Cubic</option>
+    		    <option>Orthorhombic</option>
+            <option>Monoclinic</option>
+    		    <option>Triclinic</option><option>Trigonal</option> 
+            <option>Tetragonal</option> <option>Hexagonal</option>
+          </select>
+    	</div>
+  </div>	
+  </div>
+
+  <!-- Buttons -->
+	
+	<!--rgba(96, 191, 191, 0.3);-->
+  <div>
+  <button type="button" style="background-color: rgba(96, 191, 191, 0.3)" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class='fa fa-cog'></i>&nbsp; Options
+  </button>
+  <div class="dropdown-menu">
+	  
+    <button class="dropdown-item" onclick="advanced_options_toggle()" id="advanced_options_button" value="show_more"><i class="fa fa-plus"></i>&nbsp; &nbsp; Show more properties</button>
+    <button type="button" class="dropdown-item" data-toggle="modal" data-target="#TableModal"><i class="fa fa-table"></i> &nbsp; Show / hide columns</button>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="https://www.namethatmineral.com/tutorial" rel="noopener" ><i class="fa fa-question-circle"> </i> &nbsp; Help</a>
+  </div>
+
+   <button id="resetbtn" style="background-color: rgba(96, 191, 191, 0.3)" onclick="reset_options()" class="btn" value="Reset"><i class='fa fa-angle-double-left'></i>&nbsp; Reset</button>
+	  
+  </div>
+
+<!-- Container fluid div closure -->
+</div>
+</div>
+
+
+	
+<!-- DATATABLE -->
+<div id="divforfullscreen">
+<div class="header_text" id="matching_minerals">Mineral properties
+
+<button onclick="advanced_options_toggle2()" id="advanced_options_button2" class="btn" value="show_more">Show more &nbsp;<i class='fa fa-angle-double-right'></i></button>
+		
+
+</div> 
+	
+
+<div style="border-bottom: #60BFBF solid">
+<div id="datatable_window" class="body_text">	
+	
+<div id="datatable_ajax">
+	<div >
+  	<table id="datatable" class="table table-sm">
+
+              <thead class="thead-light">
+                  <tr>
+  		
+                      <th scope="col" style="position:sticky; position: -webkit-sticky; top:0;left:0;z-index:10;">Mineral</th>
+  					
+  					<th   scope="col">Formula</th>
+  					
+                      <th   scope="col">Colour 
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#ColourModal"></i>
+  					</th>
+  					
+                      <th   scope="col">Comparative Colour
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#CColourModal"></i></th>
+  					
+                      <th   scope="col">Bireflectance
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#BireflModal"></i></th>
+  					
+                      <th   scope="col">Anisotropy
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#AniModal"></i></th>     
+  					
+  					<th   scope="col">Relative Hardness
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#RelHModal"></i></th>
+  					
+  					<th   scope="col">Habit</th>
+  					
+  					<th   scope="col">Noteworthy Features</th>
+  					
+  					<th   scope="col">Associated Minerals</th>
+  					
+  					<th   scope="col">Internal Reflections
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#IRModal"></i></th>
+  					
+  					<th   scope="col">Reflectivity
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#RefModal"></i></th>
+  					
+  					<th   scope="col">Hardness
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#HardModal"></i></th>
+  					
+  					<th   scope="col">Crystal System</th>
+  					
+  					<th   scope="col">Notes</th>
+  					
+                  </tr>
+
+<tbody>
+	
+
+<tr>
+<th id='alabandite' scope='row'>Alabandite </th>
+<td><strong></strong>MnS</td>
+<td>Gray </td>
+<td>C to Sphalerite: distinctly lighter</td>
+<td>None </td>
+<td>Isotropic / sometimes weakly anomalous</td>
+<td>~Sphalerite</td>
+<td>Euhedral crystals / Anhedral aggregates / similar to Sphalerite</td>
+<td>Cleavage / Lamellar Twinning / Zonal Textures</td>
+<td>Chalcopyrite Mn-Carbonate Mn-Sphalerite Pyrite Pyrolusite Pyrrhotite</td>
+<td>Common / dark Green to Brown</td>
+<td>Low 22%</td>
+<td>Soft (240-251)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+
+<tr>
+<th id='allargentum' onclick ='load_php(this.id)' scope='row'>Allargentum </th>
+<td>Ag<sub>1-x</sub>Sb<sub>x</sub></td>
+<td>White / slightly Grayish </td>
+<td>C to Silver: Grayish</td>
+<td>None </td>
+<td>Weak </td>
+<td>&gt;Silver</td>
+<td>Lamellar intergrowths in Silver</td>
+<td></td>
+<td>Silver</td>
+<td>None</td>
+<td>High 70%</td>
+<td></td>
+<td>Hexagonal</td>
+<td>Originally identified as Dyscrasite (Ag<sub>3</sub>Sb)</td>
+</tr>
+
+<tr>
+<th id='allemontite' scope='row'>Allemontite / Stibarsen </th>
+<td>A mixture of As or Sb with AsSb</td>
+<td>White</td>
+<td></td>
+<td>Weak </td>
+<td>Distinct </td>
+<td>~Antimony</td>
+<td><i>Very</i> fine myrmekitic intergrowth best seen under high magnification</td>
+<td>Intergrowth is often more visible after slight oxidation or etching</td>
+<td>Stibnite in Co-Ni-Ag-Bi-As ores and pegmatites</td>
+<td>None</td>
+<td>Moderate to High 50-70%</td>
+<td>Extra Soft (85-100)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='ancanthite' scope='row'>Ancanthite </th>
+<td><strong></strong>Ag<sub>2</sub>S</td>
+<td>Gray with Greenish tint </td>
+<td>C to Galena, Silver: darker, Greenish Gray</td>
+<td>Very Weak </td>
+<td>Distinct if well polished </td>
+<td>Less than most minerals</td>
+<td>Euhedral Cubic crystals / Anhedral polycrystalline aggregates</td>
+<td>Twinning visible when well polished / Irregular inclusions in Galena</td>
+<td>Covellite Galena Polybasite Proustite Pyrargyrite Pyrite Sphalerite Tetrahedrite</td>
+<td>None</td>
+<td>Low 30%</td>
+<td>Extra Soft (23-26)</td>
+<td>Monoclinic (Pseudo-Cubic)</td>
+<td>Polishing scratches visible due of softness / The hi-T polymorph (Argentite) always returns to Acanthite on cooling. Evidence of Argentite is from the pseudomorphous Acanthite with its cubic morphology</td>
+</tr>
+
+<tr>
+<th id='antimony' scope='row'>Antimony </th>
+<td><small></small>Sb</td>
+<td>White</td>
+<td>C to Arsenic: slightly more White / C to Galena: brighter White / C to Silver: less bright / C to Dyscrasite: similar</td>
+<td>Weak </td>
+<td>Distinct / Yellowish Gray, Brownish, Blueish Gray </td>
+<td>&gt;Stibnite &lt;Arsenic</td>
+<td>Fine to coarse grain aggregates / rarely Euhedral</td>
+<td>Cleavage / Twinning (often polysynthetic)</td>
+<td>Arsenopyrite Co-Ni-Arsenides Pyrite Stibarsen Stibnite</td>
+<td>None</td>
+<td>High 73-78%</td>
+<td>Extra Soft (50-69)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='argentite' scope='row'>Argentite </th>
+<td><strong></strong>Ag<sub>2</sub>S</td>
+<td>Gray with Greenish tint </td>
+<td>C to Galena, Silver: darker, Greenish Gray</td>
+<td>Very Weak </td>
+<td>Distinct if well polished </td>
+<td>Less than most minerals</td>
+<td>Euhedral Cubic crystals / Anhedral polycrystalline aggregates</td>
+<td>Twinning visible when well polished / Irregular inclusions in Galena</td>
+<td>Covellite Galena Polybasite Proustite Pyrargyrite Pyrite Sphalerite Tetrahedrite</td>
+<td>None</td>
+<td>Low 30%</td>
+<td>Extra Soft (23-26)</td>
+<td>Monoclinic (Pseudo-Cubic)</td>
+<td>Polishing scratches visible due of softness / The hi-T polymorph (Argentite) always returns to Acanthite on cooling. Evidence of Argentite is from the pseudomorphous Acanthite with its cubic morphology</td>
+</tr>
+
+<tr>
+<th id='arsenic ' scope='row'>Arsenic  </th>
+<td><small></small>As</td>
+<td>White / tarnishes rapidly</td>
+<td>C to Antimony: slightly darker Gray / C to Skutterudite and Safflorite: slightly darker Gray / C to Galena: White with a Creamy tint</td>
+<td>Grayish White to Yellow or Blueish Gray / Weak in air / distinct in oil</td>
+<td>Distinct / Gray to Yellowish Gray </td>
+<td>&gt;Bismuth &gt;Silver</td>
+<td>Fine to coarse grained Anhedral aggregates / Colloform bands</td>
+<td>Twinning / basal cleavage often visible</td>
+<td>Arsenopyrite Proustite Pyrite Rammelsbergite Skutterudite Stibarsen</td>
+<td>None</td>
+<td>High 51-56%</td>
+<td>Extra Soft to Soft (72-173)</td>
+<td>Trigonal</td>
+<td><strong>Very fast (a few hours) tarnishing is typical</strong></td>
+</tr>
+
+<tr> 
+<th id='arsenopyrite' scope='row'>Arsenopyrite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Arsenopyrite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Arsenopyrite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+
+
+</th>
+<td><strong></strong>FeAsS</td>
+<td><strong>White</strong></td>
+<td>C to Pyrite: White / C to Loellingite, Safflorite: Creamy White / C to Antimony: Grayish White / C to Galena, Sphalerite: White with pale Yellow tint </td>
+<td>Weak </td>
+<td><strong>Strong / Blue, Green</strong></td>
+<td>&gt;Skutterudite &gt;Magnetite &lt;Pyrite &lt;Cobaltite</td>
+<td>Euhedral to Subhedral <strong>rhomb shapes</strong> / Anhedral Granular masses when abundant</td>
+<td>Lamellar Twinning common</td>
+<td>Chalcopyrite Cobaltite Galena Glaucodcot Gold Loellingite Molybdenite Pyrite Pyrrhotite Sphalerite</td>
+<td>None</td>
+<td>High 52%</td>
+<td>Hard to Very Hard (715-1354)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='berthierite' scope='row'>Berthierite </th>
+<td><strong></strong>FeSb<sub>2</sub>S<sub>4</sub></td>
+<td>White-Gray with Pink or Brown tint </td>
+<td></td>
+<td>Strong and characteristic (//a) Brownish Pink (//b) Grayish White (//c) White </td>
+<td>Very Strong / Blue, Gray, White, Brown, Pink </td>
+<td>~Stibnite &lt;Sphalerite</td>
+<td>Euhedral Needlelike / Subhedral aggregates</td>
+<td></td>
+<td>Arsenopyrite Chalcopyrite Galena Gudmundite Pyrite Pyrrhotite Sphalerite Stibnite</td>
+<td>None</td>
+<td>Low to Moderate 30-42%</td>
+<td>Soft (168-228)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='bismuth' scope='row'>Bismuth </th>
+<td><small></small>Bi</td>
+<td>White to Creamy White / Pinkish Cream </td>
+<td>C to Silver: Creamy / C to Arsenic: Pinkish Creamy / C to Sulfosalts: Pinkish Creamy</td>
+<td>Weak but distinct Creamy to Pinkish </td>
+<td>Distinct to Strong </td>
+<td>&lt;All associated minerals</td>
+<td>Irregular masses / with inclusions of Anhedral crystals</td>
+<td>Twinning common, can be induced by grinding or scratching</td>
+<td>Arsenopyrite Bismuthinite Cassiterite Chalcopyrite Co-Ni-Arsenides Galena Molybdenite Pyrite Pyrrhotite Silver Sphalerite Sulfosalts Wolframite</td>
+<td>None</td>
+<td>Moderate 42%</td>
+<td>Extra Soft (16-18)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='bismuthinite' scope='row'>Bismuthinite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Bismuthinite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Bismuthinite in XP. Note the anisotropy.&nbsp;</figcaption>
+  </span>
+</div>
+
+<div class="tooltipe" onmouseover="load_videoX_p3(this)"><i class="fas fa-play-circle"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Bismuthinite in XP. Note the anisotropy.&nbsp;</figcaption>
+  </span>
+</div>
+
+</th>
+<td><strong></strong>Bi<sub>2</sub>S<sub>3</sub></td>
+<td>White / in Oil with Blueish Gray tint </td>
+<td>C to Bismuth: darker, Blueish Gray / C to Chalcopyrite: Blueish Gray / C to Galena: lighter, Creamy White</td>
+<td>Weak to distinct (//a) Blueish Gray-White (//b) Gray-White (//c) Creamy White </td>
+<td>Very Strong / especially in oil / Gray, Yellow, Violet / Straight Extinction / Large crystals often undulose </td>
+<td>&gt;Bismuth &lt;Chalcopyrite</td>
+<td>Subhedral Lath-like / less commonly as Granular masses</td>
+<td>Cleavage / Stress-induced Twinning / Undulose Extinction often seen</td>
+<td>Arsenopyrite Bismuth Cassiterite Chalcopyrite Molybdenite Pyrite Pyrrhotite Sphalerite Stannite Wolframite</td>
+<td>None</td>
+<td>High 60-70%</td>
+<td>Soft (110-136)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='bixbyite' scope='row'>Bixbyite </th>
+<td><em></em>(Mn,Fe)<sub>2</sub>O<sub>3</sub></td>
+<td>Gray with Cream to Yellow tint </td>
+<td>C to Braunite, Jacobsite, Hausmannite: lighter, Yellowish / C to Hematite: Brownish</td>
+<td>Usually None / Sometimes very Weak in oil </td>
+<td>Isotropic / sometimes weakly anomalous </td>
+<td>&gt;Hausmannite ~Braunite</td>
+<td>Euhedral crystals / Granular aggregates</td>
+<td>Cleavage / Lamellar Twinning / Zonal growth</td>
+<td>Braunite Hausmannite Hematite Pyrolusite</td>
+<td>None</td>
+<td>Moderate 37-49%</td>
+<td>Hard to Very Hard (946-1402)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='bornite' scope='row'>Bornite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Bornite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Bornite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><strong></strong>Cu<sub>5</sub>FeS<sub>4</sub></td>
+<td>Pinkish Brown to Orange / tarnishes Purplish / Violet / Iridescent </td>
+<td></td>
+<td>Weak bireflectance may be visible on grain boundaries </td>
+<td>Very weak </td>
+<td>&gt;Galena &gt;Chalcocite &lt;Chalcopyrite</td>
+<td>Irregular polycrystalline aggregates / Coatings on Chalcopyrite / Lamellar intergrowth with Chalcopyrite</td>
+<td>Cleavage may be visible / Twinning rare and difficult to see / Lamellar exsolution / Replacement textures with Chalcopyrite Enargite Digenite common / Alters on grain boundaries and fractures to Covellite</td>
+<td>Chalcopyrite Covellite Digenite Enargite Galena Hematite Linnaeite Magnetite Pyrite Sphalerite Tetrahedrite</td>
+<td>None</td>
+<td>Low 2-22%</td>
+<td>Extra Soft (87-100)</td>
+<td>Orthorhombic (Pseudo-Tetragonal)</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='boulangerite' scope='row'>Boulangerite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Boulangerite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Boulangerite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+
+<div class="tooltipe" onmouseover="load_videoX_p3(this)"><i class="fas fa-play-circle"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Boulangeritein XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><strong></strong>Pb<sub>5</sub>Sb<sub>4</sub>S<sub>11</sub></td>
+<td>White with Blueish Gray </td>
+<td>C to Galena: darker Greenish Gray / C to Stibnite: slightly lighter / C to Jamesonite: darker</td>
+<td>Distinct / Gray-White to Green-Gray </td>
+<td>Distinct / Tan, Brown, Blueish Gray </td>
+<td>&lt;Galena</td>
+<td>Granular / Fibrous aggregates </td>
+<td></td>
+<td>Chalcopyrite Galena Pb-Sb-Sulfosalts Sphalerite Tetrahedrite</td>
+<td>Rare / Red</td>
+<td>Low 22%</td>
+<td>Extra Soft to Soft (92-125)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='brannerite' scope='row'>Brannerite </th>
+<td><em></em>(U,Ca,Ce)(Ti,Fe)<sub>2</sub>O<sub>6</sub></td>
+<td>Gray </td>
+<td></td>
+<td>None </td>
+<td>None </td>
+<td></td>
+<td>Euhedral prisms / Needle-like grains / Subhedral aggregates</td>
+<td>Often forms as replacement (sometimes pseudomorph) after Uraninite and Rutile / May have "dusting" of small radiogenetic Galena crystals</td>
+<td>Anatase Coffinite Galena Magnetite Pitchblende Pyrite Pyrrhotite Rutile Sphalerite Tetrahedrite Uraninite</td>
+<td>Common / Coarse crystals: Brownish Gray / Fine grained material: Blue-Gray to Blueish White, dark Brown to Yellowish</td>
+<td>Moderate 37-42%</td>
+<td>Moderate (690)</td>
+<td>Monoclinic (Metamict)</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='braunite' scope='row'>Braunite </th>
+<td><em></em>(Mn,Fe,Si)<sub>2</sub>O<sub>3</sub></td>
+<td>Gray with Brownish tint </td>
+<td>C to Magnetite: less Brown / C to Pyrolusite, Psilomelane: darker / C to Manganite, Hausmanite: similar but weaker bireflectance / C to Bixbyite, Jacobsite: more Gray </td>
+<td>Weak but distinct / Gray </td>
+<td>Weak but distinct / Gray to Blue / often undulose </td>
+<td>&gt;Magnetite &lt;Bixbyite</td>
+<td>Anhedral Granular masses / Subhedral to Euhedral crystals</td>
+<td>Zonal Textures</td>
+<td>Bixbyite Hematite Jacobsite Magnetite Pyrolusite</td>
+<td>Rare / dark Brown to deep Red</td>
+<td>Low 15%</td>
+<td>Hard (920)</td>
+<td>Tetragonal</td>
+<td> </td>
+</tr>
+
+<tr>
+<th id='bravoite' scope='row'>Bravoite </th>
+<td><strong></strong>(Fe,Ni,Co)S<sub>2</sub></td>
+<td>Composition dependent / Fe-rich: Creamy to Pinkish / Co- and Ni-rich: Pinkish to Brownish to Violet </td>
+<td></td>
+<td>None </td>
+<td>None</td>
+<td>&gt;Sphalerite &lt;Pyrite</td>
+<td>Isolated cubes / Octahedral crystals</td>
+<td>Zonal texture very characteristic / Darker zones are Ni and Co rich</td>
+<td>Bismuth Chalcopyrite Galena Linnaeite Maucherite Niccolite Safflorite Siegenite Sphalerite Tetrahedrite</td>
+<td>None</td>
+<td>Low 18%</td>
+<td>Moderate to Very Hard (668-1535)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='breithauptite' scope='row'>Breithauptite </th>
+<td>NiSb</td>
+<td><strong>Pink with Violet tint</strong></td>
+<td>C to Niccolite: darker, Violet tint</td>
+<td>Strong / Pinkish to Pinkish Violet </td>
+<td><strong>Very Strong / Blueish Green, Blueish Gray, Violet Red</strong></td>
+<td>&lt;Niccolite &gt;Rammelsbergite &gt;Safflorite</td>
+<td>Subhedral to Euhedral grains</td>
+<td>Zonal Textures</td>
+<td>Ag-Sulfosalts Chromite Galena Niccolite Pentlandite Pyrrhotite Safflorite Silver</td>
+<td>None</td>
+<td>Moderate to High 31-54% (lowest for Co and Ni-rich)</td>
+<td>Moderate (412-584)</td>
+<td>Hexagonal</td>
+<td>Similar to Niccolite / Although Violarite appears similar, it is not zoned</td>
+</tr>
+
+<tr>
+<th id='carrollite' scope='row'>Carrollite </th>
+<td><strong></strong>CuCo<sub>2</sub>S<sub>4</sub></td>
+<td>Creamy White / rare slight Pinkish tint </td>
+<td></td>
+<td>None </td>
+<td>None </td>
+<td>&gt;Chalcopyrite &lt;Pyrite</td>
+<td>Anhedral Granular masses / Subhedral and Euhedral Octahedra</td>
+<td></td>
+<td>Bornite Chalcocite Chalcopyrite Co-Pyrite Copper minerals Digenite Pyrrhotite Siegenite</td>
+<td>None</td>
+<td>Moderate to High 38-52%</td>
+<td></td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='cassiterite' scope='row'>Cassiterite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Cassiterite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Cassiterite in XP. NOte the internal reflections.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><em></em>SnO<sub>2</sub></td>
+<td>Brownish Gray </td>
+<td>C to Stannite, Wolframite, Ilmenite, Rutile, Magnetite: Brownish Gray</td>
+<td>Distinct / Gray to Brownish Gray </td>
+<td>Distinct Gray / in oil, masked by internal reflections </td>
+<td>&lt;Pyrite</td>
+<td>Compact Anhedral masses / Zoned Subhedral to Euhedral crystals</td>
+<td>Twinning common / Cleavage may be visible</td>
+<td>Arsenopyrite Bismuth Bismuthinite Galena Hematite Magnetite Pyrite Pyrrhotite Rutile Sphalerite Stannite Wolframite</td>
+<td>Common / Yellow to Yellow-Brown (lighter than Sphalerite)</td>
+<td>Moderate 43%</td>
+<td>Very Hard (1168-1332)</td>
+<td>Tetragonal</td>
+<td>Similar to Sphalerite but is anisotropic and has lighter coloured internal reflections</td>
+</tr>
+
+<tr>
+<th id='chalcocite' scope='row'>Chalcocite   
+<div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+  <span class='tooltiptexte'>
+    <b>n </b>
+    <figcaption>Chalcocite in PPL.&nbsp;</figcaption>
+  </span>
+</div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+<span class="tooltiptexte">
+  <b> </b>
+  <figcaption>Chalcocite in XP.&nbsp;</figcaption>
+</span>
+</div>
+</th>
+<td><strong></strong>Cu<sub>2</sub>S</td>
+<td>Blueish White </td>
+<td>C to Galena, Pyrite, Bornite, Copper: Blueish Gray to Blueish White / C to Covellite: White</td>
+<td>Very Weak</td>
+<td>Weak to distinct emerald Green to light Pinkish </td>
+<td>&gt;Acanthite ~Digenite &lt;Bornite</td>
+<td>Anhedral polycrystalline aggregates / vein fillings with Fe and Cu-Fe Sulphides (e.g. Bornite, Chalcopyrite, Digenite, Pyrite)</td>
+<td>Often in exsolution intergrowth with Bornite or low-temperature Cu- Sulphides</td>
+<td>Bornite Enargite Galena Sphalerite Stannite Tetrahedrite - Tennantite</td>
+<td>None</td>
+<td>Low 11%</td>
+<td>Extra Soft (84-87)</td>
+<td>Orthorhombic</td>
+<td>Often appears Isotropic, especially in supergene fine-grained aggregates</td>
+</tr>
+
+<tr>
+<th id='chalcophanite' scope='row'>Chalcophanite </th>
+<td><em></em>Mn<sub>2</sub>O<sub>5</sub>&bull;nH<sub>2</sub>O</td>
+<td>White to Gray</td>
+<td></td>
+<td>Very strong and characteristic, especially in oil / White to Gray </td>
+<td>Very Strong / White to Gray </td>
+<td></td>
+<td>Aggregates of tabular and radiating crystals / Colloform bands in secondary Mn-ores</td>
+<td>Perfect basal cleavage</td>
+<td>Filling veins in Mn-oxides e.g. Hausmannite Psilomelane Pyrolusite</td>
+<td>Zn-rich: deep Red / Otherwise None</td>
+<td>Moderate 32%</td>
+<td>Soft (188-253)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='chalcopyrite' scope='row'>Chalcopyrite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Chalcopyrite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="far fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Example of chalcopyrite disease.&nbsp;</figcaption>
+  </span>
+</div>
+
+</th>
+<td><strong></strong>CuFeS<sub>2</sub></td>
+<td>Yellow to Brassy Yellow </td>
+<td>C to Pyrite: more Yellow / C to Gold: distinct Greenish tint</td>
+<td>Weak</td>
+<td>Weak but distinct / Gray-Blue to Yellow-Green </td>
+<td>~Galena &lt;Sphalerite</td>
+<td>Medium to coarse grained Anhedral aggregates / less commonly as well-developed Tetrahedra</td>
+<td>Twinning common / Basket weave exsolution with Bornite common / Can contain laths of Cubanite / Can contain “stars" of Sphalerite / Can contain “worms" of Mackinawite or Pyrrhotite </td>
+<td>Bornite Cubanite Digenite Galena Magnetite Pentlandite Pyrite Pyrrhotite Sphalerite Tetrahedrite</td>
+<td>None</td>
+<td>Low 9-27%</td>
+<td>Soft (187-203)</td>
+<td>Tetragonal</td>
+<td>Often alters along cracks and grain boundaries to Covellite</td>
+</tr>
+
+<tr>
+<th id='chalcostibite' scope='row'>Chalcostibite </th>
+<td><strong></strong>CuSbS<sub>2</sub></td>
+<td>White with Pinkish Gray tint </td>
+<td>C to Silver, Galena, Grayish / C to Sphalerite: Pinkish</td>
+<td>Distinct in oil / Creamy to Brown </td>
+<td>Distinct / Pinkish to Greenish or Blueish Gray </td>
+<td>&gt;Silver &lt;Chalcopyrite &lt;Sphalerite</td>
+<td>Anhedral grains / less commonly as Euhedral prismatic crystals</td>
+<td>Cleavage / Triangular pits may be visible / May be intergrown with Enargite</td>
+<td>Arsenopyrite Chalcocite Chalcopyrite Cinnabar Covellite Galena Jamesonite Pyrite Silver Sphalerite Tetrahedrite</td>
+<td>Rare / pale Red</td>
+<td>Moderate 45%</td>
+<td>Soft (283-309)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='chromite' scope='row'>Chromite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Chromite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+ 
+</th>
+<td><em></em>(Fe,Mg)(Cr,Al)<sub>2</sub>O<sub>4</sub></td>
+<td>Dark Gray to Brownish Gray </td>
+<td>C to Magnetite, Sphalerite: darker / C to Ilmenite: less Brown-Red</td>
+<td>None </td>
+<td>Weak / Usually absent</td>
+<td>&gt;Magnetite &lt;Hematite</td>
+<td>Subhedral to Euhedral crystals / Coarse crystalline aggregates / Cataclastic effects common</td>
+<td>Zonal Textures with lighter (Fe-Rich) rims common</td>
+<td>Ilmenite Magnetite Millerite Pentlandite Platinum Pyrrhotite</td>
+<td>Common / Red Brown / None in Fe-rich samples</td>
+<td>Moderate 36-44%</td>
+<td>Very Hard (1278-1456)</td>
+<td>Cubic</td>
+<td>May have exsolution lamellae of Hematite, Ilmenite, Magnetite, Rutile, Ulv&ouml;spinel</td>
+</tr>
+
+<tr>
+<th id='cinnabar' scope='row'>Cinnabar </th>
+<td><strong></strong>HgS</td>
+<td>White with Blueish Gray tint </td>
+<td>C to Galena: darker, Blueish</td>
+<td>Distinct in oil </td>
+<td>Distinct / in oil often masked by internal reflections </td>
+<td>&gt;Antimony &lt;Galena &lt;Pyrite</td>
+<td>Subhedral to Euhedral crystals / polycrystalline aggregates of Euhedral grains</td>
+<td></td>
+<td>Bornite Cassiterite Chalcopyrite Enargite Galena Gold Marcasite Orpiment Pyrite Realgar Stibnite Tetrahedrite</td>
+<td>Intense and common / Red</td>
+<td>Low 13%</td>
+<td>Extra Soft to Soft (82-156)</td>
+<td>Trigonal</td>
+<td>Looks similar to Proustite and Pyrargyrite</td>
+</tr>
+
+<tr>
+<th id='cobaltite' scope='row'>Cobaltite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Cobaltite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td><strong></strong>(Co,Fe)AsS</td>
+<td>White with Pink or Violet tint </td>
+<td>C to Arsenopyrite: Pinkish / C to Pyrite: Whiter</td>
+<td>Weak / White to Pinkish </td>
+<td>Weak to distinct in oil / Blue-Gray to Brown </td>
+<td>&gt;Skutterudite &lt;Pyrite</td>
+<td>Euhedral crystals / Polycrystalline aggregates</td>
+<td>Twinning / Zoning / Cleavage</td>
+<td>Arsenopyrite Bismuth Chalcopyrite Gold Ni-Co Arsenides Niccolite Silver Uraninite</td>
+<td>None</td>
+<td>Low 24-30%</td>
+<td>Hard to Very Hard (935-1131)</td>
+<td>Orthorhombic (Pseudo-Cubic)</td>
+<td>Weak anisotropy makes Cobaltite distinct from Niccolite or Breithauptite</td>
+</tr>
+
+<tr>
+<th id='coffinite' scope='row'>Coffinite </th>
+<td><em></em>U(SiO<sub>4</sub>)<sub>1-x</sub>OH)<sub>4x</sub></td>
+<td>Gray </td>
+<td></td>
+<td>Very Weak </td>
+<td>Very weak / Absent </td>
+<td>~Pitchblende</td>
+<td>Euhedral Tetragonal crystals / Fine aggregates / Colloform bands</td>
+<td>Botryoidal encrustations and intergranular films, especially near organic matter</td>
+<td>Bismuth Loellingite Pitchblende Pyrite Rammelsbergite Sphalerite Uraninite</td>
+<td>Rare and weak in air / Common Brownish in oil</td>
+<td>High 51%</td>
+<td>Soft (230-302)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='cohenite' scope='row'>Cohenite </th>
+<td>Fe<sub>3</sub>C</td>
+<td>Creamy White</td>
+<td>C to Pyrrhotite: lighter Creamy / C to Iron: similar</td>
+<td>Weak but distinct </td>
+<td>Weak but distinct </td>
+<td>&gt;Iron</td>
+<td>Irregular grains</td>
+<td>Twinning common in larger grains</td>
+<td>Graphite Kamacite Schreibersite Troilite</td>
+<td>None</td>
+<td>Low 8%</td>
+<td></td>
+<td>Orthorhombic</td>
+<td>Rare on earth / Found in meteorites with 6-8 wt% Ni</td>
+</tr>
+
+<tr>
+<th id='coltan' scope='row'>Coltan / Columbite Tantalite </th>
+<td><em></em>(Fe,Mn)(Ta,Nb)<sub>2</sub>O<sub>6</sub></td>
+<td>Gray-White with Brown tint</td>
+<td>C to Magnetite: slightly less Brown</td>
+<td>Weak </td>
+<td>Distinct / Straight extinction </td>
+<td></td>
+<td>Euhedral crystals / Anhedral aggregates</td>
+<td>May be Zoned / Cleavage may be visible</td>
+<td>May be within Cassiterite / May contain inclusions of Cassiterite Galena Hematite Ilmenite Rutile Uraninite Wolframite</td>
+<td>Common in Fe-rich / deep Red</td>
+<td>Low 15%</td>
+<td>Soft to Very Hard (240-1021)</td>
+<td>Orthorhombic</td>
+<td>Occurs as oriented intergrowths with Uraninite</td>
+</tr>
+
+<tr>
+<th id='copper' scope='row'>Copper 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Copper in PPL. Make sure the sample is well polished as copper tarnishes easily.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Copper in XP. It is isotropic but scratches will appear anisotropic.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><small></small>Cu</td>
+<td>Pink / tarnishes Brownish</td>
+<td>C to Silver: Pink</td>
+<td>Weak </td>
+<td>Isotropic / Fine scratches will appear Anisotropic </td>
+<td>&gt;Chalcocite &lt;Cuprite</td>
+<td>Coarse to fine grained aggregates / Dendritic or spear-like crystals</td>
+<td>Lamellar Twinning visible if etched / Zoning due to Ag or As common</td>
+<td>Bornite Chalcocite Cuprite Enargite Iron Magnetite Pyrrhotite</td>
+<td>None</td>
+<td>High 65-92%</td>
+<td>Extra Soft (79-99)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='cosalite' scope='row'>Cosalite </th>
+<td><strong></strong>Pb<sub>2</sub>Bi<sub>2</sub>S<sub>5</sub></td>
+<td>White with Pink or Gray tint </td>
+<td>C to Galena: Yellowish to Green tint</td>
+<td>Weak to distinct </td>
+<td>Weak to Moderate / Pinkish Yellow, Blueish, Violet Gray </td>
+<td>&gt;Galena</td>
+<td>Granular masses / Bundles of Subhedral Elongated Laths / Fibrous crystals</td>
+<td>No Twinning</td>
+<td>Arsenopyrite Bi and Sb Sulfosalts Bismuth Chalcopyrite Glaucodot Gold Pyrite Pyrrhotite Sphalerite Tetrahedrite Wolframite</td>
+<td>None</td>
+<td>Moderate 41-46%</td>
+<td>Extra Soft to Soft (74-161)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='covellite' scope='row'>Covellite 
+  <div class='tooltipe'onmouseover="load_videoP(this)" ><i class="far fa-play-circle"></i>
+    <span class='tooltiptexte'>
+      <b> </b>
+      <figcaption>Covellite in PPL with strong pleochroism.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Covellite in XP showing intense anisotropy.&nbsp;</figcaption>
+  </span>
+</div>
+
+</th>
+<td><strong></strong>CuS</td>
+<td><strong>Indigo Blue with Violet tint / Blueish White in Air</strong></td>
+<td></td>
+<td><strong>Purple to Violet-Red to Blue-Gray in oil</strong></td>
+<td><strong>Strong to Extreme / Red-Orange to Brownish</strong></td>
+<td>&lt;Chalcopyrite</td>
+<td>Subhedral to Anhedral masses / Laths / Platelike crystals</td>
+<td></td>
+<td>Bornite Chalcopyrite Digenite Enargite Pyrite Sphalerite Tennantite / May occur with Covellite</td>
+<td>None</td>
+<td>Low 4-24%</td>
+<td>Soft (128-138)</td>
+<td>Hexagonal</td>
+<td>Blaubleibender Covellite stays blue in oil, hence the name.</td>
+</tr>
+
+<tr>
+<th id='cubanite' scope='row'>Cubanite </th>
+<td><strong></strong>CuFe<sub>2</sub>S<sub>3</sub></td>
+<td>Creamy Gray to Yellowish Brown</td>
+<td>C to Pyrrhotite: more Yellow, less Pink / C to Chalcopyrite: more Gray-Brown</td>
+<td><strong> Grayish to Brownish</strong></td>
+<td><strong>Strong / Brownish to Blue</strong></td>
+<td>&gt;Chalcopyrite &lt;Pyrrhotite</td>
+<td>Laths within coarse-grained Chalcopyrite / Irregular Granular aggregates</td>
+<td></td>
+<td>Arsenopyrite Galena Mackinawite Magnetite Pentlandite Pyrrhotite Sphalerite</td>
+<td>None</td>
+<td>Moderate 35%</td>
+<td>Soft (247-287)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='cuprite' scope='row'>Cuprite </th>
+<td><em></em>Cu<sub>2</sub>O</td>
+<td>Air: light Blueish Gray / Oil: darker / more Blue </td>
+<td>C to Chalcopyrite, Hematite: darker and Greenish</td>
+<td>Very Weak </td>
+<td>Strong / Anomalous Gray-Blue to Olive-Green </td>
+<td>&gt;Chalcopyrite</td>
+<td>Euhedral octahedra / fine-grained mass</td>
+<td>Replaces Copper minerals</td>
+<td>Delafossite Goethite Marcasite Pyrite Tenorite</td>
+<td>Common / Deep Red characteristic</td>
+<td>Low 27%</td>
+<td>Soft (193-207)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='delafossite' scope='row'>Delafossite </th>
+<td><em></em>CuFeO<sub>2</sub></td>
+<td>Air: Yellow-Rose-Brown to Rose-Brown / Oil: Pinkish Gray to Brown-Gray</td>
+<td>C to Enargite, Tenorite: more Yellow</td>
+<td>Distinct</td>
+<td>Distinct to Strong / Blueish Gray / Straight extinction </td>
+<td>&lt;Cuprite &lt;Goethite</td>
+<td>Masses of subparallel crystals / Sheaf-like bundles / fine inclusions in Goethite</td>
+<td>Concentric and Botryoidal textures common</td>
+<td>Bornite Chalcocite Copper Covellite Cuprite Galena Goethite Limonite Pyrite Tennantite Tenorite</td>
+<td>None</td>
+<td>Low to Moderate 18-39%</td>
+<td>Moderate (412-488)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='digenite' scope='row'>Digenite </th>
+<td><strong></strong>Cu<sub>9</sub>S<sub>5</sub></td>
+<td>Grayish Blue </td>
+<td>C to Galena, Bornite: Blue / C to Chalcocite: darker Blue</td>
+<td>None </td>
+<td>Isotropic / Weakly anomalous  </td>
+<td>~Chalcocite ~Galena</td>
+<td>Irregular aggregates of Anhedral grains with lamellar intergrowths (with Cu-Sulphides or Bornite)</td>
+<td>Alters to Covellite</td>
+<td>Chalcopyrite Enargite Pyrite Tetrahedrite</td>
+<td>None</td>
+<td>Low 19%</td>
+<td>Extra Soft to Soft (86-106)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='dyscrasite' scope='row'>Dyscrasite </th>
+<td>Ag<sub>3</sub>Sb</td>
+<td>White </td>
+<td>C to Galena: Creamy White  / C to Silver: slightly Grayer / C to Antimony: slightly Creamy</td>
+<td>Weak / White to Creamy White </td>
+<td>Weak to distinct </td>
+<td>&gt;Galena &gt;Silver &lt;Chalcopyrite</td>
+<td>Euhedral Plate-like / Square crystals / Aggregates of Anhedral crystals</td>
+<td></td>
+<td>Arsenic Cobaltite Galena Pyrite</td>
+<td>None</td>
+<td>High 60%</td>
+<td>Soft (153-179)</td>
+<td>Orthorhombic</td>
+<td>The “Dyscrasite"  of Cobalt, Ontario, Canada is not Dyscrasite. It's Allargentum</td>
+</tr>
+
+<tr>
+<th id='enargite' scope='row'>Enargite </th>
+<td><strong></strong>Cu<sub>3</sub>AsS<sub>4</sub></td>
+<td>Pinkish Gray to Pinkish Brown / darker in Oil</td>
+<td>C to Bornite: Pinkish White / C to Chalcocite, Galena: Pinkish to Grayish Brown</td>
+<td>Distinct in oil: (//a) Grayish Pink (//b) Pinkish Gray (//c) Grayish Violet </td>
+<td>Strong / Blue, Green, Red, Orange </td>
+<td>&gt;Galena &gt;Chalcocite &gt;Bornite ~Tennantite &lt;Sphalerite</td>
+<td>Anhedral to Subhedral grains</td>
+<td>Cleavage / No Twinning</td>
+<td>Arsenopyrite Bornite Chalcocite Chalcopyrite Covellite Galena Pyrite Sphalerite Tennantite</td>
+<td>Rare / Deep Red</td>
+<td>Low 24%</td>
+<td>Soft (285-327)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='famatinite' scope='row'>Famatinite </th>
+<td><strong></strong>Cu<sub>3</sub>SbS<sub>4</sub></td>
+<td>Pale Pinkish Orange </td>
+<td>C to Enargite: lighter</td>
+<td>Distinct to strong in oil / Orange-Brown to Grayish Violet </td>
+<td>Very Strong / Brown to Gray-Green </td>
+<td>&gt;Bornite &gt;Chalcopyrite ~Enargite &lt;Sphalerite</td>
+<td>Anhedral to Euhedral grains</td>
+<td>Polysynthetic Twinning common / Star-shaped patterns may occur</td>
+<td>Bornite Chalcocite Chalcopyrite Enargite Galena Proustite Pyrargyrite Pyrite Sphalerite Tetrahedrite</td>
+<td>None</td>
+<td>Low 24%</td>
+<td>Soft (205-397)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='freibergite' scope='row'>Freibergite </th>
+<td>Ag-Tetrahedrite</td>
+<td>Gray / faint Yellow-Brown tint in Oil </td>
+<td>C to Proustite: Brownish / C to Galena: Grayish Brown / C to Sphalerite: lighter</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Ag-sulfosalts &lt;Galena &lt;Sphalerite</td>
+<td>Irregular masses / inclusions of Anhedral crystals </td>
+<td></td>
+<td>Argentite Bornite Chalcopyrite Co-Fe-Ni Arsenides Enargite Galena Proustite Silver</td>
+<td>Rare / Brownish Red when visible</td>
+<td>Moderate 32%</td>
+<td>Soft (263-340)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='galena' scope='row'>Galena 
+
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Galena in PPL. Note the triangular pits.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><strong></strong>PbS</td>
+<td>White / sometimes with Pink tint </td>
+<td>C to Sphalerite: White / C to Tennantite: Pinkish</td>
+<td>None </td>
+<td>Isotropic / Weakly anomalous</td>
+<td>&gt;Proustite ~Chalcopyrite &lt;Tetrahedrite</td>
+<td>Anhedral masses / Euhedral cubes</td>
+<td>Perfect cleavage usually visible / <strong>Triangular pits</strong></td>
+<td>Often contains inclusions of Chalcopyrite Pb-Bi and Pb-Sb Sulfosalts Silver Sphalerite Tetrahedrite / May occur as inclusions in Chalcopyrite Sphalerite</td>
+<td>None</td>
+<td>Moderate 42%</td>
+<td>Extra Soft (59-65)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='gersdorffite' scope='row'>Gersdorffite </th>
+<td><strong></strong>NiAsS</td>
+<td>White with Yellow or Pink tint </td>
+<td>C to Skutterudite: more Yellow / C to Linnaeite: less Pink / C to Niccolite: Blueish</td>
+<td>None </td>
+<td>Isotropic / Weakly anomalous</td>
+<td>&gt;Linnaeite ~Loellingite &lt;Pyrite</td>
+<td>Euhedral crystals</td>
+<td>Cleavage common / may show zonal growth</td>
+<td>Bismuth Bornite Chalcopyrite Cobaltite Niccolite Pyrite Silver Skutterudite Uraninite</td>
+<td>None</td>
+<td>High 54%</td>
+<td>Hard (844-935)</td>
+<td>Cubic</td>
+<td>Sometimes occurs as pseudoeutectic intergrowths with Niccolite, Maucherite, Pyrrhotite, Chalcopyrite</td>
+</tr>
+
+<tr>
+<th id='glaucodcot' scope='row'>Glaucodcot </th>
+<td><strong></strong>(Co,Fe)AsS</td>
+<td>White to light Cream </td>
+<td>C to Arsenopyrite: more Blueish White</td>
+<td>Weak / Weaker than Arsenopyrite </td>
+<td>Distinct / less than for Arsenopyrite </td>
+<td>&lt;Arsenopyrite &lt;Cobaltite</td>
+<td>Subhedral to Euhedral crystals</td>
+<td>Often with inclusions</td>
+<td>Arsenopyrite Cobaltite Galena Niccolite Pyrite Rammelsbergite Safflorite Skutterudite</td>
+<td>None</td>
+<td>Moderate 50%</td>
+<td>Very Hard (1097-1115)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='goethite' scope='row'>Goethite </th>
+<td><em></em>FeO&bull;OH</td>
+<td>Gray with Blueish tint </td>
+<td>C to Sphalerite: more Blueish / C to Hematite: darker / C to Lepidocrocite: darker</td>
+<td>Weak in air; distinct in oil but often masked by internal reflections </td>
+<td>Distinct / Gray-Blue, Gray-Yellow, Brownish </td>
+<td>~Lepidocrocite &lt;Magnetite &lt;Hematite</td>
+<td>Porous Colloform bands with radiating Fibrous texture / Porous pseudomorphs after Pyrite</td>
+<td>Nearly always secondary as veins, fracture fillings, or Botryoidal coatings</td>
+<td>Chalcopyrite Galena Hematite Lepidocrocite Mn-Oxides Pyrite Pyrite Pyrrhotite Sphalerite</td>
+<td><strong>Common / Brownish Yellow to Reddish Brown</strong></td>
+<td>Low 15%</td>
+<td>Moderate (667)</td>
+<td>Orthorhombic</td>
+<td>Internal reflection colours helps differentiate Goethite and Lepidocrocite</td>
+</tr>
+
+<tr>
+<th id='gold' scope='row'>Gold 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Gold in PPL. The high reflectivity makes the image look a bit washed out.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><small></small>Au</td>
+<td><strong>Bright Golden Yellow</strong></td>
+<td>C to Chalcopyrite: no Greenish tint</td>
+<td>None </td>
+<td>Isotropic / Incomplete extinction </td>
+<td>&gt;Galena &lt;Tetrahedrite &lt;Chalcopyrite</td>
+<td>Isolated grains / small veins</td>
+<td></td>
+<td>Arsenopyrite Chalcopyrite Pyrite</td>
+<td>None</td>
+<td>High <strong>77-88%</strong></td>
+<td>Extra Soft (53-58)</td>
+<td>Cubic</td>
+<td>Addition of Silver to form Electrum changes color to whitish and increases reflectivity</td>
+</tr>
+
+<tr>
+<th id='graphite' scope='row'>Graphite 
+  <div class='tooltipe'onmouseover="load_videoP(this)" ><i class="far fa-play-circle"></i>
+    <span class='tooltiptexte'>
+      <b> </b>
+      <figcaption>Graphite in PPL. Note how it occurs as isolated laths.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Graphite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><small></small>C</td>
+<td>Brownish Gray to Grayish Black</td>
+<td>C to Molybdenite: darker</td>
+<td>Very strong / Brownish Gray to Grayish black</td>
+<td>Very Strong / straw Yellow to Brown or Violet Gray </td>
+<td>&lt;Almost all minerals</td>
+<td>small Plates / <strong>isolated Laths</strong> / bundles of blades</td>
+<td>Basal cleavage may be visible / Undulose Extinction common</td>
+<td>Inclusions in Magnetite Pyrite Pyrrhotite Sphalerite</td>
+<td>None</td>
+<td>Low 6-27%</td>
+<td>Extra Soft (42705)</td>
+<td>Hexagonal</td>
+<td>Much more common than Molybdenite</td>
+</tr>
+
+<tr>
+<th id='hausmannite' scope='row'>Hausmannite </th>
+<td><em></em>Mn<sub>3</sub>O<sub>4</sub></td>
+<td>Blueish to Brownish Gray </td>
+<td>C to Jacobsite: Grayer / C to Bixbyite: darker / C to Braunite: less Brown</td>
+<td>Very distinct in oil / Blueish Gray to Brownish Gray </td>
+<td>Strong / Yellow Brown to Blueish Gray </td>
+<td>&gt;Manganite &gt;Pyrolusite &lt;Jacobsite &lt;Bixbyite &lt;Braunite</td>
+<td>Coarse-grained equigranular Anhedral crystals / often in veinlets</td>
+<td>Irregular Twinning / alters to Pyrolusite and Psilomelane</td>
+<td>Mn-Oxides</td>
+<td>Common / Blood Red, especially in oil</td>
+<td>Low 16%</td>
+<td>Moderate (437-572)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='hematite' scope='row'>Hematite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Hematite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Hematite in XP.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td><em></em>&alpha;-Fe<sub>2</sub>O<sub>3</sub></td>
+<td>Gray</td>
+<td>C to Ilmenite, Magnetite: White / C to Pyrite: Blueish Gray / C to Goethite, Lepidocrocite: White</td>
+<td>Weak </td>
+<td>Distinct / Gray-Blue, Gray-Yellow </td>
+<td>&gt;Magnetite &lt;Pyrite</td>
+<td>Bladed or Needle-like subparallel radiating aggregates</td>
+<td>Lamellar Twinning / Exsolution lenses or lamellae common in Ilmenite or Magnetite</td>
+<td>Bornite Cassiterite Chalcopyrite Magnetite Pyrite Rutile Sphalerite Umenite</td>
+<td>Common / Deep Red</td>
+<td>Low 25-30%</td>
+<td> (1000-1100)</td>
+<td>Hexagonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='idaite' scope='row'>Idaite </th>
+<td><strong></strong>Cu<sub>5</sub>FeS<sub>6</sub> to Cu<sub>3</sub>FeS<sub>4</sub></td>
+<td><strong> Reddish Orange</strong> / Red-Brown to Yellowish Gray </td>
+<td></td>
+<td>Strong Reddish Orange / Red-Brown to Yellowish Gray </td>
+<td>Strong to Extreme /<strong>Green</strong> or Gray-Green </td>
+<td>&gt;Covellite</td>
+<td>Tabular crystals with Covellite, Pyrite, or Bornite if Hypogene / Lamellae and veinlets in Bornite if Supergene</td>
+<td></td>
+<td>Bornite Covellite Pyrite</td>
+<td>None</td>
+<td>Low to Moderate 27-34%</td>
+<td>Soft (176-260)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='ilmenite' scope='row'>Ilmenite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Ilmenite in PPL. Note the hematite exsolution which is common.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Ilmenite in XP.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><em></em>FeTiO<sub>3</sub></td>
+<td>Brownish with Pink or Violet tint </td>
+<td>C to Magnetite: darker, Brownish</td>
+<td>Distinct / Pinkish Brown / dark Brown </td>
+<td>Strong / Greenish Gray to Brownish Gray </td>
+<td>&gt;Magnetite &lt;Hematite</td>
+<td>Subhedral to Anhedral grains / Exsolution lamellae or lenses in Hematite or Magnetite </td>
+<td>Lamellar Twinning</td>
+<td>Chromite Hematite Magnetite Pentlandite Pyrite Pyrrhotite Rutile Tantalite</td>
+<td>Rare / dark Brown</td>
+<td>Low 16%</td>
+<td>Moderate (566-698)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='iron' scope='row'>Iron </th>
+<td><small></small>Fe</td>
+<td>White / slight Blueish or Yellowish </td>
+<td>C to Pentlandite: much Whiter / C to Cohenite: slightly Blueish</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&lt;Troilite &lt;Magnetite &lt;Cohenite</td>
+<td>Irregular patches / drop-like grains in stony meteorites</td>
+<td>Intergrowths of &gamma;-Fe and &alpha;-Fe form Widmanst&aumlt;ten structures which are brought out by etching / Oxidizes to Hematite, Goethite, Lepidocrocite</td>
+<td>Chromite Copper Ilmenite Schreibersite Troilite</td>
+<td>None</td>
+<td>High 58%</td>
+<td>Soft (110-117)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='jacobsite' scope='row'>Jacobsite </th>
+<td><em></em>(Fe,Mn)<sub>2</sub>O<sub>4</sub></td>
+<td>Rose Brown to Brownish Gray </td>
+<td>C to Magnetite, Braunite: Olive-Green / C to Hausmannite: less Gray / C to Bixbyite: Olive-Gray</td>
+<td>None </td>
+<td>Isotropic / Weakly anomalous</td>
+<td>~Magnetite &lt;Braunite</td>
+<td>Anhedral grains / rounded Subhedral crystals</td>
+<td>Alters to other Fe-Mn minerals</td>
+<td>Occurs with and/or alters to Goethite Hematite Psilomelane Pyrolusite</td>
+<td>Common / Deep Red, especially when Mn-rich</td>
+<td>Low 21%</td>
+<td>Hard (720-813)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='jamesonite' scope='row'>Jamesonite </th>
+<td><strong></strong>Pb<sub>4</sub>FeSb<sub>6</sub>S<sub>14</sub></td>
+<td>White </td>
+<td>C to Galena: similar or slightly Greenish / C to Stibnite: lighter</td>
+<td>Strong / White to Yellow Green </td>
+<td>Strong / Gray, Tan, Brown, Blue </td>
+<td>&lt;Galena</td>
+<td>Needle or Lath-like crystals / Bundles</td>
+<td>Cleavage parallel to long dimension / Twinning</td>
+<td>Arsenopyrite Boulangerite Chalcopyrite Galena Pyrargyrite Pyrite Sphalerite Tetrahedrite</td>
+<td>Reddish in Bi-Jamesonite</td>
+<td>Moderate 36-44%</td>
+<td>Extra Soft (66-86)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='kamacite' scope='row'>Kamacite &alpha;-Fe  </th>
+<td><small></small>&alpha;-Fe</td>
+<td> &alpha;-Fe contains &lt; ~6% Ni and is slightly Blueish</td>
+<td>C to Pentlandite: much Whiter / C to Cohenite: slightly Blueish</td>
+<td>None </td>
+<td>Isotropic </td>
+<td></td>
+<td>Fine exsolution of Cohenite occurs in &alpha;-Fe</td>
+<td>Intergrowths of &gamma;-Fe and &alpha;-Fe form Widmanst&aumlt;ten structures which are brought out by etching / Oxidizes to Hematite, Goethite, Lepidocrocite</td>
+<td>Chromite Copper Ilmenite Schreibersite Troilite</td>
+<td>None</td>
+<td>High 58%</td>
+<td>Soft (110-117)</td>
+<td>Cubic</td>
+<td>Found in Iron meteorites / Rare on earth / cf. Iron</td>
+</tr>
+
+<tr>
+<th id='kobellite' scope='row'>Kobellite </th>
+<td><strong></strong>Pb<sub>2</sub>(Bi,Sb)<sub>2</sub>S<sub>5</sub></td>
+<td>White </td>
+<td>C to Galena: slightly darker</td>
+<td>Distinct / Greenish White to Violet-Gray </td>
+<td>Distinct / Gray to Gray-Brown </td>
+<td>&gt;Bismuth &lt;Galena</td>
+<td>Granular to tabular aggregates</td>
+<td>Well developped cleavage / Twinning / Intergrowths with Tetrahedrite</td>
+<td>Arsenopyrite Bismuth Bismuthinite Chalcopyrite Pyrite Pyrrhotite</td>
+<td>None</td>
+<td>Moderate 44%</td>
+<td>Extra Soft to Soft (100-117)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='lepidocrocite' scope='row'>Lepidocrocite </th>
+<td><em></em>&gamma;-FeO&bull;OH</td>
+<td>Grayish White</td>
+<td>C to Goethite: lighter and Whiter / C to Hematite: Greenish tint</td>
+<td>Weak to distinct </td>
+<td>Strong/ Gray</td>
+<td>&lt;Goethite</td>
+<td></td>
+<td>Occurs in Crusts and veinlets / Porous pseudomorphs</td>
+<td></td>
+<td>Common / Reddish</td>
+<td>Low 11-18%</td>
+<td>Moderate (402)</td>
+<td>Orthorhombic</td>
+<td>Internal reflection colours helps differentiate Goethite and Lepidocrocite / From the weathering Iron oxides and sulphides</td>
+</tr>
+
+<tr>
+<th id='linnaeite' scope='row'>Linnaeite </th>
+<td><strong></strong>Co<sub>3</sub>S<sub>4</sub></td>
+<td>Creamy White</td>
+<td>C to Skutterudite: Grayish White  / C to Ullmanite, Gersdorffite: Creamy or Yellowish</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Chalcopyrite &gt;Sphalerite &lt;Pyrite</td>
+<td>Euhedral crystals / Subhedral aggregates</td>
+<td>May have lamellar intergrowths with associated minerals</td>
+<td>Bismuth Bornite Chalcopyrite Covellite Millerite Niccolite Pyrite Pyrrhotite Safflorite</td>
+<td>None</td>
+<td>Moderate 50%</td>
+<td>Moderate (450-613)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='loellingite' scope='row'>Loellingite </th>
+<td>FeAs<sub>2</sub></td>
+<td>White with Yellowish tint</td>
+<td>C to Arsenopyrite: less Yellow / C to Rammelsbergite, Safflorite: similar</td>
+<td>Weak but distinct / Blueish White to Yellowish White </td>
+<td>Very Strong / Orange-Yellow, Red-Brown, Blue, Green </td>
+<td>&gt;Chalcopyrite &gt;Sphalerite &lt;Arsenopyrite</td>
+<td>Interlocking to radiating aggregates of Euhedral crystals / Sometimes as skeletal crystals</td>
+<td>Twinning common</td>
+<td>Antimony Arsenic Arsenides Arsenopyrite Chalcopyrite Dyscrasite Galena Uraninite</td>
+<td>None</td>
+<td>High 52%</td>
+<td>Hard (859-920)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='mackinawite' scope='row'>Mackinawite </th>
+<td><strong></strong>Fe<sub>1+x</sub>S</td>
+<td>Pinkish to Reddish Gray </td>
+<td>C to Pyrrhotite: similar</td>
+<td>Distinct to Strong / Pinkish tray to Gray </td>
+<td>Very Strong / Grayish White, Blueish, Brownish </td>
+<td>~Pyrrhotite</td>
+<td>Small worm-like grains / Lamellae / less commonly as small Plates</td>
+<td>Most easily found as bright grains under nearly crossed polars</td>
+<td>Chalcopyrite Cubanite Pentlandite Pyrrhotite</td>
+<td>None</td>
+<td>Low to Moderate 16-43%</td>
+<td>Extra Soft to Soft (74-181)</td>
+<td>Tetragonal</td>
+<td>Valleriite's anisotropy has a more pronounced orange tint</td>
+</tr>
+
+<tr>
+<th id='maghemite' scope='row'>Maghemite </th>
+<td><em></em>&gamma;-Fe<sub>2</sub>O<sub>3</sub></td>
+<td>Blueish Gray </td>
+<td>C to Goethite: Gray, lighter / C to Hematite: Blueish Gray / C to Magnetite: Blueish</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Magnetite &lt;Hematite</td>
+<td>Lamellae / porous patches</td>
+<td>Forms as a rare oxidation product of Magnetite</td>
+<td></td>
+<td>Rare / Brownish Red</td>
+<td>Low 23%</td>
+<td>Moderate (412)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='magnetite' scope='row'>Magnetite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Magnetite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td><em></em>Fe<sub>3</sub>O<sub>4</sub></td>
+<td>Gray with Brownish tint </td>
+<td>C to Hematite: darker Brown / C to Ilmenite: less Pink / C to Sphalerite: lighter</td>
+<td>None </td>
+<td>Isotropic / Weakly anomalous</td>
+<td>&gt;Pyrrhotite &lt;Ilmenite &lt;Hematite &lt;Pyrite</td>
+<td> Euhedral / Subhedral / Octahedral Grains / skeletal crystals / Anhedral polycrystalline aggregates</td>
+<td>Often contains exsolution or oxidation lamellae of Hematite Ilmenite and ulv&ouml;spinel / Alters to Hematite and Goethite</td>
+<td>Bornite Chalcopyrite Galena Pentlandite Pyrite Pyrrhotite Sphalerite</td>
+<td>None</td>
+<td>Low 20%</td>
+<td>Moderate to Hard (681-792)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='manganite' scope='row'>Manganite </th>
+<td><em></em>MnO(OH)</td>
+<td>Gray to Brownish Gray </td>
+<td>C to Pyrolusite: darker Gray</td>
+<td>Weak / Brownish Gray </td>
+<td>Strong / Yellow, Blueish Gray, Violet-Gray </td>
+<td>&lt;Hausmannite &lt;Jacobsite</td>
+<td>Prismatic to Lamellar crystal aggregates</td>
+<td>Cleavage / Twinning / often intergrown with Pyrolusite and Psilomelane</td>
+<td>Braunite Goethite Hausmannite</td>
+<td>Common / Blood Red</td>
+<td>Low 14-21%</td>
+<td>Moderate to Hard (630-743)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='marcasite' scope='row'>Marcasite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Marcasite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Marcasite in XP.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><strong></strong>FeS<sub>2</sub></td>
+<td>Yellowish White with slight Pinkish or Greenish tint </td>
+<td>C to Pyrite: Whiter / C to Arsenopyrite: Greenish Yellow</td>
+<td>Strong / Brownish to Yellowish Green </td>
+<td><strong>Strong / Blue, Green-Yellow, Purple-Gray</strong></td>
+<td>~Pyrite</td>
+<td>Subhedral / Lamellar intergrowths with Pyrite in Euhedral crystals / Radiating Colloform bands</td>
+<td>Twinning</td>
+<td>Pyrite and other common Sulphides</td>
+<td>None</td>
+<td>Moderate to High 49-56%</td>
+<td>Very Hard (1288-1681)</td>
+<td>Orthorhombic</td>
+<td>Forms as hypogene crystals and as supergene veinlets in Pyrrhotite and Iron oxides</td>
+</tr>
+
+<tr>
+<th id='maucherite' scope='row'>Maucherite </th>
+<td>Ni<sub>11</sub>As<sub>8</sub></td>
+<td>White</td>
+<td>C to Cobaltite: similar / C to Loellingite: Brownish Gray / C to Breithauptite: Blueish Gray</td>
+<td>None </td>
+<td>Weak to distinct in oil / Gray </td>
+<td>&gt;Chalcopyrite &gt;Sphalerite &lt;Safflorite &lt;Loellingite</td>
+<td>Euhedral crystals / Anhedral aggregates</td>
+<td>Twinning / May be intergrown with Niccolite or Gersdorffite</td>
+<td>Chalcopyrite Cubanite Siegenite</td>
+<td>None</td>
+<td>Moderate 48%</td>
+<td>Moderate to Hard (623-724)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='mawsonite' scope='row'>Mawsonite </th>
+<td><strong></strong>Cu<sub>7</sub>Fe<sub>2</sub>SnS<sub>10</sub></td>
+<td>Brownish Orange </td>
+<td></td>
+<td>Strong / Orange to Brown </td>
+<td>Very Strong / Straw-Yellow to Royal Blue </td>
+<td>&gt;Bornite</td>
+<td>Irregular inclusions</td>
+<td>Inclusion in Bornite</td>
+<td>Chalcocite Chalcopyrite Enargite Galena Pyrite Stannite Tetrahedrite</td>
+<td>None</td>
+<td>Low to Moderate 27-35%</td>
+<td>Soft (166-210)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='miargyrite' scope='row'>Miargyrite </th>
+<td><strong></strong>AgSbS<sub>2</sub></td>
+<td>in Air: White / in Oil: Blueish tint </td>
+<td>C to Galena: darker with Green-Gray tint / C to Freibergite: Blueish / C to Pyrargyrite: Whiter</td>
+<td>Moderate / White to Blueish Gray </td>
+<td>Strong / Blue-Gray to Brownish / masked by internal reflections </td>
+<td>&gt;Pyrargyrite &lt;Stephanite &lt;Galena</td>
+<td>Granular Anhedral aggregates</td>
+<td>Twinning</td>
+<td>Galena Polybasite Pyrargyrite Silver Sphalerite Stephanite Tetrahedrite</td>
+<td>Common / Deep Red</td>
+<td>Low to Moderate 30-35%</td>
+<td>Extra Soft to Soft (88-130)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='millerite' scope='row'>Millerite </th>
+<td><strong></strong>NiS</td>
+<td>Yellow </td>
+<td>C to Chalcopyrite: lighter, not Greenish / C to Linnaeite, Pentlandite: Yellower</td>
+<td>Distinct in oil / Yellow to Blue or Violet </td>
+<td>Strong / Lemon-Yellow to Blue or Violet </td>
+<td>&gt;Chalcopyrite &lt;Pentlandite</td>
+<td>Radiating aggregates / Anhedral Granular masses</td>
+<td>Twinning / Cleavage/ common as oriented intergrowths with Linnaeite, Violarite, Pyrrhotite</td>
+<td>Ni-bearing Sulphides often as replacement or alteration</td>
+<td>None</td>
+<td>Moderate to High 50-59%</td>
+<td>Soft (192-376)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='molybdenite' scope='row'>Molybdenite 
+  <div class='tooltipe'onmouseover="load_videoP(this)" ><i class="far fa-play-circle"></i>
+    <span class='tooltiptexte'>
+      <b> </b>
+      <figcaption>Molybdenite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Molybdenite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><strong></strong>MoS<sub>2</sub></td>
+<td>White to Gray with Blueish tint</td>
+<td>C to Graphite: lighter</td>
+<td><strong>Strong to Extreme</strong></td>
+<td><strong>Very Strong / White with Pinkish tint / dark Blue if polars not comptetely crossed</strong></td>
+<td><strong>&lt;Almost all minerals</strong></td>
+<td>Small deformed Plates / Irregular inclusions / Less commonly as Rosettes or Colloform bands</td>
+<td>Cleavage / Twinning / Undulose extinction / Often in veins</td>
+<td>Bismuth Bismuthinite Bornite Cassiterite Chalcopyrite Pyrite Sulphides Wolframite</td>
+<td>None</td>
+<td>Low to Moderate 19-39%</td>
+<td>Extra Soft (8-100)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='niccolite' scope='row'>Niccolite (nickeline) 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Niccolite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Niccolite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td>NiAs</td>
+<td>Yellowish Pink to Brownish Pink</td>
+<td>C to Maucherite, Skutterudite, Bismuth, Arsenic: more Pink / C to Breithauptite: Pinkish Yellow</td>
+<td>Strong</td>
+<td>Very Strong / Yellow, Greenish Violet-Blue, Blue-Gray </td>
+<td>&gt;Chalcopyrite &gt;Breithauptite &lt;Skutterudite &lt;Pyrite</td>
+<td>Isolated Subhedral and Euhedral crystals / Anhedral aggregates / Concentric bands / Complex intergrowths (with Pyrrhotite, Chalcopyrite, Maucherite)</td>
+<td>Commonly intergrown with Arsenides / Often twinned and in radial aggregates</td>
+<td>Intergrowths with Chalcopyrite Maucherite Pyrrhotite</td>
+<td>None</td>
+<td>Moderate to High 46-56%</td>
+<td>Soft (363-372)</td>
+<td>Hexagonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='orpiment' scope='row'>Orpiment </th>
+<td><strong></strong>As<sub>2</sub>S<sub>3</sub></td>
+<td>Gray </td>
+<td>C to Realgar: slightly lighter / C to Sphalerite: lighter</td>
+<td>Strong in Air: (//a) White; (//b) dull Gray / Reddish: (//c) dull Gray-White / in Oil: (//a) Gray-White; (//b) dark Gray; (//c) Gray-White </td>
+<td>Strong / in oil masked by internal reflections </td>
+<td>&gt;Realgar</td>
+<td>Tabular interlocking Anhedral masses / Needle or Lath-like crystals</td>
+<td>Often formed on Realgar</td>
+<td>Arsenic Arsenopyrite Enargite Loellingite Pyrite Realgar Sphalerite Stibnite</td>
+<td>Common and intense / White to Yellow</td>
+<td>Low 22-28%</td>
+<td>Extra Soft (22-58)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='para rammelsbergite' scope='row'>Para rammelsbergite </th>
+<td>NiAs<sub>2</sub></td>
+<td>Whiter than associated Co-Ni-Fe Arsenides </td>
+<td></td>
+<td>Very Weak to distinct / Yellowish to Blueish White </td>
+<td>Strong / less than Rammelsbergite and without Blue </td>
+<td>&gt;Niccolite &lt;Skutterudite</td>
+<td>Tabular crystals with rectangular outlines / Mosaics of intergrown crystals</td>
+<td>May be zoned / Twinning rare</td>
+<td>Cobaltite Gersdorffite Niccolite Proustite Pyrite Rammelsbergite Silver Skutterudite</td>
+<td>None</td>
+<td>High 59%</td>
+<td>Moderate to Hard (681-830)</td>
+<td>Orthorhombic</td>
+<td>Solid solution with Polybasite</td>
+</tr>
+
+<tr>
+<th id='pearcite' scope='row'>Pearcite </th>
+<td><strong></strong>Ag<sub>16</sub>As<sub>2</sub>S<sub>11</sub></td>
+<td>Gray </td>
+<td>C to Pyrargyrite: darker Brownish / C to Tetrahedrite: similar</td>
+<td>Air: Weak; oil: distinct / Green to Gray with Violet tint </td>
+<td>Blue, Gray, Yellow-Green, Brown / Air: Moderate / Oil: Strong</td>
+<td>&gt;Argentite ~Pyrargyrite &lt;Stephanite</td>
+<td>Platelike to equant grains</td>
+<td></td>
+<td>With, or in, Galena Pyrite Sphalerite Tetrahedrite </td>
+<td>Common / Deep Red</td>
+<td>Low 29%</td>
+<td>Soft (180-192)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='pentlandite' scope='row'>Pentlandite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Pentlandite in PPL. Note the subtle colour difference between the background Pyrrhotite.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Pentlandite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><strong></strong>(Fe,Ni)<sub>9</sub>S<sub>8</sub></td>
+<td>Light Creamy to Yellowish </td>
+<td>C to Pyrrhotite: lighter / C to Linnaeite: darker, not Pinkish</td>
+<td>None</td>
+<td>Isotropic </td>
+<td>&gt;Chalcopyrite &lt;Pyrrhotite</td>
+<td>Granular veinlets / “flames" / lamellae in Pyrrhotite or Chalcopyrite</td>
+<td>Alters to Violarite and Millerite along cracks and grain boundaries</td>
+<td>Cubanite Mackinawite Magnetite Pyrite</td>
+<td>None</td>
+<td>Moderate 47%</td>
+<td>Soft (268-285)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='platinum' scope='row'>Platinum </th>
+<td><small></small>Pt</td>
+<td>White </td>
+<td></td>
+<td>None</td>
+<td>Isotropic / Incomplete extinction </td>
+<td>&gt;Sphalerite &lt;Pyrrhotite</td>
+<td>Isolated Euhedral to Subhedral crystals</td>
+<td>May be zoned / exsolution Laths of Iridium and Osmium</td>
+<td>Chalcopyrite Chromite Magnetite Pentlandite Pyrrhotite</td>
+<td>None</td>
+<td>High 70%</td>
+<td>Soft (297-339)</td>
+<td>Cubic</td>
+<td>May occur with other small grains of Platinum minerals</td>
+</tr>
+
+<tr>
+<th id='polybasite' scope='row'>Polybasite </th>
+<td><strong></strong>Ag<sub>16</sub>Sb<sub>2</sub>S<sub>11</sub></td>
+<td>Gray </td>
+<td>C to Galena: darker / C to Pyrargyrite: darker Brownish / C to Tetrahedrite: similar</td>
+<td>Air: Weak; oil: distinct / Green to Gray with Violet tint </td>
+<td>Blue Gray, Yellow-Green, Brown / Air: moderate / Oil: Strong</td>
+<td>&gt;Argentite ~Pyrargyrite &lt;Stephanite</td>
+<td></td>
+<td>Forms complete solid solution with Pearcite</td>
+<td>Complete solid solution with Pearcite</td>
+<td>Common / Deep Red</td>
+<td>Low 30%</td>
+<td>Soft (108-141)</td>
+<td>Monoclinic</td>
+<td>Similar occurrences as Pearcite</td>
+</tr>
+
+<tr>
+<th id='proustite' scope='row'>Proustite </th>
+<td><strong></strong>Ag<sub>3</sub>AsS<sub>3</sub></td>
+<td>Blueish Gray </td>
+<td>C to Pyrargyrite: darker</td>
+<td>Distinct / Yellowish to Blueish Gray </td>
+<td>Strong / masked by internal reflection </td>
+<td>~Pyrargyrite</td>
+<td></td>
+<td>Forms complete solid solutions with Pyrargyrite</td>
+<td>Complete solid solutions with Pyrargyrite</td>
+<td>Always / Scarlet Red</td>
+<td>Low 23-28%</td>
+<td>Extra Soft to Soft (70-105)</td>
+<td>Trigonal</td>
+<td>Same characteristics as Pyrargyrite except that Proustite occurs in more As-rich environments</td>
+</tr>
+
+<tr>
+<th id='psilomelane' scope='row'>Psilomelane (General name for massive, hard manganese oxides) </th>
+<td><em></em>BaMn<sup>2+</sup>Mn<sup>4+</sup><sub>8</sub>O<sub>16</sub>(OH)<sub>4</sub></td>
+<td>Blueish Gray to Grayish White </td>
+<td>C to Pyrolusite: darker / C to Braunite, Manganite, Jacobsite, Hausmannite, Bixbyite: lighter</td>
+<td>Strong / White to Blueish Gray </td>
+<td>Strong / White to Gray </td>
+<td></td>
+<td>Very fine acicular crystals in concentric layers / Botryoidal masses </td>
+<td>Often intergrown with Pyrolusite and Cryptomelane</td>
+<td>Mn-Oxides</td>
+<td>Rare / Brown</td>
+<td>Low 15-30%</td>
+<td>Soft to Hard (203-813)</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th id='pyrargyrite' scope='row'>Pyrargyrite </th>
+<td><strong></strong>Ag<sub>3</sub>SbS<sub>3</sub></td>
+<td>Blueish Gray</td>
+<td>C to Proustite: slightly lighter / C to Galena: Grayish Blue</td>
+<td>Distinct to Strong </td>
+<td>Strong / Gray to dark Gray / in oil, masked by internal reflections </td>
+<td>&gt;Polybasite &lt;Galena</td>
+<td>Irregular grains / Aggregates</td>
+<td>Twinning / Zonal Textures</td>
+<td>Arsenopyrite Chalcopyrite Galena Ni-Co-Fe Arsenides Pyrite Sb-sulfosalts Sphalerite Tetrahedrite</td>
+<td>Common / Intense Red</td>
+<td>Low 27%</td>
+<td>Soft (107-144)</td>
+<td>Trigonal</td>
+<td>Solid solution with Proustite</td>
+</tr>
+
+<tr>
+<th id='pyrite' scope='row'>Pyrite   <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+  <span class='tooltiptexte'>
+    <b>n </b>
+    <figcaption>Pyrite in PPL.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><strong></strong>FeS<sub>2</sub></td>
+<td><strong>Yellowish White</strong></td>
+<td>C to Marcasite: Yellower / C to Arsenopyrite: Creamy Yellow / C to Chalcopyrite: lighter</td>
+<td>None </td>
+<td><strong> Often Weak / Blue-Green to Orange-Red </strong></td>
+<td>&gt;Arsenopyrite &gt;Marcasite &lt;Cassiterite</td>
+<td>Euhedral cubes and pyritohedra /  Anhedral crystalline masses / Colloform bands of very fine grains</td>
+<td>Growth zoning / Twinning</td>
+<td>Super common, occurs with most ore minerals</td>
+<td>None</td>
+<td>High 52%</td>
+<td><strong>Very Hard</strong> (1505-1620)</td>
+<td>Cubic</td>
+<td>The most abundant Sulphide &trade;</td>
+</tr>
+
+<tr>
+<th id='pyrolusite' scope='row'>Pyrolusite </th>
+<td><em></em>MnO<sub>2</sub></td>
+<td>Creamy White </td>
+<td>C to Magnetite, Hematite: Yellowish / C to Manganite: White</td>
+<td>Distinct in oil / Yellowish White to Gray-White </td>
+<td>Very Strong / Yellowish, Brownish, Blue </td>
+<td>Very variable depending on grain size and orientation</td>
+<td>Coarse-grained tabular crystals / banded aggregates</td>
+<td>Cleavage / Twinning / Very fine grained material may be intergrown with Psilomelane, Hematite, Fe-hydroxides</td>
+<td>Bixbyite Braunite Magnetite Manganite</td>
+<td>None</td>
+<td>Low to Moderate 28-40%</td>
+<td>Soft (146-243)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='pyrrhotite' scope='row'>Pyrrhotite (Hexagonal) 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Pyrrhotite in PPL. Note the subtle pink-ish colour compared to the neighbouring chalcopyrite.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Anisotropic pyrrhotite surrounding an isotropic pentlandite in XP.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><strong></strong>Fe<sub>1-x</sub>S / (~Fe<sub>9</sub>S<sub>10</sub>)</td>
+<td>Creamy Pinkish Brown </td>
+<td>C to Pentlandite: darker / C to Cubanite: more Pinkish</td>
+<td>Very distinct / Creamy Brown to Reddish Brown </td>
+<td>Very Strong / Yellow-Gray, Grayish Blue </td>
+<td>&gt;Chalcopyrite ~Pentlandite &lt;Pyrite</td>
+<td>Anhedral Granular masses</td>
+<td>Twinning common, especially where stressed / Lamellar exsolution intergrowths of hexagonal and monoclinic forms common / Weathering of hexagonal Pyrrhotite yields a rim of monoclinic Pyrrhotite (usually slightly lighter in colour)</td>
+<td>Most other common Sulphides</td>
+<td>None</td>
+<td>Moderate 36%</td>
+<td>Soft (230-259)</td>
+<td>Hexagonal</td>
+<td>Pentlandite exsolution lamellae and flames common in Ni-ores / often contains Mackinawite lamellae</td>
+</tr>
+
+<tr>
+<th id='pyrrhotite' scope='row'>Pyrrhotite (Monoclinic) 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Pyrrhotite in PPL. Note the subtle pink-ish colour compared to the neighbouring chalcopyrite.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="load_videoX(this)"><i class="fas fa-play-circle"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Anisotropic pyrrhotite surrounding an isotropic pentlandite in XP.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><strong></strong>(~Fe<sub>7</sub>S<sub>8</sub>) </td>
+<td>Creamy Pinkish Brown </td>
+<td>C to Pentlandite: darker / C to Cubanite: more Pinkish</td>
+<td>Very distinct / Creamy Brown to Reddish Brown </td>
+<td>Very Strong / Yellow-Gray, Grayish Blue </td>
+<td>&gt;Chalcopyrite ~Pentlandite &lt;Pyrite</td>
+<td>Anhedral Granular masses</td>
+<td>Twinning common, especially where stressed / Lamellar exsolution intergrowths of hexagonal and monoclinic forms common / Weathering of hexagonal Pyrrhotite yields a rim of monoclinic Pyrrhotite (usually slightly lighter in colour)</td>
+<td>Most other common Sulphides</td>
+<td>None</td>
+<td>Moderate 36-42%</td>
+<td>Soft to Moderate (373-409)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='rammelsbergite' scope='row'>Rammelsbergite </th>
+<td>NiAs<sub>2</sub></td>
+<td>White more so than other Ni-Co-Fe Arsenides </td>
+<td></td>
+<td>Very Weak in air; distinct in oil / Yellowish to Blueish </td>
+<td>Strong / Pinkish, Brownish, Greenish, Blueish </td>
+<td>~Skutterudite &lt;Safflorite &lt;Loellingite</td>
+<td>Fine-grained aggregates of interlocking crystals / Zoning / Spherulitic radiating textures / Fibres</td>
+<td>Simple or complex Twinning / May be intergrown with Niccolite and Co-Ni-Fe Arsenides / Sometimes as overgrowths on dendrites of Silver or Bismuth</td>
+<td>Bismuth Co-Ni-Fe Arsenides Niccolite Silver</td>
+<td>None</td>
+<td>High 57%</td>
+<td>Moderate to Hard (630-758)</td>
+<td>Orthorhombic</td>
+<td>Similar to Safflorite</td>
+</tr>
+
+<tr>
+<th id='realgar' scope='row'>Realgar </th>
+<td><strong></strong>As<sub>4</sub>S<sub>4</sub> or AsS</td>
+<td>Dull Gray</td>
+<td>C to Sphalerite: similar  / C to Cinnabar: darker / Orpiment slightly darker</td>
+<td>Weak but distinct / Gray with Reddish to Blueish tint </td>
+<td>Strong / in oil masked by internal reflections</td>
+<td>&lt;Orpiment</td>
+<td>Irregular / Plate-like masses with Orpiment</td>
+<td></td>
+<td>Arsenic Arsenopyrite As-sulfosalts Enargite Proustite Pyrite Stibnite Tennantite</td>
+<td>Common and intense / Yellowish Red</td>
+<td>Low 21%</td>
+<td>Extra Soft (47-60)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='rutile' scope='row'>Rutile </th>
+<td><em></em>TiO<sub>2</sub></td>
+<td>Gray / faint Blueish tint </td>
+<td>C to Magnetite, Chromite: similar / C to Ilmenite: no Brownish tint / C to Cassiterite: lighter</td>
+<td>Distinct </td>
+<td>Strong / masked by internal reflections </td>
+<td>&gt;Ilmenite &lt;Hematite</td>
+<td>Euhedral to Subhedral / Needlelike</td>
+<td>Common in hydrothermally altered rocks</td>
+<td>Ilmenite Tantalite Ti-Hematite Ti-Magnetite</td>
+<td>Common and intense / White, Yellowish, Reddish Brown</td>
+<td>Low 19%</td>
+<td>Hard (894-974)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='safflorite' scope='row'>Safflorite </th>
+<td>(Co,Fe,Ni)As<sub>2</sub></td>
+<td>White with Blueish tint </td>
+<td>C to Bismuth: Blueish / C to Silver: Grayish White</td>
+<td>Very Weak / Blueish to Gray </td>
+<td>Strong </td>
+<td>&gt;Skutterudite &lt;Loellingite</td>
+<td>Concentric layers of Radiating masses of Anhedral to Subhedral crystals / Euhedral crystals / Starlike triplets</td>
+<td>Twinning common</td>
+<td>Other Arsenides</td>
+<td>None</td>
+<td>High 54%</td>
+<td>Hard (792-882)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='scheelite' scope='row'>Scheelite </th>
+<td>CaWOs<sub>4</sub></td>
+<td>Gray-White / darker in Oil</td>
+<td>C to Gangue: similar in air / lighter in oil </td>
+<td>None</td>
+<td>Distinct / masked by internal reflections </td>
+<td>&lt;Wolframite</td>
+<td>Equant to Lath-like polycrystalline aggregates / Partial replacement of Wolframite</td>
+<td><strong>Fluoresces pale blue to yellow under UV light</strong> / Intergrown with Fe-oxides, Huebnerite, Ferberite, Cassiterite</td>
+<td> Intergrown with Cassiterite Fe-oxides Ferberite Huebnerite</td>
+<td>Common / White</td>
+<td>High 54%</td>
+<td>Soft to Moderate (383-464)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='schreibersite' scope='row'>Schreibersite </th>
+<td>(Fe,Ni)<sub>3</sub>P</td>
+<td> in Air: White / in Oil: Brownish Pink tint </td>
+<td>C to Cohenite: lighter / C to Iron: similar </td>
+<td>In oil distinct / Pinkish Brown to Yellowish </td>
+<td>Weak but distinct in oil </td>
+<td>&gt;Cohenite ~Iron</td>
+<td>Oriented Needle and tablet-like inclusions in Iron meteorites</td>
+<td>Inclusions in Iron in meteorites</td>
+<td></td>
+<td>None</td>
+<td>Low 10%</td>
+<td>Soft (125)</td>
+<td>Tetragonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='siegenite' scope='row'>Siegenite </th>
+<td><strong></strong>(Co,Ni)<sub>3</sub>S<sub>4</sub></td>
+<td>Creamy White with slight Pink tinge </td>
+<td>C to Cattierite: less Pinkish </td>
+<td>None </td>
+<td>lsotropic </td>
+<td>~Linnaeite</td>
+<td>Euhedral and Subhedral crystals / Anhedral polycrystalline aggregates</td>
+<td></td>
+<td>Cattierite Pyrite Uraninite Vaesite</td>
+<td>None</td>
+<td>Moderate 47%</td>
+<td>Moderate (459-548)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='silver' scope='row'>Silver </th>
+<td><small></small>Ag</td>
+<td>Bright White with Creamy tint / tarnishes rapidly </td>
+<td>C to Antimony, Arsenic: brighter and Creamy </td>
+<td>None </td>
+<td>Isotropic / Fine scratches often look Anisotropic</td>
+<td>&gt;Proustite &gt;Galena &lt;Tetrahedrite</td>
+<td>Irregular masses / veinlets / Inclusions / Dendrites within Arsenides</td>
+<td>Lamellar intergrowths with Allargentum / Incomplete extinction / Tarnishes rapidly</td>
+<td>Ag-sulfosalts Argentite Co-Fe-Ni Arsenides Cu-Sulphides Galena</td>
+<td>None</td>
+<td>High 93%</td>
+<td>Extra Soft (60-65)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='skutterudite' scope='row'>Skutterudite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Skutterudite in PPL with characteristic "teeth".&nbsp;</figcaption>
+    </span>
+  </div>
+</div>
+ </th>
+<td>(Co,Ni)As<sub>2-3</sub></td>
+<td>Cream-White to Grayish White / often in zones </td>
+<td>C to Cobaltite: White / C to Safflorite: Yellowish</td>
+<td>None </td>
+<td>Isotropic / sometimes weakly anomalous</td>
+<td>&gt;Linnaeite &lt;Arsenopyrite &lt;Pyrite ~Safflorite</td>
+<td>Characteristically radial blade-like crystals with well-developed growth zoning / Euhedral single crystals</td>
+<td>May be intergrown with Niccolite Bismuth other Co-Fe-Ni Arsenide</td>
+<td>Intergrowth with Bismuth Niccolite</td>
+<td>None</td>
+<td>High 55%</td>
+<td>Moderate to Hard (606-824)</td>
+<td>Cubic</td>
+<td>Occurs in Ag-Bi-U rich deposits</td>
+
+</tr>
+
+<tr>
+<th id='sphalerite' scope='row'>Sphalerite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Sphalerite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Sphalerite in XP. Note the internal reflections.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><strong></strong>(Zn,Fe)S</td>
+<td>Gray / sometimes with Brown tint </td>
+<td>C to Magnetite: darker </td>
+<td>None </td>
+<td>Isotropic / sometimes weakly anomalous</td>
+<td>&gt;Chalcopyrite &gt;Tetrahedrite &lt;Pyrrhotite &lt;Magnetite</td>
+<td>Irregular Anhedral masses</td>
+<td>Growth zoning of light and dark bands / Often featureless except for internal reflections / Commonly contains  inclusions of Chalcopyrite, Pyrrhotite, Galena, and less commonly, Stannite</td>
+<td>Chalcopyrite Galena Pyrite Pyrrhotite</td>
+<td>Common / Yellow-Brown to Reddish Brown</td>
+<td>Low 16%</td>
+<td>Soft (138-160)</td>
+<td>Cubic</td>
+<td>Internal reflections and the lack of cleavage allows you to distinguish from Magnetite</td>
+</tr>
+
+<tr>
+<th id='stannite' scope='row'>Stannite </th>
+<td><strong></strong>Cu<sub>2</sub>FeSnS<sub>4</sub></td>
+<td>Brownish Olive-Green</td>
+<td>C to Tetrahedrite: darker Brownish Gray / C to Sphalerite: lighter, Yellow-Brown to Olive-Green </td>
+<td>Distinct / light Brown to Brown-Olive-Gray </td>
+<td>Moderate / Yellow-Brown, Olive-Green, Violet-Gray </td>
+<td>&gt;Chalcopyrite &gt;Tetrahedrite &lt;Sphalerite</td>
+<td>Anhedral grains / Granular aggregates / oriented intergrowths with Chalcopyrite, Sphalerite and Tetrahedrite</td>
+<td>Cleavage / compound Twinning, sometimes in microline pattern</td>
+<td>Bismuth Chalcopyrite Sphalerite Tetrahedrite Tungsten</td>
+<td>None</td>
+<td>Low 26%</td>
+<td>Soft (140-326)</td>
+<td>Tetragonal</td>
+<td>Common with Bismuth and Tungsten minerals / In many ore types as a minor phase</td>
+</tr>
+
+<tr>
+<th id='stephanite' scope='row'>Stephanite </th>
+<td><strong></strong>Ag<sub>5</sub>SbS<sub>4</sub></td>
+<td>Gray with Pinkish Violet tint </td>
+<td>C to Galena: darker, Pinkish / C to Polybasite, Pyrargyrite: lighter</td>
+<td>Weak but distinct / Gray to Pinkish Gray </td>
+<td>Strong in oil / Violet to Green </td>
+<td>&gt;Polybasite &gt;Pyrargyrite &lt;Tetrahedrite</td>
+<td>Anhedral aggregates / Euhedral columnar crystals</td>
+<td>Compound Twinning common</td>
+<td>Arsenides Ni-Co-Fe Sulfosalts Silver</td>
+<td>None</td>
+<td>Low 28%</td>
+<td>Extra Soft to Soft (26-124)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='stibnite' scope='row'>Stibnite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Stibnite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Stibnite in XP.&nbsp;</figcaption>
+  </span>
+</div>  
+
+</th>
+<td><strong></strong>Sb<sub>2</sub>S<sub>3</sub></td>
+<td>White to Grayish White </td>
+<td>C to Bismuthinite: darker / C to Antimony: Grayish</td>
+<td>Strong / Grayish White to White </td>
+<td>Very Strong / often undulose / Blue, Gray, Brown, Pinkish Brown</td>
+<td>&gt;Orpiment &lt;Chalcopyrite</td>
+<td>Granular aggregates / Lath-like crystals often with deformation textures</td>
+<td>Pressure Twinning / Undulose Extinction / Deformation textures</td>
+<td>Chalcopyrite Pyrite Pyrrhotite Sphalerite</td>
+<td>None</td>
+<td>Low to Moderate 30-48%</td>
+<td>Extra Soft to Soft (48-153)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='stromeyerite' scope='row'>Stromeyerite </th>
+<td><strong></strong>AgCuS</td>
+<td>Gray with Violet Pinkish tint </td>
+<td>C to Chalcocite: Lavender-Gray </td>
+<td>Weak but distinct in oil / Gray-Brown to light Gray with Blue or Pink tint </td>
+<td>Strong / Light Violet, Purple, Brown, Orange-Yellow </td>
+<td>&lt;Galena &lt;Chalcocite</td>
+<td>Hypogene phase in Granular aggregates / Supergene phase in small veinlets</td>
+<td>Often intergrown with other Silver numerals</td>
+<td>Cu-Fe and Fe Sulphides Silver Sphalerite</td>
+<td>None</td>
+<td>Low to Moderate 26-31%</td>
+<td>Extra Soft (30-32)</td>
+<td>Orthorhombic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='sylvanite' scope='row'>Sylvanite </th>
+<td>(Au,Ag)Te<sub>2</sub></td>
+<td>Creamy White </td>
+<td>C to Galena: lighter </td>
+<td>Distinct / Creamy White to Brownish </td>
+<td>Strong / light Blueish Gray to dark Brown </td>
+<td>&gt;Argentite &lt;Pyrargyrite</td>
+<td>Skeletal blades</td>
+<td>Well-developed cleavage / characteristic polysynthetic twinning / Often intergrown with other Gold-Tellurides</td>
+<td>Argentite Bornite Chalcopyrite Galena Gold Pyrite Sphalerite</td>
+<td>None</td>
+<td>High 53-63%</td>
+<td>Soft (154-172)</td>
+<td>Monoclinic</td>
+<td> </td>
+</tr>
+
+<tr>
+<th id='taenite' scope='row'>Taenite </th>
+<td><small></small>&gamma;-Fe</td>
+<td>&gamma;-Fe contains ~ 27-60% Ni and is slightly Yellowish</td>
+<td>C to Pentlandite: much Whiter / C to Cohenite: slightly Blueish</td>
+<td>None </td>
+<td>Isotropic </td>
+<td></td>
+<td></td>
+<td>Intergrowths of &gamma;-Fe and &alpha;-Fe form Widmanst&aumlt;ten structures which are brought out by etching / Oxidizes to Hematite, Goethite, Lepidocrocite</td>
+<td>Chromite Copper Ilmenite Schreibersite Troilite</td>
+<td>None</td>
+<td>High 58%</td>
+<td>Soft (110-117)</td>
+<td>Cubic</td>
+<td>Found in Iron meteorites / Rare on earth / cf. Iron</td>
+</tr>
+
+<tr>
+<th id='tennantite' scope='row'>Tennantite 
+  
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Tennantite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td><strong></strong>Cu<sub>12</sub>As<sub>4</sub>S<sub>13</sub> (May contain Fe, Zn, Sb etc,)</td>
+<td>Gray / sometimes with Greenish or Blueish tint </td>
+<td>C to Galena, Chalcocite: Greenish / C to Pearcite: similar</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Galena &gt;Chalcopyrite &lt;Sphalerite</td>
+<td></td>
+<td>Occurrences the same as for Tetrahedrite except in more As-rich envIronments</td>
+<td>Complete solid solution with Tetrahedrite</td>
+<td>Common / Reddish</td>
+<td>Low 29%</td>
+<td>Soft (294-380)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='tenorite' scope='row'>Tenorite </th>
+<td><em></em>CuO</td>
+<td>in Air: Gray to Gray-White / in Oil: strongly pleochroic</td>
+<td>C to Cuprite: Brownish Blueish / C to Chalcocite: Brownish / C to Goethite: lighter Yellowish </td>
+<td>Distinct</td>
+<td>Strong / Blue to Gray</td>
+<td>&gt;Chalcocite &lt;Goethite&lt;Cuprite</td>
+<td>Aggregates of acicular crystals / concentrically grown aggregates</td>
+<td>May have Lamellar Twinning</td>
+<td>Cu and Fe oxides in weathering zone</td>
+<td>None</td>
+<td>Low 20-28%</td>
+<td>Soft (190-300)</td>
+<td>Monoclinic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='tetradymite' scope='row'>Tetradymite </th>
+<td><strong></strong>Bi<sub>2</sub>Te<sub>2</sub>S</td>
+<td>White with Creamy tint </td>
+<td>C to Chalcopyrite: lighter / C to Galena: Yellowish</td>
+<td>Weak </td>
+<td>Distinct / Blueish Gray to Yellow Gray </td>
+<td>&gt;Bismuth &lt;Galena</td>
+<td>Tabular Plates / Granular aggregates</td>
+<td>Basal cleavage common / Twinning rare / Intergrowths with Telluro-Bismuthinite</td>
+<td>Galena Gold Pb-Bi Sulfosalts</td>
+<td>None</td>
+<td>High 55-61%</td>
+<td>Extra Soft (25-76)</td>
+<td>Trigonal</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='tetrahedrite' scope='row'>Tetrahedrite </th>
+<td><strong></strong>Cu<sub>12</sub>SbS<sub>13</sub> (May contain Fe, Zn, Ag, As, Hg etc.)</td>
+<td>Gray with Olive or Brownish tint </td>
+<td>C to Galena: Brownish or Greenish / C to Chalcocite: Blue-Gray / C to Sphalerite: lighter</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Galena ~Chalcopyrite &lt;Sphalerite (Hardness varies with composition)</td>
+<td> Irregular masses of Anhedral grains interstitial to Fe and Cu-Fe sulphides /  Rounded inclusions in Galena and Sphalerite</td>
+<td>Forms complete solid solution with Tennantite / Growth zoning especially in more As-rich members</td>
+<td>Arsenopyrite Galena Sphalerite</td>
+<td>Rare / Increasingly common as As-content increases / Reddish</td>
+<td>Moderate 32%</td>
+<td>Soft (312-351)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='troilite' scope='row'>Troilite </th>
+<td><strong></strong>FeS is Troilite</td>
+<td>Creamy Pinkish Brown </td>
+<td>C to Pentlandite: darker / C to Cubanite: more Pinkish</td>
+<td>Very distinct / Creamy Brown to Reddish Brown </td>
+<td>Very Strong / Yellow-Gray, Grayish Blue </td>
+<td>&gt;Chalcopyrite ~Pentlandite &lt;Pyrite</td>
+<td>Anhedral equigranular masses with Iron</td>
+<td>Occurs in meteorites</td>
+<td>Most other common Sulphides</td>
+<td>None</td>
+<td>Moderate 39%</td>
+<td></td>
+<td></td>
+<td>cf. Pyrrhotite</td>
+</tr>
+
+<tr>
+<th id='ullmannite' scope='row'>Ullmannite </th>
+<td><strong></strong>NiSbS</td>
+<td>White with Blueish tint </td>
+<td>C to Gersdorffite: less Yellow / C to Skutterudite: more Yellow / C to Linnaeite: White</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Linnaeite ~Gersdorffite &lt;Pyrite</td>
+<td>Dispersed Subhedral to Euhedral crystals</td>
+<td>Cleavage may be visible / Triangular cleavage pits</td>
+<td>Arsenides Cu-Fe Sulphides Co-Fe-Ni Antimonides</td>
+<td>None</td>
+<td>Moderate 47%</td>
+<td>Moderate (592-627)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='ulvospinel' scope='row'>Ulv&ouml;spinel </th>
+<td><em></em>Fe<sub>2</sub>TiO<sub>4</sub></td>
+<td>Brown to Reddish Brown </td>
+<td>C to Magnetite: darker Brown</td>
+<td>None</td>
+<td>Isotropic </td>
+<td>&gt;Magnetite</td>
+<td>Very fine dark isotropic exsolution lamellae / Less commonly as octahedral crystals / Matrix containing oriented cubes of Magnetite</td>
+<td>Very fine, dark isotropic exsolution lamellae in Ti-Magnetite, giving a “doth weave" texture</td>
+<td>Ilmenite Magnetite</td>
+<td>None</td>
+<td>Low 15%</td>
+<td> (-650)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='uraninite' scope='row'>Uraninite </th>
+<td><em></em>UO<sub>2</sub>, usually partly oxidised</td>
+<td>Brownish Gray </td>
+<td>C to Magnetite: Less Pink / C to Sphalerite: Brownish</td>
+<td>None</td>
+<td>Isotropic </td>
+<td>&gt;Magnetite &lt;Pyrite</td>
+<td>Colloform / Oolitic / Dendritic masses</td>
+<td>Growth-zoning / Twinning common / Cleavage may be visible / May contain inclusions of Gold</td>
+<td>Cu-Fe Sulphides Pyrite Uranium minerals</td>
+<td>Common / Dark Brown to Reddish Brown</td>
+<td>Low 14%</td>
+<td>Moderate (499-548)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='valleriite' scope='row'>Valleriite </th>
+<td><strong></strong>(Fe,Cu)S<sub>2</sub> (Mg,Al)(OH)<sub>2</sub></td>
+<td>Bronze to Gray </td>
+<td></td>
+<td><strong>Very Strong</strong></td>
+<td>Strong to Extreme / White to Gray-bronze with satin-like texture </td>
+<td>&gt;Chalcopyrite ~Cubanite &lt;Pyrrhotite</td>
+<td>Veinlets / Interstitial fillings / Small inclusions within and surrounding Chalcopyrite ,Magnetite, Pentlandite andPyrrhotite</td>
+<td>Bronze anisotropy appears in a satin-like wavy pattern</td>
+<td>Chalcopyrite Magnetite Pentlandite Pyrrhotite</td>
+<td>None</td>
+<td>Low 10-23%</td>
+<td>Extra Soft (30)</td>
+<td>Hexagonal</td>
+<td>Mackinawite has a sharper extinction and less of an orange anisotropism</td>
+</tr>
+
+<tr>
+<th id='violarite' scope='row'>Violarite </th>
+<td><strong></strong>FeNi<sub>2</sub>S<sub>4</sub></td>
+<td>Brownish Gray with Violet tint</td>
+<td>C to Pentlandite: darker, Violet tint / C to Pyrrhotite: lighter / C to Millerite: Brownish Violet</td>
+<td>None </td>
+<td>Isotropic </td>
+<td>&gt;Chalcopyrite &gt;Sphalerite ~Pentlandite &lt;Pyrrhotite</td>
+<td>Porous alteration product along grain boundaries and fractures / Equant Anhedral grains</td>
+<td>Sometimes as fine lamellar intergrowths with Millerite and Chalcopyrite / Porous alteration product along grain boundaries and fractures of Pentlandite, Pyrrhotite, and Millerite / Equant Anhedral grains with Pyrite, Millerite Pyrrhotite</td>
+<td>Millerite Pentlandite Pyrite Pyrrhotite</td>
+<td>None</td>
+<td>Moderate 45%</td>
+<td>Soft (241-373)</td>
+<td>Cubic</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='wolframite' scope='row'>Wolframite / Ferberite - Hübnerite Series 
+  
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b>n </b>
+      <figcaption>Wolframite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+<div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+  <span class="tooltiptexte">
+    <b> </b>
+    <figcaption>Wolframite in XP.&nbsp;</figcaption>
+  </span>
+</div>
+</th>
+<td><em></em>(Fe,Mn)WO<sub>4</sub></td>
+<td>Air: Gray to White / Oil: Gray with Brown or Yellow tint </td>
+<td>C to Sphalerite: similar / C to Magnetite: darker / C to Cassiterite: lighter</td>
+<td>Weak </td>
+<td>Weak to distinct / Yellow to Gray </td>
+<td>&gt;Magnetite &gt;Scheelite &lt;Pyrite &lt;Arsenopyrite</td>
+<td>Euhedral Platelets / masses of interpenetrating Laths</td>
+<td>Cleavage / Twinning common</td>
+<td>Arsenopyrite Bismuth Bismuthinite Cassiterite Chalcopyrite Gold Molybdenite Scheelite</td>
+<td>Common / Deep Red, especially in oil</td>
+<td>Low 15%</td>
+<td>Soft (319-390)</td>
+<td>Monoclinic</td>
+<td>Wolframite is technically not a mineral name. It ought to be referred to as the Ferberite-Hübnerite Series</td>
+</tr>
+
+<tr>
+<th id='zincite' scope='row'>Zincite </th>
+<td><em></em>ZnO</td>
+<td>Pinkish Brown </td>
+<td></td>
+<td>None / Masked by internal reflections</td>
+<td>Masked by internal reflections</td>
+<td>&lt;Franklinite &lt;Hausmannite</td>
+<td>Anhedral grains</td>
+<td>Cleavage may be visible / Forms oriented intergrowths with Hausmannite</td>
+<td>Franklinite Hausmannite</td>
+<td>Common / Red to Yellowish</td>
+<td>Low 11%</td>
+<td>Soft (205-221)</td>
+<td>Hexagonal</td>
+<td></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody>				  
+				  
+</thead>
+</table>
+  </div>
+
+
+<!-- Font template div closure--> 
+</div>
+
+
+  
+</div>
+
+</div>
+</div>
+</div>
+
+<button id="suggested_toggle" style="display: none; border-color: #60BFBF;" onclick="datatable_resize('datatable_window')">
+	
+<svg id="suggested_chevron" style="color: #60BFBF;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-bar-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z"/>
+</svg>
+	
+</button>
+	
+<div class="header_text" id="suggested_minerals" style="display: none;">
+  Suggested minerals - with fewer matching properties than selected
+</div>
+	
+
+<div id="suggested_datatable">
+
+</div>
+
+
+
+<!--Modals-->
+<div>
+	
+<!-- Toggle column display Modal -->
+<div id="TableModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+  <!-- Modal content -->
+    <div class="modal-content">
+          <div class="modal-body">
+  <!--		  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>  -->
+            <p>Click on the column header names for the columns you would like displayed. Then, press accept.</p>
+           
+			  <button id="formula_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0"> Formula</button>
+              <button id="colour_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Colour</button>
+			  <button id="compc_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Comparative Colour</button>
+              <button id="birefl_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Bireflectance</button>
+              <button id="ani_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Anisotropy</button>
+              <button id="relh_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Relative Hardness</button>
+              <button id="habit_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Habit</button>
+              <button id="nf_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Noteworthy Features</button>
+
+           
+              <button id="assoc_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Associated Minerals</button>
+              <button id="IR_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Internal Reflections</button>
+              <button id="refl_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Reflectivity</button>
+              <button id="hardness_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Hardness</button>
+              <button id="csys_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Crystal System</button>
+              <button id="notes_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Other Notes</button>
+            
+			  <br>
+			  
+            <button onclick="column_toggle()"  data-dismiss="modal" aria-label="Close">Accept</button>
+			
+			<button onclick="column_toggle_reset()">Reset</button>
+			  
+          </div>
+    </div>
+   </div>
+   </div>  
+
+
+	
+	
+<!-- Colour Modal -->
+<div id="ColourModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		<!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+          <p>Colour here always refers to its colour in PPL (Plane Polarised Light)</p>
+        </div>
+  </div>
+ </div>
+ </div>
+
+<!-- COmparative COlour Modal -->
+<div id="CColourModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		  
+          <p>Most minerals will appear some sort of gray or yellow on its own in PPL.</p>
+          <p>However, you can see the subtle differences in colour and tint when you compare it to another mineral side-by-side.</p>
+        </div>
+  </div>
+ </div>
+ </div>
+
+	<!-- Bireflectance Modal -->
+<div id="BireflModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		 
+          <p>The way the mineral changes brightness in PPL as you rotate the stage.</p> 
+		  <p>Although often lumped together, it is different from pleochroism. Pleochroism is the change in colour when you rotate the stage and bireflectance is the change in brightness. A mineral is often both pleochroic and bireflectant.
+          <p><a href="https://www.namethatmineral.com/definitions#bireflectance" target="_blank" rel="noopener" >More on bireflectance</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- Anisotropy Modal -->
+<div id="AniModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		 
+          <p>Changes in mineral colour and intensity under crossed polars as you rotate the stage.</p>
+          <p>Make sure to turn up the microscope light intensity if it all looks black and you struggle to see it.</p>
+          <p><a href="https://www.namethatmineral.com/definitions#anisotropy" target="_blank" rel="noopener"   >More on anisotropy</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- Relative hardness Modal -->
+<div id="RelHModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		 
+          <p>Softer minerals will appear lower, sunken down, sometimes more scratched due to polishing, compared to the harder mineral next to it. And vice versa.</p>
+          <p>It's a similar visual effect to relief for minerals seen under transmitted light sections.</p>
+   
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- internal Reflections Modal -->
+<div id="IRModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		 
+          <p>The glittery, faint space nebula -esque colours you see within a mineral under crossed polars.</p>
+          <p>Often quite faint, and you can tell that it's light within the mineral, not so much reflecting off of the surface.</p>
+<p><a href="https://www.namethatmineral.com/definitions#internal_reflections" target="_blank" rel="noopener ">More on internal reflections</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- reflectivity Modal -->
+<div id="RefModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		 
+          <p>How bright is the mineral? (in PPL)</p>
+          <p>Higher reflectivity minerals appear brighter and lower reflectivity minerals look duller.</p>
+  <p><a href="https://www.namethatmineral.com/definitions#reflectivity" target="_blank" rel="noopener "    >More on reflectivity</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- Hardness Modal -->
+<div id="HardModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+		
+          <p>Hardness numbers here are from Vickers hardness tests.</p>
+		  <p>The test compresses the mineral with a pyramid shaped indenter and measures the resulting dent in the mineral.</p>
+<p><a href="https://www.namethatmineral.com/definitions#vickers_hardness" target="_blank" rel="noopener "    >More on hardness</a></p>
+        </div>
+  </div>
+ </div>
+ </div>	
+</div>
+
+
+
+
+
+<footer>
+<div class="lepied">
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/" title="thin section mineral identification tool homepage">Home</a> 
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/about">About</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/contact">Contact</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener noreferrer" class= "footer-buttons" href="https://www.namethatmineral.com/sitemap">Sitemap</a>
+  
+  <br><br>
+</div>    
+  
+      <p style="text-align: center; font-size: 11px"><i>Disclaimer: While care has been taken to ensure the veracity of the information hosted on this website, we do not take responsibility for any damages or losses incurred or arisen from the usage of the content herein.</i>
+      </p>
+</footer> 
+
+
+
+
+
+
+
+
+	
+<!-- All the javascript links are placed at the end -->
+<div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
+<script type="text/javascript" src="reflected.js"></script> 
+</div>
+
+
+
+
+
+</body>
+</html>
+
+

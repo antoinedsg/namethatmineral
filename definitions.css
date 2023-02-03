@@ -1,0 +1,138 @@
+.intro_text {
+  font-size: 16px;
+  font-family: "Roboto";
+  line-height: 24px;
+}
+
+/* Formating for each definition row: heading for the title and body for the definition */ 
+  .panel-heading{
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Roboto";
+  }
+
+  .panel-body{
+    font-size: 14px;
+    font-family: "Roboto";
+  }
+  
+
+.homebutton {
+  /*background-image: url('definitions_home.svg');*/ 
+  height: 48px;
+  width: 48px;
+  margin-right: -10px;
+  margin-left: -7px;
+  margin-top: -15px;
+  margin-bottom: -12px;
+
+}
+
+  #basic_geology_button {
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #8e69b5; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 7px; /* Some padding */
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+  }
+
+/* Show All/Hide All */
+  #toggle {
+  float:right;
+  margin-right: 9px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 22px;
+  padding-top: 4px;
+
+  }
+
+/* definitions and show all format at narrow screens */
+@media screen and (max-width: 550px) {
+	  h1 {font-size: 25px;}
+	
+  #toggle {
+  float:right;
+  margin-right: 9px;
+  color: #495057;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  padding-top: 7px;
+
+  }
+	
+} 
+
+@media screen and (max-width: 450px) {
+	  h1 {font-size: 25px;}
+	
+  #toggle {
+  float:right;
+  margin-right: -5px;
+  color: #495057;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  padding-top: 7px;
+
+  }
+	
+} 
+
+@media screen and (max-width: 375px) {
+	  h1 {font-size: 25px;}
+	
+  #toggle {
+  float:right;
+  margin-right: -2%;
+  color: #495057;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 15px;
+  padding-top: 10px;
+
+  }
+	
+} 
+
+
+p {text-align: justify;}
+
+
+
+/* Scroll to top formatting*/
+
+#topscroll {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #8e69b5; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 7px; /* Some padding */
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+}
+
+#topscroll:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+} 
+
+
+

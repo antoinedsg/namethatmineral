@@ -1,0 +1,4575 @@
+﻿  <!DOCTYPE html>
+<html lang="en-GB">
+
+
+
+
+<head>
+<!-- Import various packages -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!--<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+<link rel="stylesheet" type="text/css" href="template_Table.css" />
+<link rel="stylesheet" type="text/css" href="footer.css" />
+	
+<script src="https://kit.fontawesome.com/85c5677f85.js" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+	
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	
+<link rel="stylesheet" type="text/css" href="transmitted.css" />
+  <!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<!-- Bootstrap 4 formatting -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- meta about the website -->
+<title>Transmitted Light</title>
+<link rel="icon" href="biglogo.svg" type="image/gif" sizes="25x25">
+<meta name="author" content="Dylan Price">
+<meta name="author" content="Antoine de Saint Germain">
+<meta name="description" content="This page is dedicated to identifying thin sections of minerals observed under the microscope in transmitted light. You will find a large table of minerals, along with their observable properties. To navigate the table, choose the observed properties.">
+<meta name="keywords" content="minerals, identify, microscope, thin section, transmitted, light, property, table">
+</head>
+
+
+
+
+
+<body>
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+
+	
+<!-- Top Navigation Bar -->	
+	
+
+	
+<div class="topnav" id="myTopnav">
+  <a href="https://www.namethatmineral.com/" ><img alt="plagioclase thin section PPL and XP" class="homebutton" src="transmitted_home.svg"></a>
+	
+  <a href="https://www.namethatmineral.com/transmitted" rel="noopener" title="thin sections mineral property identification transmitted" style="width: 158px">Transmitted Light</a>
+  <a href="https://www.namethatmineral.com/reflected" rel="noopener" title="thin sections mineral property identification reflected" style="width: 142px">Reflected Light</a> 
+  <a href="https://www.namethatmineral.com/definitions" rel="noopener" title="thin sections mineral property and texture definition" style="width: 210px">Definitions of Properties</a>
+  <a href="https://www.namethatmineral.com/about" rel="noopener" title="thin section identification resources" style="width: 65px">About</a>
+  <a href="https://www.namethatmineral.com/contact" rel="noopener" style="width: 120px">Contact Us</a>
+  <a href="javascript:void(0);" class="icon" onclick="topbarFunction()">
+  <i class="fa fa-bars"></i>
+  </a>
+	
+  <input type="search" id="mineral_search" onkeyup="mineralsearch()" placeholder="&#xF002; Search for a mineral.."> 
+	
+</div>
+
+
+  <button onclick="topFunction()" id="topscroll" title="Go to top" style="background-color: #244F75"><i class="fas fa-angle-double-up"></i></button>
+  <button onclick="fullScreen()" id="fullscreen" title="Fullscreen Table" value="fullscreen" style="background-color: #3f617c" ><i class="fas fa-expand"></i></button>
+
+
+
+<!-- Div for Area above Table -->	
+<div class="top_container" style="border-color: #244F75;">
+<div class="container-fluid" > 
+  <div class="header_text">Identify minerals under transmitted light</div>   
+  <h1 class="body_text">Select below the properties that you can see under the microscope. The table will then display all the minerals that match that specific combination of properties.</h1> 
+  <p>Properties in <strong>bold</strong> are particularly distinct for that mineral. Click on the mineral name to see pictures. </p>
+  	
+	
+  <!-- Selection of Properties -->
+
+  <div class="row">
+    <div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown(); colouring();" id="Colour" data-col="1" class="form-control"  >
+        <option>Pick Colour</option>
+        <option value="Colourless">Colourless (White)</option>
+        <option value="Opaque">Opaque (Black)</option>
+		    <option value="Brown">Brown</option>   
+        <option value="Green">Green</option>
+		    <option value="Blue">Blue</option>  
+        <option value="Yellow">Yellow</option>
+		    <option value="Red">Red</option>
+		    <option value="Pink">Pink</option>
+        <option value="Orange">Orange</option>
+		    <option value="Magenta">Magenta</option>
+        <option value="Purple">Purple</option>
+      </select>
+    </div>
+		
+    <div class="col-md-2 button-wrapper">       
+      <select onchange="choicedropdown()" id="Birefringence" data-col="2" class="form-control">
+        <option>Pick Birefringence</option>
+        <option value="Isotropic">Isotropic</option>
+		    <option value="Anomal">Anomalous</option>
+		  <optgroup label="Interference Colours:">
+        <option value="Very L">Very Low (Grays)</option>
+		    <option value="Low">Low (1<sup>st</sup> Order Yellow / Orange)</option>
+        <option value="Modera">Moderate (up to mid 2<sup>nd</sup> Order Green)</option>
+        <option value="High">High  (2<sup>nd</sup> Order Green to mid 3<sup>rd</sup> Order)</option>
+        <option value="very h">Very High (High 3<sup>rd</sup> Order, Pastel Colours)</option>
+		</optgroup>
+      </select>
+    </div>
+		
+    <div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="Relief" data-col="3" class="form-control"  >
+        <option>Pick Relief</option>
+        <option>Contrasting</option>
+        <option>Negative</option>
+        <option>Low</option>
+        <option>Moderate</option>
+        <option>High</option>
+        <option>Very High</option>
+      </select>
+    </div>
+
+    <div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="dfeatures" data-col="4" class="form-control"  >
+        <option>Pick Noteworthy Feature</option>
+        <option value="twin">Twinning</option>
+		<option value="cleav">Cleavage</option>
+		<option value="zon">Zoning</option>
+		
+        <option value="acces">Accessory Minerals</option>
+        <option value="cavit">Cavity Filling</option>
+		<option value="exsol">Exsolution Textures</option>
+		<option value="mass">Groundmass</option>
+		<option value="halo">Haloes</option>
+		<option value="inclus">Inclusions</option>
+		<options value="intergrow">Intergrowths</options>
+        <option>Length Slow</option>
+        <option>Length Fast</option>
+        <option value="poro">Porous</option>
+		    <option value="replac">Replacement textures</option>
+		    <option value="rim">Rims</option>
+		    <option value="undulose">Undulose Extinction</option>
+      </select>
+    </div>
+	
+  	<div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="Cleavage" data-col="5" class="form-control">
+        <option>Pick Cleavage</option>
+        <option>None</option>
+        <option>Poor</option>
+        <option>Good</option>
+        <option>Perfect</option>
+        <option>2 sets</option>
+        <option>3 sets</option>
+      </select>
+  	</div>
+	
+  	<div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="Extinction" data-col="6" class="form-control">
+        <option>Pick Extinction</option>
+        <option>Straight</option>
+        <option>Inclined</option> 
+		 <option>Undulose</option>
+        <option>Isotropic</option>
+      </select>
+  	</div>
+	</div>
+	
+  <!--Additional Properties-->
+  <div id="advanced_options" style="display: none">
+  <div class="row">
+	  
+  	<div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="Habit" data-col="7" class="form-control">
+        <option>Pick Habit</option>
+        <option value="amorph">Amorphous</option>
+        <option value="anhedral">Anhedral</option>
+		<option value="column">Columnar</option>
+        <option value="corrod">Corroded</option>
+  		<option value="cub">Cubic</option>
+        <option value="diamo">Diamond / Lozenges</option>
+  		<option value="dodeca">Dodecahedral</option>
+  		<option value="euhedr">Euhedral</option>
+  		<option value="fibr">Fibrous</option>
+  		<option value="flak">Flaky</option>
+        <option value="gr">Granular / Aggregates</option>
+        <option value="hexagonal">Hexagonal</option>
+		<option value="irreg">Irregular</option>
+        <option value="lath">Laths</option>
+  		<option value="needl">Needles</option>
+        <option value="octah">Octahedral</option>
+  		<option value="plat">Platy</option>
+  		<option value="prism">Prismatic</option>
+  		<option value="radi">Radiating / Fan / Rosette</option>
+  		<option value="scal">Scaly</option>
+        <option value="skel">Skeletal / Dendritic</option>
+		<option value="spher">Spherical</option>
+        <option value="spong">Spongy</option>
+  		<option value="tabula">Tabular</option>
+        <option value="triang">Triangular</option>
+ 
+      </select>
+  	</div>
+	
+  	<div class="col-md-2 button-wrapper">       
+      <select onchange="choicedropdown()" id="2V" data-col="8" class="form-control">
+        <option>Pick 2V Angle</option>
+        <option value="Uniaxial">Uniaxial</option>
+        <option value="Small">Small (&lt;30&deg;)</option>
+  		  <option value="Moderate">Moderate (30-70&deg;)</option>
+        <option value="Large">Large (&gt;70&deg;)</option>
+      </select>
+    </div>
+  		
+    <div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="2VSign" data-col="9" class="form-control" >
+        <option>Pick Optic Sign</option>
+        <option>Isotropic</option>
+        <option>Positive</option>
+  			<option>Negative</option>
+      </select>
+  	</div>
+  	
+
+  	
+  	<div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="RockType" data-col="10" class="form-control"  >
+        <option>Pick Rock Type</option>
+        <option value="igneous">Igneous</option>
+        <option value="metamorphic">Metamorphic</option>
+        <option value="sedimentary">Sedimentary</option>
+        <option value="volcanic">Volcanic (Exclusively)</option>
+      </select>
+  	</div>
+	
+
+    <div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="Assoc" data-col="11" class="form-control" >
+        <option>Pick Associated Mineral</option>
+ <option>Actinolite</option> 
+ <option>Aegirine-Augite</option> 
+ <option>Aenigmatite</option> 
+ <option>Albite</option> 
+ <option>Alkali-Feldspar</option> 
+ <option>Almandine</option> 
+ <option>Amphibole</option> 
+ <option>Analcite</option> 
+ <option>Andalusite</option> 
+ <option>Anhydrite</option> 
+ <option>Anorthoclase</option> 
+ <option>Antigorite</option> 
+ <option>Apatite</option> 
+ <option>Apophyllite</option> 
+ <option>Arfvedsonite</option> 
+ <option>Augite</option> 
+ <option>Beryl</option> 
+ <option>Biotite</option> 
+ <option>Bornite</option> 
+ <option>Bronzite</option> 
+ <option>Calcite</option> 
+ <option>Carbonate</option> 
+ <option>Cassiterite</option> 
+ <option>Celestite</option> 
+ <option>Chabazite</option> 
+ <option>Chalcedony</option> 
+ <option>Chalcopyrite</option> 
+ <option>Chlorite</option> 
+ <option>Chromite</option> 
+ <option>Chrysotile</option> 
+ <option>Clay</option> 
+ <option>Clinochore</option> 
+ <option>Clinopyroxene</option> 
+ <option>Clinozoisite</option> 
+ <option>Cordierite</option> 
+ <option>Corundum</option> 
+ <option>Cristobalite</option> 
+ <option>Delessite</option> 
+ <option>Diopside</option> 
+ <option>Epidote</option> 
+ <option>Fassaite</option> 
+ <option>Fluorite</option> 
+ <option>Galena</option> 
+ <option>Garnet</option> 
+ <option>Glass</option> 
+ <option>Glaucophane</option> 
+ <option>Grossularite</option> 
+ <option>Gypsum</option> 
+ <option>Halite</option> 
+ <option>Hematite</option> 
+ <option>Hercynite</option> 
+ <option>Heulandite</option> 
+ <option>Hornblende</option> 
+ <option>Hyalophane</option> 
+ <option>Hypersthene</option> 
+ <option>Ilmenite</option> 
+ <option>Jadeite</option> 
+ <option>K-Feldspar</option> 
+ <option>Kyanite</option> 
+ <option>Laumontite</option> 
+ <option>Lawsonite</option> 
+ <option>Lepidocrocite</option> 
+ <option>Leucite</option> 
+ <option>Li-Mica</option> 
+ <option>Magnesite</option> 
+ <option>Magnetite</option> 
+ <option>Melanite</option> 
+ <option>Melilite</option> 
+ <option>Mica</option> 
+ <option>Microcline</option> 
+ <option>Mordenite</option> 
+ <option>Muscovite</option> 
+ <option>Natrolite</option> 
+ <option>Nepheline</option> 
+ <option>Nosean</option> 
+ <option>Olivine</option> 
+ <option>Omphacite</option> 
+ <option>Opal</option> 
+ <option>Orthopyroxene</option> 
+ <option>Oxyhornblende</option> 
+ <option>Pentlandite</option> 
+ <option>Perovskite</option> 
+ <option>Phillipsite</option> 
+ <option>Phlogopite</option> 
+ <option>Pigeonite</option> 
+ <option>Plagioclase</option> 
+ <option>Prehnite</option> 
+ <option>Pumpellyite</option> 
+ <option>Pyrite</option> 
+ <option>Pyrope</option> 
+ <option>Pyroxene</option> 
+ <option>Pyrrhotite</option> 
+ <option>Quartz</option> 
+ <option>Riebeckite</option> 
+ <option>Rutile</option> 
+ <option>Sanidine</option> 
+ <option>Scolecite</option> 
+ <option>Sericite</option> 
+ <option>Serpentine</option> 
+ <option>Sillimanite</option> 
+ <option>Sodalite</option> 
+ <option>Sphalerite</option> 
+ <option>Sphene</option> 
+ <option>Spinel</option> 
+ <option>Spodumene</option> 
+ <option>Staurolite</option> 
+ <option>Stilbite</option> 
+ <option>Talc</option> 
+ <option>Tantalite</option> 
+ <option>Thomsonite</option> 
+ <option>Titanaugite</option> 
+ <option>Titanbiotite</option> 
+ <option>Topaz</option> 
+ <option>Tourmaline</option> 
+ <option>Tremolite</option> 
+ <option>Tridymite</option> 
+ <option>Vesuvianite</option> 
+ <option>Wolframite</option> 
+ <option>Wollastonite</option> 
+ <option>Zeolite</option> 
+ <option>Zircon</option> 
+ <option>Zoisite</option>
+
+      </select>
+    </div>
+  	
+  	<div class="col-md-2 button-wrapper">
+      <select onchange="choicedropdown()" id="Group" data-col="12" class="form-control"  >
+        <option>Pick Mineral Group</option>
+        <option>Amphibole</option>
+        <option>Al Silicate</option>
+        <option>Carbonate</option>
+        <option>Sheet</option>
+        <option>Epidote</option>
+        <option>Plagiocalse Feldspar</option>
+        <option>Feldspar</option>
+        <option>Feldspathoid</option>
+        <option>Framework</option>
+        <option>Garnet</option>
+        <option>Mica</option>
+        <option>Oxide</option>
+        <option>Pyroxene</option>
+        <option>Sheet</option>
+      </select>
+  	</div>	
+  </div>	
+  </div>
+
+		
+<div>
+ <!--  <button onclick="advanced_options_toggle()" style="background-color: rgba(36, 79, 117, 0.3)" id="advanced_options_button" class='btn' value="show_more"><i class='fa fa-plus'></i>&nbsp; &nbsp; Show more properties</button> -->
+
+  <button type="button" style="background-color: rgba(36, 79, 117, 0.3)" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class='fa fa-cog'></i>&nbsp; Options
+  </button>
+	
+  <div class="dropdown-menu">
+    <button class="dropdown-item" onclick="advanced_options_toggle()" id="advanced_options_button" value="show_more"><i class="fa fa-plus"></i>&nbsp; &nbsp; Show more properties
+	</button>
+	  
+    <button type="button" class="dropdown-item" data-toggle="modal" data-target="#TableModal"><i class="fa fa-table"></i> &nbsp; Show / hide columns</button>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="https://www.namethatmineral.com/tutorial" rel="noopener" ><i class="fa fa-question-circle"> </i> &nbsp; Help</a>
+  </div>
+
+  <button id="resetbtn" style="background-color: rgba(36, 79, 117, 0.3)" onclick="reset_options()" class="btn" value="Reset"><i class='fa fa-angle-double-left'></i>&nbsp; Reset</button>
+
+
+</div>
+  
+
+<!-- Container fluid div closure -->
+</div>
+</div>
+
+
+<div id="divforfullscreen">
+<div class="header_text" id="matching_minerals">Mineral properties
+	
+<button onclick="advanced_options_toggle2()" id="advanced_options_button2" class="btn" value="show_more">Show more &nbsp;<i class='fa fa-angle-double-right'></i></button>
+	
+</div>
+  
+
+
+
+<div style="border-bottom: #244F75 solid">
+<div id="datatable_window" class="body_text" >
+
+	
+
+	
+  <!-- Table Database -->
+<div id="datatable_ajax">
+  <div>
+  	<table id="datatable" class="table table-sm" >
+
+              <thead class="thead-light" >
+                  <tr>
+                      <th scope="col" style="position:sticky; position: -webkit-sticky; top:0;left:0;z-index:10;">Mineral</th>
+  					
+                      <th   scope="col">Colour 
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#ColourModal"></i>
+  					</th>
+  					
+                      <th   scope="col">Birefringence
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#BirModal"></i></th>
+  					
+                      <th   scope="col">Relief
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#ReliefModal"></i></th>
+  					
+        				<th scope="col">Noteworthy Features</th>
+  					
+  					<th   scope="col">Cleavage
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#CleavageModal"></i></th>
+  					
+  					<th   scope="col">
+
+Extinction
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#ExtModal"></i></th>
+  					
+  					<th scope="col">Habit</th>
+  					
+  					<th   scope="col">2V Angle
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#TwoVModal"></i></th>
+  					
+  					<th   scope="col">Optic Sign
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#TwoVSModal"></i></th>
+  					
+
+  					
+  					<th scope="col">Found In</th>
+
+  					<th scope="col">Associated Minerals</th>
+  					
+  					<th   scope="col">Mineral Group
+  					<i class="fas fa-info-circle" style="font-size:14px" data-toggle="modal" data-target="#GroupModal"></i></th>
+
+  					<th   scope="col" >Crystal System</th>
+  					
+                  </tr>
+              </thead>
+  <tbody>
+
+
+
+
+<tr>
+<th id='actinolite' scope='row'> Actinolite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Actinolite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Actinolite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Green Pleochroic. More Green for more Fe-rich</td>
+<td>Moderate. 0.027 up to mid 2<sup>nd</sup> order</td>
+<td>Moderate</td>
+<td>C to Epidote: less Yellowish and lower relief / Length Slow</td>
+<td>Good. 2 sets at 124&#176</td>
+<td>Inclined 30&#176 max / Typically 15&#176</td>
+<td><strong>Fine Prisms</strong> / Laths / Fibrous / Needle-like</td>
+<td>Large 75-80&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Green and Blueschist, Serpentinite, Marbles)</td>
+<td></td>
+<td>Actinolite Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='aegirine' scope='row'>Aegirine
+    <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Aegirine in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Aegirine in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Bright Green / Yellow / Brown / Pleochroic</td>
+<td><strong>High. 0.04-0.06 up to 3<sup>rd</sup> or 4<sup>th</sup></strong></td>
+<td>High</td>
+<td>May occur as rim on other green pyroxenes / Length Fast</td>
+<td>Good. 2 sets at 87&#176</td>
+<td><strong>Inclined 0-10&#176</strong></td>
+<td>Needle Prisms / Hexagonal</td>
+<td>Large 80-90&#176</td>
+<td>Negative</td>
+<td>Igneous</td>
+<td>Albite Epidote Biotite Sphene Talc Calcite Chlorite Quartz Sericite</td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='aenigmatite' scope='row'>Aenigmatite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Aenigmatite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Aenigmatite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Dark Brown to opaque / Strongly Pleochroic in very thin sections</td>
+<td>Very High</td>
+<td>High to Very High</td>
+<td>Intergrowths with Arfvedsonite are common / Opaque to smoky haloes around Orthite inclusions / Polysynthetic Twinning</td>
+<td>Good. 2 sets at 66&#176</td>
+<td>Inclined 4-45&#176</td>
+<td>Columns / Needles</td>
+<td>Small to Moderate 27-55&#176</td>
+<td>Positive</td>
+<td>Igneous (Felsic, Na-rich rocks)</td>
+<td>Anorthoclase Arfvedsonite Clinopyroxenes Nepheline</td>
+<td>Sapphirine Supergroup</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='akermanite' scope='row'>Akermanite</th>
+<td>Colourless / Weakly Pleochroic</td>
+<td>Low</td>
+<td>Moderate</td>
+<td>May have anomalous interference colours (Purple Blue) / Interpenetrating twinning / Length Fast</td>
+<td>Poor. 2 sets</td>
+<td>Straight</td>
+<td>Plates</td>
+<td>Uniaxial</td>
+<td>Positive</td>
+<td>Igneous (Silica-undersaturated Volcanic rocks) / Metamorphic</td>
+<td>Epidote Sphene Tourmaline</td>
+<td>Melilite</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='albite' scope='row'>Albite</th>
+<td>Colourless</td>
+<td>Low. up to cream</td>
+<td>Very Low</td>
+<td>Albite Twinning lengthways / Carlsbad Twinning / Common in low-grade Metamorphic rocks with Chlorite, Muscovite and Actinolite / May occur as rims on more calcic plagioclase
+later replacement of feldspars in Igneous rocks.</td>
+<td>Perfect and Good. 2 sets at 86&#176</td>
+<td>Inclined 12-20&#176</td>
+<td>Prisms</td>
+<td>Large 70-80&#176</td>
+<td>Positive</td>
+<td>Igenous / Metamorphic</td>
+<td>Leucite Nepheline Olivine Titanaugite      </td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='allanite' scope='row'>Allanite / Orthite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Allanite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Allanite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td><strong>Yellow / Pink / Magenta / Deep Brown Pleochroism</strong></td>
+<td>Moderate to High. 0.018-0.030</td>
+<td>High</td>
+<td>Commonly zoned / with Epidote and Clinozoisite rims (due to radiation damage) / Rich in REE</td>
+<td>Poor</td>
+<td>Straight or Inclined</td>
+<td>Irregular Prisms / Needles</td>
+<td>Moderate to Large 40-80&#176</td>
+<td>Negative</td>
+<td>Igneous (Acid to Intermediate rocks) / Metamorphic (Low to High grade regional metamorphism)</td>
+<td>Biotite Cordierite Quartz Sericite Muscovite</td>
+<td>Epidote</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='almandine' scope='row'>Almandine</th>
+<td>Colourless / Reddish</td>
+<td>Isotropic</td>
+<td>High</td>
+<td>Porous texture / Heliocentric inclusion spirals</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Metamorphic (Low to high grade)</td>
+<td>Biotite Clinopyroxene Olivine Hornblende MicroclineK-Feldspar Orthopyroxene Quartz Titanaugite Volcanic Glass</td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='analcime' scope='row'>Analcime / Analcite</th>
+<td>Colourless</td>
+<td>Very Weak (may be anomalous)</td>
+<td>Low</td>
+<td>Often in groundmass between Plagioclase grains in Dolerite and Basalt rocks / Replaces Leucite / Polysynthetic Twinning</td>
+<td>Poor</td>
+<td>Almost Isotropic</td>
+<td>Euhedral / Anhedral / usually deformed / Spheres</td>
+<td><strong>Nearly Isotropic</strong></td>
+<td>Negative</td>
+<td>Igenous (Basic volcanic rocks)</td>
+<td>Biotite Clinopyroxene Olivine Hornblende MicroclineK-Feldspar Orthopyroxene Quartz Titanaugite Volcanic Glass</td>
+<td>Zeolite</td>
+<td>Triclinic / Pseudo Cubic</td>
+</tr>
+
+<tr>
+<th id='anatase' scope='row'>Anatase</th>
+<td>Yellow Brownish / Blue / Opaque</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>May have zoned colour distribution / Length Fast</td>
+<td>Perfect. 2 sets</td>
+<td>Straight</td>
+<td>Detrital / Granular / Needles</td>
+<td>Uniaxial</td>
+<td>Negative</td>
+<td>Sedimentary</td>
+<td></td>
+<td>Oxide</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='andalusite' scope='row'>Andalusite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Andalusite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Andalusite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Red / Yellow / Green / Pale Pink Pleochroic</td>
+<td>Low. 0.009-0.012 up to White</td>
+<td>Moderate</td>
+<td>May alter to Mica / Patchy Pink colouration / Graphite inclusions / Length Fast</td>
+<td>Good </td>
+<td>Straight</td>
+<td>Prisms / Cubes / Needles</td>
+<td>Large 70-90&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Low-P metapelites) / rare in igneous </td>
+<td></td>
+<td>Al Silicate</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='andesine' scope='row'>Andesine</th>
+<td>Colourless</td>
+<td>Low. up to pale Gray</td>
+<td>Very Low</td>
+<td>Albite Twinning lengthways / Carlsbad Twinning / Often zoned / with Hornblende in Igneous rocks / Found in medium to high grade metamorphic rocks</td>
+<td>Perfect and Good. 2 sets at 86&#176</td>
+<td>Inclined 12-28&#176</td>
+<td>Prisms / Tabular / Laths</td>
+<td>Large 70-90&#176</td>
+<td>Negative</td>
+<td>Igenous / Metamorphic (Medium to High grade)</td>
+<td>Calcite Zeolite</td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='andradite' scope='row'>Andradite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Andradite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Andradite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Green to Brown</td>
+<td>Isotropic (may be anomalous)</td>
+<td>Very High</td>
+<td>Zonal growth rings / Mottled colour texture</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Metamorphic (Fe-metasomatosed skarn)</td>
+<td>Biotite Diopside Hornblende Hypersthene Olivine Plagioclase</td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='anhydrite' scope='row'>Anhydrite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Anhydrite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Anhydrite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very High to Moderate</td>
+<td>Distorted cleavage planes / Alters to Gypsum with water / Polysynthetic Twinning</td>
+<td>Good. 3 sets</td>
+<td>Straight</td>
+<td>Granular / Needles</td>
+<td>Moderate to Small 42&#176</td>
+<td>Positive</td>
+<td>Sedimentary (Evaporites)</td>
+<td>Albite Almandine Chlorite Clinopyroxene Hornblende Kyanite MuscoviteK-Feldspar Orthopyroxene Plagioclase Quartz Staurolite Volcanic Glass</td>
+<td>Sulphate</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='anorthite' scope='row'>Anorthite</th>
+<td>Colourless</td>
+<td>Low. up to cream / Yellow</td>
+<td>Low</td>
+<td>Distinctive Twinning lengthways / Often zoned: typically Anorthite (Ca-rich) centres and Albite (Na-rich) rims. Anorthite cores tend to alter to a fine-grained, turbid, white mica (Sericite) / More commonly found in very high grade metamorphic rocks than in igneous rocks</td>
+<td>Perfect and Good. 2 sets at 86&#176</td>
+<td>Inclined 52&#176</td>
+<td>Prisms</td>
+<td>Large 80-90&#176</td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (High grade) </td>
+<td>Biotite Clinopyroxene Olivine Hornblende MicroclineK-Feldspar Orthopyroxene Quartz Titanaugite Volcanic Glass</td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='anorthoclase ' scope='row'>Anorthoclase 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Anorthoclase in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Anorthoclase in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low to Low</td>
+<td>Cross Hatched twinning / Length Fast</td>
+<td>Good. 2 sets  at 90&#176</td>
+<td></td>
+<td>Plates / Lath-Like / Granular</td>
+<td>Moderate to Large 60-110&#176</td>
+<td>Positive / Negative</td>
+<td>Igneous (Na-rich Volcanic rocks)</td>
+<td></td>
+<td>Alkali Feldspar</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='anthophyllite' scope='row'>Anthophyllite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Anthophyllite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Anthophyllite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low to Moderate. 0.013 up to mid 2<sup>nd</sup> order</td>
+<td>Moderate</td>
+<td>Occurs in Mg-rich metamorphic rocks (e.g. low-grade metabasites) / Often with Talc / Like Actinolite but parallel extinction / Length Slow</td>
+<td>Good. 2 sets at 124&#176 (Amphibole Cleavage)</td>
+<td><strong>Straight</strong></td>
+<td>Prisms</td>
+<td>Large 70-90&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Low-P metapelites)</td>
+<td>Aegirine-Augite Calcite Melanite Nepheline Sanidine Sodalites</td>
+<td>Amphibole</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='antigorite' scope='row'>Antigorite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Antigorite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Antigorite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Green / Weakly Pleochroic</td>
+<td>Very High</td>
+<td>Low to Moderate</td>
+<td>Fan-shaped multiple twins with undulose extinction / Grid texture in ultrabasic rocks / Length Slow</td>
+<td>Perfect</td>
+<td>Straight / May be Undulose</td>
+<td><strong>Radiating</strong> / Flaky / Long Prisms / Scaly</td>
+<td>Small to Moderate 27-60&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Low grade and Serpentinites)</td>
+<td></td>
+<td>Serpentine</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='apatite'  scope='row'>Apatite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Apatite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Apatite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Red Grey or Brownish</td>
+<td>Very Low. 0.002 <strong>Gray</strong></td>
+<td>Moderate</td>
+<td><strong>Usually as tiny elongate crystals with rounded or hexagonal outline</strong> / Often as accessory mineral / Length Fast</td>
+<td>Poor. 2 sets</td>
+<td>Straight</td>
+<td>Hexagonal / Elongate Prisms / Laths / Oolitic spheres / Radiating branches</td>
+<td>Uniaxial </td>
+<td>Negative</td>
+<td>Igneous / Metamorphic / Sedimentary</td>
+<td>Albite Almandine Biotite Chlorite Quartz Rutile Sericite</td>
+<td>Phosphate</td>
+<td>Hexagonal</td>
+</tr>
+
+<tr>
+<th id='apophyllite' scope='row'>Apophyllite</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Low</td>
+<td></td>
+<td>Perfect</td>
+<td>Straight</td>
+<td>Platy / Granular / Tabular</td>
+<td>Uniaxial</td>
+<td>Positive / Negative</td>
+<td>Igneous (Fractures and Amygdules in basic Volcanic rocks)</td>
+<td>Olivine Serpentine Titanaugite           </td>
+<td></td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='aragonite' scope='row'>Aragonite</th>
+<td>Colourless</td>
+<td>Very High. 0.155</td>
+<td>Low to High</td>
+<td>No rhombohedral Cleavage / Simple to Lamellar twinning / Length Fast / Cavity Filling in volcanic rocks</td>
+<td>Poor</td>
+<td><strong>Straight</strong></td>
+<td>Prisms / Radiating needles</td>
+<td>Small 18&#176</td>
+<td>Negative</td>
+<td>Sedimentary (with organics)</td>
+<td></td>
+<td>Carbonate</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='arfvedsonite' scope='row'>Arfvedsonite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Arfvedsonite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Green / Purple / Brown / Dark Blue / Pleochroic</td>
+<td>Very High / May be Anomalous</td>
+<td>Moderate to High</td>
+<td>Poikilitic sieve texture / Simple Twinning / Length Fast</td>
+<td>Perfect and Good. 2 sets</td>
+<td>Inclined 65-80&#176</td>
+<td>Thick Columns / Elongate Prisms / Needles / Granular / Flaky</td>
+<td>Small to Large 0-100&#176</td>
+<td>Positive / Negative</td>
+<td>Igneous (Nepheline Syenite)</td>
+<td>Andalusite Biotite Garnet Hercynite Hypersthene Quartz K-Feldspar Muscovite Plagioclase Quartz Sillimanite</td>
+<td>Alkali Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='augite' scope='row'>Augite Group
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Augite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Augite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Green / Brown / Pleochroic</td>
+<td>Moderate. 0.018</td>
+<td>Moderate to High</td>
+<td>Simple Twinning / May have zoned colour distribution / Relief changes depending on orientation / Alters to Amphibole, Chlorite, Epidote and Talc / Replaces Diopside in Limestones</td>
+<td>Good. 2 sets at 87&#176</td>
+<td>Inclined 35-50&#176 / May be Undulose</td>
+<td>Prisms / Hexagonal / Needles</td>
+<td>Moderate 60&#176</td>
+<td>Positive</td>
+<td>Igneous (Alkaline basalts) / Metamorphic</td>
+<td>Almandine Also Garnet Clinozoisite Epidote Jadeite Lawsonite Omphacite Pumpellyite Rutile Zoisite</td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='barite' scope='row'>Barite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Barite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Barite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very High</td>
+<td>Moderate</td>
+<td>Kinking and crenulation / Polysynthetic Twinning / Length Fast</td>
+<td>Good. 3 sets</td>
+<td>Straight</td>
+<td>Flaky / Granular / Fibrous / Columns / Elongate Prisms / Platy / Radial</td>
+<td>Moderate 36-38&#176</td>
+<td>Positive</td>
+<td>Igneous / Metamorphic / Sedimentary (as gangue in hydrothermal deposits, in concretions in sandstone and in desert roses)</td>
+<td></td>
+<td></td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='barrosite' scope='row'>Barrosite Group</th>
+<td>Blue Green / Pleochroic</td>
+<td>Very High</td>
+<td>Moderate to High</td>
+<td>May have pleochroic haloes / Use associated minerals to distinguish from other amphiboles / Alters to Actinolite, Antigorite, Chlorite / Length Slow</td>
+<td>Perfect. 2 sets at 124&#176</td>
+<td>Inclined 15-22&#176</td>
+<td>Short to Long Columns / Elongate Prisms / Needles</td>
+<td>Moderate to Large 65-90&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Low grade)</td>
+<td>Augite Olivine Pigeonite Plagioclase</td>
+<td>Green Hornblende Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='beryl' scope='row'>Beryl
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Beryl in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Beryl in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Blue to Pale Green / Weakly Pleochroic</td>
+<td>Low</td>
+<td>Very High to Moderate</td>
+<td>May be anomalously Biaxial / Length Fast</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Short to Long Prisms / Granular</td>
+<td>Uniaxial</td>
+<td>Negative</td>
+<td>Igneous (Granite pegmatites) / Metamorphic</td>
+<td></td>
+<td></td>
+<td>Hexagonal</td>
+</tr>
+
+<tr>
+<th id='biotite' scope='row'>Biotite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Biotite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Biotite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Brown or Green / Pleochroic</td>
+<td>High. 0.028</td>
+<td>Moderate to High</td>
+<td>Easily altered to Chlorites or Clays / More opaque in volcanic rocks / Mottled / Length Slow</td>
+<td>Perfect</td>
+<td>Straight or Inclined 5&#176</td>
+<td>Hexagonal / Plates</td>
+<td>Small 0-35&#176</td>
+<td>Negative</td>
+<td>Igneous / Metamorphic</td>
+<td></td>
+<td>Biotite Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='bronzite' scope='row'>Bronzite</th>
+<td>Pale Green / Weakly Pleochroic</td>
+<td>Very High</td>
+<td>Moderate to High</td>
+<td>A variety of Enstatite / Zoning with Mg-rich core in Colcanic rocks / often with exsolution lamellae in Plutonic rocks / Alters to serpentine</td>
+<td>Good. 2 sets</td>
+<td></td>
+<td>Short Columns / Elongate Prisms / Granular</td>
+<td>Large to Moderate 97-63&#176</td>
+<td>Positive / Negative</td>
+<td>Igneous (Basic to ultrabasic rocks)</td>
+<td>Hematite Quartz Topaz Tourmaline          </td>
+<td>Orthopyroxene</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='bytownite ' scope='row'>Bytownite </th>
+<td>Colourless</td>
+<td>Low. up to cream</td>
+<td>Low</td>
+<td>Albite Twinning lengthways / Carlsbad Twinning / Often zoned: typically Anorthite (Na-rich) centres and Albite (Ca-rich) rims. Anorthite cores tend to alter to a fine-grained, turbid, white mica (Sericite) / Often with Clinopyroxene and/or Olivine in Igenous rocks.</td>
+<td>Perfect and Good. 2 sets at 86&#176</td>
+<td>Inclined 40-52&#176</td>
+<td>Rectangular Laths / Prisms</td>
+<td>Large 80-90&#176 </td>
+<td>Negative</td>
+<td>Igenous / Metamorphic (High grade)</td>
+<td></td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='calcite' scope='row'>Calcite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Calcite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Calcite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td><strong>Very High. 0.172 Extreme pastel colours</strong></td>
+<td>Low to High</td>
+<td>Twinkling Cleavage / Lamellar Twinning / Found infilling Fauna and Flora in carbonates / Length Fast</td>
+<td><strong>Perfect. 3 sets (Rhombohedral)</strong></td>
+<td>Straight</td>
+<td>Interlocked Grains / Fibrous / Oolitic spheres</td>
+<td>Uniaxial </td>
+<td>Negative</td>
+<td>Metamorphic / Sedimentary</td>
+<td></td>
+<td>Carbonate</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='cancrinite' scope='row'>Cancrinite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Cancrinite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Cancrinite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Yellow</td>
+<td><strong>Moderate. 0.018</strong></td>
+<td><strong>Low Negative</td>
+<td>Often replaces Nepheline / Length Fast</td>
+<td>Perfect </td>
+<td>Straight</td>
+<td>Elongate Prisms / Laths / Fibrous</td>
+<td><strong>Uniaxial</strong> </td>
+<td><strong>Negative</strong></td>
+<td>Igneous</td>
+<td>Almandine Also Garnet Clinozoisite Epidote Jadeite Lawsonite Omphacite Pumpellyite Rutile Zoisite</td>
+<td>Feldspathoid</td>
+<td>Hexagonal</td>
+</tr>
+
+<tr>
+<th id='carbon' scope='row'>Carbon (Organic)
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Carbon in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Brownish to Gray / Opaque</td>
+<td></td>
+<td>Very Low to Very High</td>
+<td>As a black pigment in many organic rich rocks</td>
+<td>Not a crystal</td>
+<td></td>
+<td>Granular (Small)</td>
+<td>Not a crystal</td>
+<td>Not a crystal</td>
+<td>Metamorphic (Low-grade) / Sedimentary (Organic rich) </td>
+<td></td>
+<td></td>
+<td>Amorphous</td>
+</tr>
+
+<tr>
+<th id='cassiterite' scope='row'>Cassiterite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Cassiterite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Cassiterite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Gray / Yellow / Red / Brown / Weakly Pleochroic</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>May have zoned colour distribution / Pleochroic haloes / Twinning / Length Slow</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Granular / Prisms / Needles </td>
+<td>Uniaxial</td>
+<td>Positive</td>
+<td>Igneous (Pegmatitic Ore deposits) / Metamorphic (Greisen and contact skarn)</td>
+<td>Clinopyroxenes Leucite Melanite Nepheline Olivine Plagioclase Volcanic Glass Sanidine Titanaugite     </td>
+<td></td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='celadonite' scope='row'>Celadonite</th>
+<td>Green / Pleochroic</td>
+<td>Very High</td>
+<td>Moderate</td>
+<td>Pseudomorphs after Olivines / Length Slow</td>
+<td>Pefect</td>
+<td>Inclined 2-3&#176</td>
+<td>Radiating / Fine Grained</td>
+<td>Small 0-20&#176</td>
+<td>Negative</td>
+<td>Igneous (Cavity filling in basalts) / Metamorphic (Zeolite facies)</td>
+<td></td>
+<td></td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='chabazite'  scope='row'>Chabazite </th>
+<td>Colourless</td>
+<td>Very Low to Low</td>
+<td>Very Low</td>
+<td>Mostly as subgrains / Simple Twinning</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Cubes / Prismatic</td>
+<td>Small 0-30&#176</td>
+<td>Positive / Negative</td>
+<td>Igneous (Cavity and Fractures Filling in Volcanic rocks, in veins in plutonic rocks)</td>
+<td></td>
+<td>Cubic Zeolite</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='chalcedony' scope='row'>Chalcedony
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Chalcedony in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low</td>
+<td>Very Low to Low</td>
+<td></td>
+<td></td>
+<td>Straight</td>
+<td>Needles / Radiating / Dense</td>
+<td>Uniaxial</td>
+<td>Positive</td>
+<td>Igneous (Fractures and Amygdules in Volcanic rocks)</td>
+<td>Chromite Hematite <Strong>Magnetite</Strong> Pentlandite Pyrite Pyrrhotite Rutile Tantalite</td>
+<td>Framework SiO<sub>2</sub></td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='chlorite' scope='row'>Chlorite Group
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Chlorite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Chlorite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Green</td>
+<td>Low or Very low. up to Gray. Usually anomalous blue, purple,</td>
+<td>Moderate</td>
+<td>Often with Muscovite / Also as alteration product (often of biotite)</td>
+<td>Perfect</td>
+<td>Inclined 0-10&#176</td>
+<td>Hexagonal / Plates</td>
+<td>Small </td>
+<td>Positive or Negative</td>
+<td>Low-grade Metamorphic</td>
+<td>Biotite Clinopyroxene Olivine Hornblende MicroclineK-Feldspar Orthopyroxene Quartz Titanaugite Volcanic Glass</td>
+<td>Sheet</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='chloritefe' scope='row'>Chlorite (Fe<sup>2+</sup>)</th>
+<td>Dark Olive Green to Brown-Green / Pleochroic</td>
+<td>Very High / May be Anomalous Blue</td>
+<td>Moderate to High</td>
+<td>Length Slow</td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td>Thin to Thick Plates / Flaky / Scaly / Fibrous</td>
+<td>Small 0-30&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Low grade and Blueschist facies)</td>
+<td>Epidote Glaucophane Lawsonite Pumpellyite</td>
+<td>Orthochlorite Chlorite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='chloritemgfe' scope='row'>Chlorite (Mg, Fe<sup>2+</sup>)</th>
+<td>Pale Green / Weakly Pleochroic</td>
+<td>Very High / May be Anomalous Blue or Brown</td>
+<td>Moderate</td>
+<td></td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td>Thin to Thick Plates / Flaky / Scaly / Fibrous</td>
+<td>Small to Moderate 0-10&#176 (if Positive) / 0-40&#176 (if Negative)</td>
+<td>Positive / Negative</td>
+<td>Igneous (Amygdules in magmatic rocks)</td>
+<td></td>
+<td>Orthochlorite Chlorite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='chloritemg' scope='row'>Chlorite (Mg)</th>
+<td>Colourless / Greenish / Weakly Pleochroic</td>
+<td>Very High / May be Anomalous Blue</td>
+<td>Very High to Moderate</td>
+<td>Anomalous birefringence for Pennine, normal for Clinochlore</td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td>Thin to Thick Plates / Flaky / Scaly / Fibrous</td>
+<td>Small 0-30&#176 (if Positive) / 0-5&#176 (if Negative)</td>
+<td>Positive / Negative</td>
+<td>Igneous (Ultrabasic rocks, palaeo-rhyolites and acidic plutonic rocks)</td>
+<td>Almandine Biotite K-Feldspar Muscovite Plagioclase Quartz Staurolite</td>
+<td>Orthochlorite Chlorite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='chloritoid' scope='row'>Chloritoid
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Chloritoid in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Chloritoid in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Green or Gray Blue Pleochroic</td>
+<td><strong>Low</strong></td>
+<td>High</td>
+<td>Cleavage not as good as Mica / Twinning / Hourglass texture</td>
+<td>Perfect. 2 sets</td>
+<td>Almost Straight</td>
+<td>Prisms / Euhedral / Spherical</td>
+<td>Moderate 36-70&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Low Grade)</td>
+<td>Albite Glaucophane Jadeite Pumpellyite</td>
+<td>Garnet</td>
+<td>Monoclinic / Triclinic</td>
+</tr>
+
+<tr>
+<th id='chromite' scope='row'>Chromite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Chromite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Chromite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Reddish / Deep Brown / almost Opaque</td>
+<td>Isotropic if translucent</td>
+<td>Very High</td>
+<td>Simple Twinning</td>
+<td>None</td>
+<td>Isotropic</td>
+<td><strong>Cubes</strong> / Octahedral / Small grains</td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Igneous (Mafic and Ultramafic)</td>
+<td>Clinopyroxenes Melanite Nepheline Olivine Sodalites Volcanic Glass / <Strong>Never With Quartz</Strong></td>
+<td>Oxide / Spinel</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='chrysotile' scope='row'>Chrysotile / White Asbestos</th>
+<td>Colourless to Pale Green / Weakly Pleochroic</td>
+<td>Very Low</td>
+<td>Low to Very High</td>
+<td>Asbestos forming in fractures</td>
+<td></td>
+<td>Straight</td>
+<td>Fibrous / Radiating</td>
+<td>Small to Large 10-90&#176 (if Positive) / 30-35&#176 (if Negative)</td>
+<td>Positive / Negative</td>
+<td>Metamorphic (Hydrothermally altered ultrabasic and basic rocks and Greenschist Facies)</td>
+<td>Bornite Chalcopyrite Galena Ilmenite Pentlandite Pyrite Pyrrhotite Sphalerite</td>
+<td>Serpentine</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='clinozoisite' scope='row'>Clinozoisite</th>
+<td>Colourless</td>
+<td>Low to Moderate. 0.004-0.015 <strong>Anomalous</strong></td>
+<td>Moderate</td>
+<td>Anomalous steel-blue birefringence</td>
+<td>Good</td>
+<td>Straight parallel to side / Inclined to cleavage</td>
+<td>Prisms</td>
+<td>Moderate to Large 40-90&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Low to High grade regional metamorphism, Contact Metamorphism, Blueschist)</td>
+<td>Biotite Hornblende MuscoviteK-Feldspar Plagioclase Quartz</td>
+<td>Epidote</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='cordierite' scope='row'>Cordierite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Cordierite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Cordierite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low. 0.008 up to White</td>
+<td>Low</td>
+<td>Often Spongy, Porous / may alter to yellow Pinite along cracks and margins / Twinning / Yellow pleochroic haloes around radioactive inclusions / Inclusions of Biotite and Quartz or Graphite in metamorphic rocks</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Irregular / Hexagonal / <strong>Spongy</strong></td>
+<td>Moderate to Large 35-80&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Low-P metapelites) / rare in igneous</td>
+<td>Albite Almandine Biotite Quartz Chlorite Kyanite MicroclineK-Feldspar Plagioclase Quartz Staurolite</td>
+<td>Ring Silicate</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='corundum' scope='row'>Corundum
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Corundum in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Corundum in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Reddish or Blue / Pleochroic</td>
+<td>Low (up to 1<sup>st</sup> order Yellow)</td>
+<td>High</td>
+<td>May have zoned colour distribution with pleochroism / Lamellar Twinning / Length Fast</td>
+<td>Good. 2 sets at 94&#176</td>
+<td>Straight</td>
+<td>Plates / Hexagonal / Needles / Prisms</td>
+<td>Uniaxial</td>
+<td>Negative</td>
+<td>Metamorphic (Al-rich and silica-poor contact metamorphism, regional Schists)</td>
+<td>Aegirine-Augite Apatite Leucite Melanite Melilite Olivine Sodalites Titanaugite / <Strong>Never With Quartz</Strong></td>
+<td></td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='cristobalite' scope='row'>Cristobalite</th>
+<td>Colourless</td>
+<td>Very Low to Low</td>
+<td>Very Low</td>
+<td>Lamellar Twinning / Occurs in cavities in Si-oversaturated igneous rocks / Devitrification product in high T metamorphic rocks (Sanidine facies)</td>
+<td></td>
+<td>Straight</td>
+<td>Plates / Spherulitic / Needles / Chalcedony-Like /Tabular Prisms / Fibrous</td>
+<td>Uniaxial or Biaxial Small 2V (25&deg;)</td>
+<td>Uniaxial Positive / Biaxial Negative</td>
+<td>Igneous (Fractures of acidic to intermediate Volcanic rocks) / Metamorphic (Sanidinite facies Contact metamorphism)</td>
+<td>Clinopyroxenes Leucite Melanite Nepheline Olivine Plagioclase Volcanic Glass Sanidine Titanaugite     </td>
+<td>Framework SiO<sub>2</sub></td>
+<td>Pseudo Cubic</td>
+</tr>
+
+<tr>
+<th id='crossite' scope='row'>Crossite</th>
+<td>Pale Yellow / Purple / Blue / <strong>Pleochroic</strong></td>
+<td><strong>Moderate. 0.02</strong></td>
+<td>Moderate</td>
+<td>May be zoned</td>
+<td>Good. 2 sets at 124&#176</td>
+<td>Inclined 5-10&#176</td>
+<td>Prisms / Fibrous </td>
+<td>Small to Moderate 0-50&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Glaucophane Schist, Eclogite)</td>
+<td>Chromite Clino And Orthopyroxenes Plagioclase Serpentine </td>
+<td>Alkali Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='cummingtonite' scope='row'>Cummingtonite</th>
+<td>Colourless to Pale Brown</td>
+<td>Moderate to High. 0.02-0.045</td>
+<td>Moderate to High</td>
+<td>Lamellar Twinning</td>
+<td>Good. 2 sets at 124&#176 <strong>(Amphibole Cleavage)</strong></td>
+<td><strong>Inclined 10-20&#176</strong></td>
+<td>Prisms</td>
+<td>Moderate to Large 60-85&#176</td>
+<td>Positive or Negative</td>
+<td>Metamorphic / rare in igneous</td>
+<td><Strong>Rutile</Strong> Garnet Kyanite Zoisite</td>
+<td>Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='diopside'  scope='row'>Diopside
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Diopside in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Diopside in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Brownish / Greenish</td>
+<td>Moderate to High. up to upper 2<sup>nd</sup> order</td>
+<td>High</td>
+<td>Rare Simple Twinning / Exsolution Lamellae in Orthopyroxene / Alters to Amphibole and Serpentine</td>
+<td>Good. 2 sets at 90&#176</td>
+<td>Inclined 35-50&#176</td>
+<td>Prisms</td>
+<td>Moderate 50-70&#176</td>
+<td>Positive</td>
+<td>Igenous (Basic rocks, Kimberlites) / Metamorphic (Marbles, High grade metabasite)</td>
+<td>Biotite Hornblende Microcline Plagioclase Quartz Sericite Sphene</td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='dolomite ' scope='row'>Dolomite 
+ <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Dolomite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Brown tinged</td>
+<td>Very High. 0.179</td>
+<td>Low to High</td>
+<td>Lamellar Twinning / Commonly iron-oxide dusted / Coarser Lamellae than Calcite / Length Fast</td>
+<td>Perfect</td>
+<td>Inclined to Cleavage</td>
+<td>Prisms</td>
+<td>Uniaxial </td>
+<td>Negative</td>
+<td>Metamorphic / Sedimentary</td>
+<td></td>
+<td>Carbonate</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='enstatite' scope='row'>Enstatite</th>
+<td>Colourless / Weakly Pleochroic</td>
+<td>Very Low</td>
+<td>Moderate to High</td>
+<td>Zoning with Mg-rich core in Colcanic rocks / often with exsolution lamellae in Plutonic rocks / Alters to serpentine</td>
+<td>Good. 2 sets</td>
+<td>Straight</td>
+<td>Short Columns / Elongate Prisms / Granular</td>
+<td>Moderate to Large 54-83&#176</td>
+<td>Positive</td>
+<td>Igneous (Basic to ultrabasic rocks)</td>
+<td></td>
+<td>Orthopyroxene</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='epidote' scope='row'>Epidote
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Epidote in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Epidote in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless, <strong>Yellow</strong> or Greenish / Pleochroic Yellow Orange to Red Purple</td>
+<td><strong>Moderate to High. 0.015-0.05 up to 3<sup>rd</sup> order</strong> / May be Anomalous</td>
+<td>High</td>
+<td>Occurs as accessory mineral in granitic rocks</td>
+<td>Good</td>
+<td>Straight or Inclined</td>
+<td>Prisms / Granular / Hexagonal / Radiating</td>
+<td>Moderate Large 60-90&#176</td>
+<td>Positive or Negative</td>
+<td>Metamorphic (Low-Grade metabasalts, Blueschist, Contact Metamorphism)</td>
+<td>Leucite Magnetite Melilite Nepheline Sodalites / <Strong>Never Ilmenite</Strong></td>
+<td>Epidote</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='epistilbite ' scope='row'>Epistilbite </th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>High birefringence compared to other zeolites / Simple Twinning / Length Slow</td>
+<td></td>
+<td>Inclined 10&#176</td>
+<td>Radial / Fibrous Aggregates / Laths</td>
+<td>Moderate to Small 44&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Hydrothermal Amygdules in Basalts and Andesites)</td>
+<td>Albite Almandine Biotite Quartz Chlorite Kyanite MicroclineK-Feldspar Plagioclase Quartz Staurolite</td>
+<td>Flaky Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='fluorite' scope='row'>Fluorite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Fluorite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Fluorite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Blueish / Purple</td>
+<td>Isotropic</td>
+<td>Very High <strong>Negative</strong></td>
+<td>Often purple due to radiation damage / Occurs as cement in sandstones / Zonal growth rings / Mottled colour texture / Found in Hydrothermal veins</td>
+<td>Perfect. 3 sets at 60&#176/ 2 Sets at 70</td>
+<td>Isotropic</td>
+<td>Cubes / Octahedral / Typically Massive</td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Igenous / Sedimentary </td>
+<td>Calcite Diopside Leucite Melilite Nepheline Olivine Pyrope</td>
+<td>Fluorite</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='garnet' scope='row'>Garnet Group
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Garnet in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Garnet in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Pink (most common)</td>
+<td>Isotropic</td>
+<td>High</td>
+<td>May be zoned / May have trails with Quartz and Biotite inclusions, which may have S or Z shapes / May alter to chlorite</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Hexagonal / Octogonal</td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Metamorphic / rare in igneous</td>
+<td></td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='gedrite' scope='row'>Gedrite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Gedrite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Gedrite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low to Moderate. 0.013</td>
+<td>Moderate</td>
+<td></td>
+<td>Good. 2 sets at 124&#176 <strong>(Amphibole Cleavage)</strong></td>
+<td><strong>Straight</strong></td>
+<td>Prisms</td>
+<td>Large </td>
+<td>Positive</td>
+<td>Metamorphic</td>
+<td>Clinopyroxenes Leucite Nepheline Olivine Plagioclase Sodalites</td>
+<td>Amphibole</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='gehlenite' scope='row'>Gehlenite</th>
+<td>Colourless / Yellow / Weakly Pleochroic</td>
+<td>Low / May be anomalous Purple Blue</td>
+<td>Moderate</td>
+<td>Interpenetrating twinning / Length Slow</td>
+<td>Poor. 2 sets</td>
+<td>Straight</td>
+<td>Short Prisms / Granular</td>
+<td>Uniaxial</td>
+<td>Negative</td>
+<td>Igneous (Silica-undersaturated Volcanic rocks) / Metamorphic</td>
+<td>Biotite Clinopyroxene Olivine Hornblende MicroclineK-Feldspar Orthopyroxene Quartz Titanaugite Volcanic Glass</td>
+<td>Melilite</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='glauconite' scope='row'>Glauconite
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Glauconite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Glauconite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Green / Pleochroic</td>
+<td>Very High</td>
+<td>Moderate</td>
+<td>Never as oolite (as opposed to chamosite) / Length Slow</td>
+<td>Pefect</td>
+<td>Inclined 2-3&#176</td>
+<td>Spheres / Elliptic</td>
+<td>Small 0-20&#176</td>
+<td>Negative</td>
+<td>Metmorphic (Marbles) / Sedimentary (Sandstones)</td>
+<td></td>
+<td></td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='glaucophane' scope='row'>Glaucophane
+ <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Glaucophane in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Glaucophane in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Pale Yellow / Purple / Blue / <strong>Pleochroic</strong></td>
+<td>Moderate. 0.02 up to Low 2<sup>nd</sup> order</td>
+<td>Moderate</td>
+<td>May be zoned / Length Slow</td>
+<td>Good. 2 sets at 124&#176</td>
+<td>Inclined 5&#176</td>
+<td>Prisms / Fibrous </td>
+<td>Small to Moderate 0-50&#176</td>
+<td>Negative</td>
+<td>Metamorphic (High P Low T)</td>
+<td>Albite Biotite Hornblende K-Feldspar Microcline Plagioclase Sphene Volcanic Glass</td>
+<td>Alkali Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='goethite' scope='row'>Goethite</th>
+<td>Yellow / Orange Brown / Pleochroic</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Component of Limonite</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Needles / Radial Fibrous / Oolitic spheres</td>
+<td>Small</td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (in weathered and altered Fe-minerals and rocks,  Cavity and Fracture Filling, Fe-ore deposits)</td>
+<td>Aegirine-Augite K-Feldspar Anorthoclase Nepheline Riebeckite Sodalite</td>
+<td>Oxide</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='graphite' scope='row'>Graphite</th>
+<td>Greenish Gray / Opaque</td>
+<td></td>
+<td>Very Low to Very High</td>
+<td>Smeared margins / Often in Barrovian foliated rocks (e.g. Phyllite or Gneisses)</td>
+<td>Perfect</td>
+<td></td>
+<td>Flakes / Grains</td>
+<td></td>
+<td></td>
+<td>Metamorphic </td>
+<td>Biotite Cordierite Corundum Kyanite Quartz Spinel</td>
+<td></td>
+<td>Hexagonal</td>
+</tr>
+
+<tr>
+<th id='grossularite' scope='row'>Grossularite</th>
+<td>Colourless / Green to Yellow</td>
+<td>Isotropic (may be anomalous)</td>
+<td>High</td>
+<td>Zonal growth rings / Mottled colour texture</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Metamorphic (e.g. Marbles) / Sedimentary (e.g. Limestones)</td>
+<td>Biotite Clinopyroxenes Hornblende Orthopyroxenes Plagioclase Quartz</td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='grünerite' scope='row'>Grünerite</th>
+<td>Colourless to Pale Brown</td>
+<td>Moderate to High. 0.02-0.045</td>
+<td>Moderate to High</td>
+<td>Lamellar Twinning</td>
+<td>Good. 2 sets at 124&#176 <strong>(Amphibole Cleavage)</strong></td>
+<td><strong>Inclined 10-20&#176</strong></td>
+<td>Prisms</td>
+<td>Moderate to Large 60-85&#176</td>
+<td>Positive or Negative</td>
+<td>Metamorphic / rare in igneous</td>
+<td></td>
+<td>Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='gypsum' scope='row'>Gypsum
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Gypsum in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low to Low</td>
+<td>Tends to be distorted / Polysynthetic twinning can form during thin-section making / Simple Twinning</td>
+<td>Good. 3 sets</td>
+<td>Inclined 15&#176</td>
+<td>Plates / Fibrous / Granular</td>
+<td>Moderate to Small 58&#176</td>
+<td>Positive</td>
+<td>Sedimentary</td>
+<td></td>
+<td></td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='harmotome'  scope='row'>Harmotome </th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Heating during thin-section making changes the optical characteristics</td>
+<td></td>
+<td>Inclined 28-32&#176</td>
+<td>Thick Columns / Elongate Prisms </td>
+<td>Large to Small 79&#176</td>
+<td>Positive</td>
+<td>Igneous (Cavity and Fractures Filling in basic Volcanic rocks, in veins in plutonic rocks)</td>
+<td></td>
+<td>Cubic Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='hastingsite' scope='row'>Hastingsite Group</th>
+<td>Bright Green to Yellow Green / Pleochroic</td>
+<td>Very Low</td>
+<td>Moderate to High</td>
+<td>May have pleochroic haloes / Use associated minerals to distinguish from other amphiboles / Alters to Actinolite, Antigorite, Chlorite / Length Slow</td>
+<td></td>
+<td>Inclined 14-20&#176</td>
+<td>Short to Long Columns / Needles / Elongate Prisms</td>
+<td>Moderate to Large 34-90&#176</td>
+<td>Negative</td>
+<td>Igneous (Intermediate to acidic rocks and Lamprophyrs) / Metamorphic (Amphibolite and Amphibole Schists)</td>
+<td>Andalusite Biotite Cordierite K-Feldspar Kyanite Muscovite Plagioclase Quartz</td>
+<td>Green Hornblende Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='hauyne' scope='row'>Haüyne
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Haüyne in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Haüyne in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Blue / Purple Blue / Blue Green</td>
+<td>Isotropic</td>
+<td><strong>Moderate Negative</strong></td>
+<td>Dark rims, opaque streaks and clusters / Zoned / Irregular colour distribution / Locally as fine-grained inclusions</td>
+<td>Good</td>
+<td>Isotropic</td>
+<td>Hexagonal / Cubes / Anhedral / Corroded crystals / </td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Igneous (Mainly alkaline volcanic, rarely plutonic)</td>
+<td>Leucite Nepheline</td>
+<td>Sodalite (Feldspathoid)</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='hematite' scope='row'>Hematite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Hematite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+</th>
+<td>Blood Red / <strong>Opaque</strong></td>
+<td>Not detectable</td>
+<td>Very High</td>
+<td>Normally Opaque / Grains may be deep Red on thin edges / Mainly in schists or as accessory mineral in other rocks.</td>
+<td>None</td>
+<td>Straight</td>
+<td>Hexagonal Plates / Granular / Tabular / Fibrous</td>
+<td>Uniaxial (Opaque) </td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (Low to Medium grade) / Sedimentary</td>
+<td>Clinopyroxenes Leucite Melanite Nepheline Olivine Titanaugite Volcanic Glass  / <Strong>Never With Quartz</Strong></td>
+<td>Oxide</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='hercynite' scope='row'>Hercynite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Hercynite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Hercynite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Deep, "Emerald" Green</td>
+<td>Isotropic</td>
+<td>High</td>
+<td>May be zoned with a darker core / Simple Twinning</td>
+<td></td>
+<td>Isotropic</td>
+<td>Octahedral / Granular</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous (Ultramafic rocks) / Metamorphic (Cordierite Sillimanite Gneisses)</td>
+<td>Aegirine-Augite Apatite Nepheline K-Feldspar Plagioclase Quartz Sanidine</td>
+<td>Spinel</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='heulandite' scope='row'>Heulandite</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Simple Twinning / May occur as Devitrification Product / Length Fast</td>
+<td>Perfect</td>
+<td>Inclined 0-32&#176</td>
+<td>Platy / Flaky / Radiating / Rosettes / Subparallel Aggregates</td>
+<td>Small to Moderate 0-50&#176</td>
+<td>Positive</td>
+<td>Igneous (Cavity and Fractures Filling in acidic to basic magmatic rocks) / Metamorphic (in metatuffs and metagreywackes in Zeolite facies)</td>
+<td>Almandine Cordierite Corundum           </td>
+<td>Flaky Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='hornblende' scope='row'>Hornblende
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Hornblende in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Hornblende in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Green / Brown / Red / orange / <strong>Pleochroic</strong></td>
+<td>Low to Moderate. 0.015-0.02 up to mid 2<sup>nd</sup> order</td>
+<td>High</td>
+<td>Colour of metamorphic Hornblendes often related to grade: Low to high grade goes from Bluish Green to Green to Brownish / Occurs in intermediate Igneous rocks / Occurs in medium grade metamorphic rocks</td>
+<td>Good. 2 sets at 120&#176</td>
+<td>Inclined 2-4&#176</td>
+<td>Elongate Prisms / Laths</td>
+<td>Moderate to Large 50-80&#176</td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (Med grade)</td>
+<td>Albite Almandine Biotite Kyanite Muscovite Quartz</td>
+<td>Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='hypersthene' scope='row'>Hypersthene</th>
+<td>Pale Green / Reddish / Pale Brown / Weakly Pleochroic</td>
+<td>Very High</td>
+<td>Moderate to High</td>
+<td>Outdated term for a mineral in the Enstatite-Ferrosilite series / Zoning with Mg-rich core in Colcanic rocks / often with exsolution lamellae in Plutonic rocks / Alters to serpentine</td>
+<td>Good. 2 sets</td>
+<td></td>
+<td>Short Columns / Granular / Elongate Prisms</td>
+<td>Moderate 63-45&#176</td>
+<td>Negative</td>
+<td>Igneous (Intermediate to acidic Volcanic rocks) / Metamorphic (Contact metamorphism, Pyroxene Granulites)</td>
+<td>Calcite Glaucophane Chlorite Garnet Quartz Sericite Sphene</td>
+<td>Orthopyroxene</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='illite' scope='row'>Illite</th>
+<td>Colourless</td>
+<td>High. 0.030-0.035</td>
+<td>Low</td>
+<td>Coats grain surface / Extremely fine</td>
+<td>Perfect</td>
+<td>-</td>
+<td><strong>Fibrous / Wispy / Very fine</strong></td>
+<td>Small 5-25&#176</td>
+<td>Negative</td>
+<td>Sedimentary</td>
+<td>Antigorite Actinolite Clinochore Quartz Tremolite</td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='ilmenite' scope='row'>Ilmenite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Ilmenite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Ilmenite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Red in thin flakes or Opaque</td>
+<td>Not detectable</td>
+<td>Very High</td>
+<td>Common accessory mineral</td>
+<td>None</td>
+<td>Straight</td>
+<td>Hexagonal Plates / Laminar / Prismatic / Skeletal / Granular / Flaky</td>
+<td>Uniaxial (Opaque) </td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (High grade) / Sedimentary</td>
+<td>Apatite Beryl Cassiterite Fluorite Spodumene Topaz</td>
+<td>Oxide</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='jadeite' scope='row'>Jadeite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Jadeite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Jadeite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Green / Weakly Pleochroic</td>
+<td>Low. 0.006 anomalous</td>
+<td>Moderate</td>
+<td>Occurs in Glaucophane rocks and Jadeite-Quartzites</td>
+<td>Good. 2 sets at 87&#176</td>
+<td>Inclined 30-50&#176 / May be Undulose</td>
+<td>Prisms / Hexagonal / Needles</td>
+<td>Large 60-90&#176</td>
+<td>Positive</td>
+<td>Metamorphic</td>
+<td>Albite Epidote Biotite Sphene Talc Calcite Chlorite Quartz Sericite</td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='kaersutite' scope='row'>Kaersutite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Kaersutite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Kaersutite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Reddish Brown / Pleochroic</td>
+<td>Very High</td>
+<td>Moderate to High</td>
+<td>May have zoned colour distribution / Hourglass structure / Reaction Rims / Length Slow</td>
+<td></td>
+<td>Inclined 3-19&#176</td>
+<td>Short Columns / Elongate Prisms</td>
+<td>Large 74-82&#176</td>
+<td>Negative</td>
+<td>Igneous (Na-rich basic rocks)</td>
+<td>Cristobalite</td>
+<td>Brown Hornblende Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='kaolinite' scope='row'>Kaolinite</th>
+<td>Colourless / Pale Yellow</td>
+<td>Low. 0.007</td>
+<td>Low</td>
+<td>Stacks of tiny plates / Often fills pore space / from the alteration of Feldspars</td>
+<td>Perfect</td>
+<td>-</td>
+<td>Plates / Fibrous / Radiating platelets</td>
+<td>Small to Moderate 25-50&#176</td>
+<td>Negative</td>
+<td>Sedimentary</td>
+<td>Calcite Diopside Epidote Grossularite Quartz Vesuvianite</td>
+<td>Clay / Sheet</td>
+<td>Triclinic / Monoclinic</td>
+</tr>
+
+<tr>
+<th id='katophorite' scope='row'>Katophorite</th>
+<td>Greenish Brown</td>
+<td>Very Low</td>
+<td>Moderate to High</td>
+<td>May have zoned colour distribution / Hourglass structure / Reaction Rims / Length Slow</td>
+<td></td>
+<td>Inclined 8-16&#176</td>
+<td></td>
+<td>Small to Moderate 0-57&#176</td>
+<td>Negative</td>
+<td>Igneous (Na-rich Magmatites)</td>
+<td></td>
+<td>Brown Hornblende Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='koppite' scope='row'>Koppite</th>
+<td>Colourless / Red to Brown</td>
+<td>Isotropic</td>
+<td>Very High</td>
+<td>Simple Twinning / Hard to differentiate from Perovskite, Picotite, Cromite and Melanite</td>
+<td></td>
+<td>Isotropic</td>
+<td>Euhedral (Dodecahedrons; like a Hexagon with more faces)</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous (Carbonatites)</td>
+<td>Apatite Biotite Hornblende Or Nepheline K-Feldspar Quartz</td>
+<td></td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='kyanite' scope='row'>Kyanite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Kyanite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Kyanite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Blue Pleochroic</td>
+<td>Low. 0.012-0.016  up to 1<sup>st</sup> order Yellow</td>
+<td><strong>High &gt; Andalusite and Sillimanite</strong></td>
+<td>Stress induced curving / Length Slow</td>
+<td>Perfect. 2 sets at 85&#176</td>
+<td>Inclined 0-30&#176max</td>
+<td>Prisms</td>
+<td>Large 85&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Moderate to high grade metapelites)</td>
+<td>Actinolite Albite Chlorite Clinozoisite Epidote Prehnite Sericite</td>
+<td>Al Silicate</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='labradorite' scope='row'>Labradorite </th>
+<td>Colourless</td>
+<td>Low. up to White</td>
+<td>Low</td>
+<td>Albite Twinning lengthways / Carlsbad Twinning / Often zoned: typically Anorthite (Na-rich) centres and Albite (Ca-rich) rims. Anorthite cores tend to alter to a fine-grained, turbid, white mica (Sericite) / Often with Clinopyroxene and/or Olivine in Igenous rocks.</td>
+<td>Perfect and Good. 2 sets at 86&#176</td>
+<td>Inclined 28-39&#176</td>
+<td>Prisms / Rectangular Laths</td>
+<td>Large 70-90&#176</td>
+<td>Negative</td>
+<td>Igenous / Metamorphic (High grade)</td>
+<td>Fluorite K-Feldspar Li-Mica Quartz Rutile Topaz Tourmaline</td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='laumontite' scope='row'>Laumontite</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Extinction angle related to degree of water loss / Length Slow</td>
+<td></td>
+<td>Inclined 8-11&#176</td>
+<td>Radial / Columns  / Elongate Prisms / Spherulitic</td>
+<td>Moderate 33-47&#176</td>
+<td>Negative</td>
+<td>Igneous (Cavity and Fractures Filling in acidic to basic magmatic rocks) / Metamorphic (in metatuffs and metagreywackes in Zeolite facies)</td>
+<td>Zircon Cassiterite Ilmenite Rutile</td>
+<td>Mordenite Fibrous Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='lawsonite' scope='row'>Lawsonite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Lawsonite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Lawsonite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Rare Blueish</td>
+<td>Moderate. 0.020</td>
+<td>Moderate</td>
+<td>Lamellar Twinning / Length Fast / in Glaucophane schists, Greenschist and amphibolites</td>
+<td>Perfect. 2 sets</td>
+<td>Straight / May be Undulose</td>
+<td>Diamond / Prisms / Plates</td>
+<td>Large 76-87&#176</td>
+<td>Positive</td>
+<td>Metamorphic</td>
+<td>Leucite Nepheline Olivine Perovskite Pyroxene  <Strong>Never With Quartz</Strong></td>
+<td>Epidote</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='lepidolite' scope='row'>Lepidolite</th>
+<td>Colourless / Pale pink / Weakly Pleochroic</td>
+<td>Very High</td>
+<td>Very Low to Moderate</td>
+<td>Pleochroic haloes around zircon / Occurs as fine-speckled in extinction orientation / Length Slow</td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td>Platy / Flaky / Scaly / Columns</td>
+<td>Small to Moderate 23-58&#176</td>
+<td>Negative</td>
+<td>Igneous (Li-rich Granite Pegmatites) / Metamorphic (Greisen)</td>
+<td>Leucite Nepheline Olivine Perovskite Pyroxene  <Strong>Never With Quartz</Strong></td>
+<td>Lithionite Series Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='leucite' scope='row'>Leucite 
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Leucite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Leucite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low. Almost Isotropic. 0.001 / Anomalous</td>
+<td>Moderate Negative</td>
+<td><strong>Multiple Twinning / Volcanic only</strong></td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Euhedral (Icositetrahedral) / Trapeze shaped</td>
+<td>Almost Isotropic </td>
+<td>Positive</td>
+<td>Igneous</td>
+<td>Opal Zeolites</td>
+<td>Feldspathoid</td>
+<td>Tetragonal / Pseudo Cubic</td>
+</tr>
+
+<tr>
+<th id='limonite' scope='row'>Limonite</th>
+<td>Ochre-Yellow to Reddish-Brown</td>
+<td>Very Low / Opaque if dendritic</td>
+<td>Very High to Very Low</td>
+<td>Broad term for unidentifiable massive Fe oxides / No visible crystals / Most commonly just Goethite</td>
+<td>None</td>
+<td></td>
+<td>Oolitic spheres / Crust and Soil-Like / Radiating</td>
+<td></td>
+<td></td>
+<td>From alteration of Hematite or Magnetite / Igneous / Metamorphic / Sedimentary</td>
+<td>Cristobalite Tridymite Volcanic Glass</td>
+<td>Oxide</td>
+<td>-</td>
+</tr>
+
+<tr>
+<th id='lizardite' scope='row'>Lizardite</th>
+<td>Colourless to Pale Green / Weakly Pleochroic</td>
+<td>Very Low</td>
+<td>Low</td>
+<td>Main phase in Bastite (Pseudomorphous after orthopyroxenes) / Length Slow</td>
+<td>Perfect</td>
+<td>Straight</td>
+<td>Fine-Scaly / Fibrous</td>
+<td>Small 0&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Serpentinites)</td>
+<td>Analcite Calcite Zeolites</td>
+<td>Serpentine</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='magnesite' scope='row'>Magnesite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Magnesite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Magnesite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Gray Brown</td>
+<td>Very High</td>
+<td>Very Low to High</td>
+<td>May have Lamellar Twinning / Length Fast</td>
+<td></td>
+<td>Straight</td>
+<td>Granular / Fibrous / Dense</td>
+<td>Uniaxial</td>
+<td>Negative</td>
+<td>Metamorphic (Talc and chlorite schist, as gel in serpentinites, as ore deposit in metasomatic zones)</td>
+<td></td>
+<td>Carbonate</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='magnetite' scope='row'>Magnetite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Magnetite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Magnetite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Opaque</td>
+<td>Isotropic if translucent</td>
+<td>Very High</td>
+<td>Magnetic / AKA Lodestone</td>
+<td>None</td>
+<td>Isotropic</td>
+<td><strong>Cubes</strong> / Octahedral / Granular / Skeletal</td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Igneous / Metamorphic / Sedimentary</td>
+<td></td>
+<td>Oxide</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='melanite' scope='row'>Melanite</th>
+<td>Brown</td>
+<td>Isotropic</td>
+<td>Very High</td>
+<td>Zonal texture</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous (Alkaline rocks)</td>
+<td></td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='mesolite'  scope='row'>Mesolite </th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Isotypic (Similar crystal structure and chemical formula) with Natrolite and Scolecite / Length Fast</td>
+<td></td>
+<td>Inclined 2-5&#176</td>
+<td>Fibrous</td>
+<td>Large to Small 80&#176</td>
+<td>Positive</td>
+<td>Igneous (Cavity filling in phonolites and basalts)</td>
+<td></td>
+<td>Natrolite Fibrous Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='microcline' scope='row'>Microcline
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Microcline in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low. 0.006-0.010 up to Gray</td>
+<td>Very Low</td>
+<td>Cross-hatch Twinning</td>
+<td>Perfect. 2 sets</td>
+<td><strong>Inclined</strong></td>
+<td>Prisms</td>
+<td>Moderate to Large 60-80&#176</td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (Med to High Grade) / Sedimentary</td>
+<td>Calcite Epidote Fassaite Grossularite Sphene Spinel Wollastonite</td>
+<td>Alkali Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='monazite' scope='row'>Monazite</th>
+<td>Colourless / Green - Yellow / Weakly pleochroic</td>
+<td>High to Very High</td>
+<td>High</td>
+<td>Simple Twinning / May be fractured / May look like Zircon or Sphene / Higher birefringence and less pleochroic than Staurolite</td>
+<td>Good</td>
+<td>Straight / May be Inclined 2-6&#176</td>
+<td>Tabular / Plates</td>
+<td>Small 10-25&#176</td>
+<td>Positive</td>
+<td>Igneous (Granites) / Metamorphic (Dolostones and Mica Schists) / Sedimentary (highly resistant to weathering)</td>
+<td>Epidote Cordierite Apatite Ilmenite Bastnasite</td>
+<td>Phosphate</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='mordenite' scope='row'>Mordenite</th>
+<td>Colourless / Red</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>May occur as Devitrification Product</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Fibrous / Radial / Fine grained</td>
+<td>Large 76-90&#176</td>
+<td>Positive / Negative</td>
+<td>Igneous (Cavity and Fractures Filling in acidic Volcanic rocks) / Sedimentary</td>
+<td>Cassiterite Li-Mica Quartz Topaz Tourmaline</td>
+<td>Mordenite Fibrous Zeolite</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='muscovite' scope='row'>Muscovite
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Muscovite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Yellow / Pale Green (Cr-rich)</td>
+<td>High. 0.036-0.04 up to upper 2<sup>nd</sup> order</td>
+<td>Moderate</td>
+<td>Cleavage kink due to deformation / Length Slow</td>
+<td><strong>Perfect </strong></td>
+<td><strong>Straight or 1-2&#176 (Undulose)</strong></td>
+<td><strong>Plates</strong> / Fine aggregates / Flakes</td>
+<td>Moderate 30-50&#176</td>
+<td>Negative</td>
+<td>Igneous (Al-rich granites) / Metamorphic / Sedimentary</td>
+<td>Calcite Zeolite</td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='natrolite' scope='row'>Natrolite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Natrolite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Natrolite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Pseudomorphous after Plagioclases / Length Slow</td>
+<td>Good</td>
+<td>Straight</td>
+<td><strong>Radiating Needles</strong> / Lath / Fibrous / Radiating Aggregates</td>
+<td>Moderate 58-64&#176</td>
+<td>Positive</td>
+<td>Igneous (Cavity filling in basic to intermediate magmatic rocks)</td>
+<td>Clinopyroxenes Olivine Plagioclase Spinel</td>
+<td>Natrolite Fibrous Zeolite</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='nepheline' scope='row'>Nepheline
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Nepheline in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Nepheline in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Cloudy from inclusions</td>
+<td>Low. 0.009-0.005 (&lt;quartz) up to dark Gray</td>
+<td>Low <strong>Negative</strong></td>
+<td>Euhedral blocky shapes (i.e. hexagons or rectangles) are only seen in lavas, Anhedral elsewhere / Length Fast</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Hexagonal / Prisms / Euhedral blocks</td>
+<td>Uniaxial </td>
+<td>Negative</td>
+<td>Igneous (Alkali rocks)</td>
+<td>Clinopyroxenes Olivine Plagioclase Spinel</td>
+<td>Feldspathoid</td>
+<td>Hexagonal</td>
+</tr>
+
+<tr>
+<th id='nosean' scope='row'>Nosean</th>
+<td>Colourless</td>
+<td>Isotropic</td>
+<td>Moderate Negative</td>
+<td>Dark rims, opaque streaks and clusters / Zoned / Irregular colour distribution / Locally as fine-grained inclusions</td>
+<td>Poor</td>
+<td>Isotropic</td>
+<td>Hexagonal / Cubes / Anhedral corroded crystals / </td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Igneous (Mainly alkaline volcanic, rarely plutonic)</td>
+<td>Biotite Clinopyroxenes Hornblende Plagioclase Volcanic Glass</td>
+<td>Sodalite (Feldspathoid)</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='oligoclase' scope='row'>Oligoclase </th>
+<td>Colourless</td>
+<td>Low. up to White</td>
+<td>Very Low</td>
+<td>Albite Twinning lengthways / Carlsbad Twinning / Often zoned: typically Anorthite (Na-rich) centres and Albite (Ca-rich) rims. Anorthite cores tend to alter to a fine-grained, turbid, white mica (Sericite) / Often with Biotite and K-feldspar in Igneous rocks / In low-med grade metamorphic rocks</td>
+<td>Perfect and Good. 2 sets at 86&#176</td>
+<td>Inclined 12&#176</td>
+<td>Prisms / Rectangular Laths</td>
+<td>Large 70-90&#176</td>
+<td>Negative</td>
+<td>Igenous / Metamorphic (Low grade)</td>
+<td>Clinopyroxenes Leucite Nepheline Olivine Plagioclase Sodalites</td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='olivine' scope='row'>Olivine Group
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Olivine in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Olivine in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless (Mg-rich) to Yellow or Pale Brown (Fe-rich)</td>
+<td>High. 0.032-0.05 up to upper 2<sup>nd</sup> order, or 3<sup>st</sup> in Fayalite (Fe-rich Olivines)</td>
+<td>High</td>
+<td>May have different birefringence colours along curving cracks / May alter to serpentine / Occurs in basic and ultrabasic igneous rocks / Occurs in meta marbles / Fayalite (Fe-rich olivines) rare in granitic
+and syenitic rocks.</td>
+<td>None. Curving Cracks</td>
+<td>Straight</td>
+<td>Diamond / Hexagonal / Octahedral / Granular</td>
+<td>Uniaxial </td>
+<td>Positive for Forsterite (Mg-rich) / Negative for Fayalite (Fe-rich)</td>
+<td>Igneous (Basic to Ultrabasic) / Metamorphic (e.g. Serpentinites, Marbles)</td>
+<td>Biotite Garnet MicroclineK-Feldspar Plagioclase Pyroxene Quartz Sphene</td>
+<td>Olivine</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='omphacite' scope='row'>Omphacite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Omphacite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Omphacite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Green / faintly Pleochroic</td>
+<td>Low. 0.012 moderately anomalous</td>
+<td>Moderate to High</td>
+<td>Like Augite but with lower Birefringence</td>
+<td>Good . 2 sets at 87&#176</td>
+<td>Inclined 34-48&#176</td>
+<td>Prisms / Hexagonal</td>
+<td>Moderate to Large 55-85&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Only Eclogites)</td>
+<td>Biotite Garnet MicroclineK-Feldspar Plagioclase Pyroxene Quartz Sphene</td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='opal' scope='row'>Opal</th>
+<td>Colourless / Yellowish / Reddish</td>
+<td>Anomalous</td>
+<td>Very Low</td>
+<td>Often altered to Cristobalite or Chalcedony / Shrinkage cracks / Hydrated SiO<sub>2</sub></td>
+<td>Not a crystal</td>
+<td></td>
+<td>Amorphous / Spherical</td>
+<td>Not a crystal</td>
+<td>Not a crystal</td>
+<td>Igneous (Volcanic)</td>
+<td>Albite Almandine Epidote</td>
+<td>Oxide</td>
+<td></td>
+</tr>
+
+<tr>
+<th id='orthoclase' scope='row'>Orthoclase / K-Feldspar</th>
+<td>Colourless</td>
+<td>Low. 0.006-0.010 up to Gray</td>
+<td>Low</td>
+<td>Carlsbad Twinning / Perthitic Exsolution common / Often turbid</td>
+<td>Perfect. 2sets at 90&#176</td>
+<td>Straight</td>
+<td>Prisms </td>
+<td>Large 60-80&#176</td>
+<td>Negative</td>
+<td>Igneous (Acid to Intermediate rocks, Volcanic) / Metamorphic (Orthogneiss)</td>
+<td>Biotite Clinopyroxene Orthopyroxene Plagioclase Volcanic Glass</td>
+<td>Alkali Feldspar</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='orthopyroxene' scope='row'>Orthopyroxene Group
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Orthopyroxene in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Orthopyroxene in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Pink / Green Pleochroic</td>
+<td>Low. 0.007 to Moderate at Ferrosilite (Fe-rich). up to 1<sup>st</sup> order Yellow</td>
+<td>Moderate to High</td>
+<td>Pleochroic grains usually have a negative optic sign / Occurs in basic and ultrabasic rocks / Occurs in high-grade metamorphic rocks (i.e. metabasites) / Length Fast</td>
+<td><strong>Good. 2 sets  at 87&#176</strong></td>
+<td><strong>Straight</strong></td>
+<td>Prisms / Hexagonal</td>
+<td>Moderate to Large 55-90&#176</td>
+<td>Positive for 88-100 Fe% / Negative at 12-88 Fe%</td>
+<td>Igneous / Metamorphic</td>
+<td>Olivine Plagioclase Titanaugite</td>
+<td>Pyroxene</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='oxybiotite' scope='row'>Oxybiotite</th>
+<td>Red to Dark Brown</td>
+<td>Very Low</td>
+<td>Moderate to High</td>
+<td>Reaction Rims / Pleochroic haloes around Zircon / Occurs as fine-speckled in extinction orientation / Length Slow</td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td>Platy / Flaky / Scaly / Columns</td>
+<td>Small 20-30&#176</td>
+<td>Negative</td>
+<td>Igneous (Intermediate Volcanic rocks)</td>
+<td>Aegirine-Augite Apatite Arfvedsonite Nepheline Sanidine Olivine Titanbiotite</td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='oxyhornblende' scope='row'>Oxyhornblende</th>
+<td>Red to Dark Brown</td>
+<td>Very Low</td>
+<td>Moderate to High</td>
+<td>Changeable relief and birefringence in a single crystal / Haloes / Reaction Rims / Length Slow</td>
+<td>Perfect. 2 sets at 124&#176</td>
+<td>Straight to Inclined 12&#176</td>
+<td>Short to Long Columns</td>
+<td>Moderate to Large 56-88&#176</td>
+<td>Negative</td>
+<td>Igneous (Acidic to intermediate Volcanic rocks)</td>
+<td>Aegirine-Augite Anorthoclase K-Feldspar Nepheline Riebeckite Sodalite</td>
+<td>Brown Hornblende Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='paragonite' scope='row'>Paragonite</th>
+<td>Colourless</td>
+<td>High. 0.036-0.04</td>
+<td>Moderate</td>
+<td></td>
+<td>Perfect </td>
+<td>Straight or 1-2&#176 (Undulose)</td>
+<td>Plates</td>
+<td>Moderate 40&#176</td>
+<td>Negative</td>
+<td>Metamorphic / Sedimentary</td>
+<td>Beryl Cassiterite Quartz Spodumene Topaz Tourmaline</td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='perovskite' scope='row'>Perovskite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Perovskite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Dark Brown / Yellowish / Greenish</td>
+<td>Isotropic / Very weak / Anomalous</td>
+<td>Very High</td>
+<td>May have zoned colour distribution / Very small grains are opaque / Simple and Lamellar Twinning</td>
+<td>Poor</td>
+<td>Almost Isotropic</td>
+<td>Octahedral / Cubes</td>
+<td>Almost Isotropic </td>
+<td>Positive</td>
+<td>Igneous (Kimberlites, Alkaline and Volcanic rocks)</td>
+<td>Cassiterite Quartz Topaz Wolframite</td>
+<td>Pervoskite</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='phengite' scope='row'>Phengite</th>
+<td>Colourless / Pale Green</td>
+<td>High. 0.036-0.04</td>
+<td>Moderate</td>
+<td>A Si-rich Muscovite / Can't be distinguished from Muscovite Optically / Length Slow</td>
+<td>Perfect </td>
+<td>Straight or 1-2&#176 (Undulose)</td>
+<td>Fine aggregates / Flakes</td>
+<td>Moderate 25-35&#176</td>
+<td>Negative</td>
+<td>Igneous / Metamorphic (Glaucophane schist, Eclogite, Gneiss)</td>
+<td>Clino And Orthopyroxenes Oxyhornblende Plagioclase Quartz Volcanic Glass Sanidine</td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='phillipsite' scope='row'>Phillipsite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Phillipsite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Phillipsite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Interpenetrating Twinning / Occurs in basalt cavities / Length Slow</td>
+<td></td>
+<td>Inclined 11-30&#176</td>
+<td>Thick Columns</td>
+<td>Moderate to Large 60-80&#176</td>
+<td>Positive</td>
+<td>Igneous (Cavity and Fractures Filling in basic Volcanic rocks, Nepheline syenite)</td>
+<td>Aegirine-Augite Apatite Na-Sanidine Nepheline Nosean</td>
+<td>Cubic Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='phlogopite' scope='row'>Phlogopite
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Phlogopite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Yellow and Green / Orange / Pink / Brown</td>
+<td>High. 0.028-0.045</td>
+<td>Low to Moderate</td>
+<td>A Mg-rich Mica / Pleochroic Haloes around inclusions / Length Slow</td>
+<td>Perfect</td>
+<td>Straight or slightly Inclined</td>
+<td>Needles / Elongate Laths / Micaceous Flakes</td>
+<td>Small &lt;15&#176</td>
+<td>Negative</td>
+<td>Igneous (Basic and Ultrabasic, Kimberlites) / Metamorphic (Marbles)</td>
+<td>Calcite Pyrite Quartz</td>
+<td>Biotite Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='picotite' scope='row'>Picotite</th>
+<td>Yellow to Brown</td>
+<td>Isotropic</td>
+<td>Very High to Very Low</td>
+<td>Occurs as small inclusions in Olivines or Serpentine / Simple Twinning</td>
+<td></td>
+<td>Isotropic</td>
+<td>Granular within Olivine or Serpentine</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous (Alkali basalts)</td>
+<td>Calcite Chlorite Chrysotile Olivine Pyroxene Zeolite</td>
+<td>Spinel</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='piemontite' scope='row'>Piemontite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Piemontite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Piemontite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td><strong>Yellow / Pink / Magenta / Deep Brown Pleochroism</strong></td>
+<td>Low to High. 0.025-0.075 / May be Anomalous</td>
+<td>High</td>
+<td>A Mn-rich Epidote</td>
+<td>Good. 2 sets</td>
+<td>Straight or Inclined</td>
+<td>Prisms</td>
+<td>Moderate to Large 50-85&#176</td>
+<td>Positive</td>
+<td>Metamorphic</td>
+<td>Hornblende Microcline OlivineK-Feldspar Pyroxene Quartz Serpentine</td>
+<td>Epidote</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='pigeonite' scope='row'>Pigeonite</th>
+<td>Colourless to Greenish Pinkish or Brownish</td>
+<td>Moderate to High. 0.023-0.029</td>
+<td>Moderate to High</td>
+<td>May alter along cracks / Lamellar Twinning / Often as matrix</td>
+<td>Good. 2 sets  at 87&#176</td>
+<td>Inclined 37-44&#176</td>
+<td>Prisms / Hexagonal</td>
+<td><strong>Small 0-30&#176</strong></td>
+<td>Positive</td>
+<td>Igneous (Ti-rich Alkali Rocks)</td>
+<td>Amphibole Biotite Delessite Pyroxene</td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='plagioclase' scope='row'>Plagioclase Group
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Plagioclase in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low. 0.007-0.013</td>
+<td>Low</td>
+<td><strong>Lamellar Twinning </strong></td>
+<td>Perfect</td>
+<td>Inclined</td>
+<td>Prisms</td>
+<td>Large </td>
+<td>Positive for Ab 77, Negative for An 78</td>
+<td>Igneous / Metamorphic / Sedimentary</td>
+<td>Actinolite Albite Biotite Epidote Glaucophane Lawsonite Pumpellyite Quartz Sericite Zoisite</td>
+<td>Plagioclase Feldspar</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='pleonaste' scope='row'>Pleonaste</th>
+<td>Greenish Gray</td>
+<td>Isotropic</td>
+<td>High to Very Low</td>
+<td>Simple Twinning</td>
+<td></td>
+<td>Isotropic</td>
+<td>Octahedral</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous (Mafic) / Metamorphic (e.g. Marbles)</td>
+<td>Chrysotile Magnesite Olivine Orthopyroxene Talc</td>
+<td>Spinel</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='prehnite' scope='row'>Prehnite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Prehnite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Prehnite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very Low / May be Anomalous Blue to Brown</td>
+<td>Moderate</td>
+<td>Lamellar Twinning</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Plates / Flaky / Radiating Aggregates / Dendritic / Skeletal</td>
+<td>Moderate to Large 64-71&#176</td>
+<td>Positive</td>
+<td>Igneous (Basic Volcanic rocks) / Metamorphic (Greenschists, metabasalts and in metamorphic siliceous limestones)</td>
+<td></td>
+<td>Alumino-Silicate</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='pumpellyite' scope='row'>Pumpellyite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Pumpellyite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Pumpellyite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Green / Blue-Gray / Brownish / Pleochroic</td>
+<td>Low to Moderate / May be anomalous Blue to Brown</td>
+<td>Moderate to High</td>
+<td>Twinning / Zoned / Intergrown with Lawsonite</td>
+<td>Good. 2 sets</td>
+<td>Inclined 5-22&#176</td>
+<td>Radiating Rays / Laths / Needles / Fibrous / Rosettes</td>
+<td>Small to Large 7-110&#176</td>
+<td>Positive or Negative</td>
+<td>Metamorphic (Green and Blueschist)</td>
+<td>Antigorite Bronzite Chrysotile</td>
+<td>Pumpellyite Epidote</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='pyrite' scope='row'>Pyrite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Pyrite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Pyrite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Opaque</td>
+<td>Isotropic</td>
+<td>High</td>
+<td>Hard to ID in Transmitted light / Often weathered / Interpenetrating Twinning</td>
+<td></td>
+<td>Isotropic</td>
+<td>Octahedral / Cubes / Granular</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous / Metamorphic (Schists) / Sedimentary </td>
+<td>Aegirine-Augite Aenigmatite Arfvedsonite Quartz Volcanic Glass</td>
+<td></td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='pyrochlore' scope='row'>Pyrochlore</th>
+<td>Reddish to Opaque Brown</td>
+<td>Isotropic</td>
+<td>Very High</td>
+<td>Simple Twinning / Hard to differentiate from Perovskite, Picotite, Chromite and Melanite</td>
+<td></td>
+<td>Isotropic</td>
+<td>Octahedral / Granular</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Igneous (Pegmatites and Volcanic ejections)</td>
+<td>Analcite Calcite Heulandite Laumontite Na-Sanidine Nepheline Scolecite Stilbite Thomsonite</td>
+<td></td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='pyrope' scope='row'>Pyrope</th>
+<td>Pale Red</td>
+<td>Isotropic</td>
+<td>Very Low</td>
+<td>Celyphytic rims common</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Metamorphic (Peridotites, Kimberlites, Serpentinites and Eclogites)</td>
+<td>Calcite Chalcedony Zeolite</td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='pyrrhotite' scope='row'>Pyrrhotite</th>
+<td>Opaque</td>
+<td></td>
+<td>Very Low</td>
+<td>Hard to ID in Transmitted light</td>
+<td></td>
+<td></td>
+<td>Granular / Tabular/ Massive</td>
+<td></td>
+<td></td>
+<td>Igneous (Mafic to Ultramafic)</td>
+<td>Albite Analcite Calcite Chabazite Chalcedony Chlorite Heulandite Natrolite Scolecite Stilbite Thomsonite</td>
+<td></td>
+<td>Hexagonal</td>
+</tr>
+
+<tr>
+<th id='quartz' scope='row'>Quartz
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Quartz in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Quartz in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low. 0.009 up to cream</td>
+<td>Low</td>
+<td>Length Slow</td>
+<td><strong>None</strong></td>
+<td>Straight if Prisms edge visible (may be Undulose)</td>
+<td><strong>Irregular Prisms</strong></td>
+<td>Uniaxial </td>
+<td>Positive</td>
+<td>Igneous / Metamorphic (Low grade) / Sedimentary</td>
+<td>Albite Analcite Calcite Chabazite Chalcedony Chlorite Heulandite Natrolite Scolecite Stilbite Thomsonite</td>
+<td>Framework SiO<sub>2</sub></td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='riebeckite' scope='row'>Riebeckite</th>
+<td>Green / Purple / Brown / Dark Blue / Pleochroic</td>
+<td>Low. 0.006-0.016 / May be anomalous</td>
+<td>Moderate to High</td>
+<td>Length Fast</td>
+<td>Good. 2 sets at 124&#176</td>
+<td>Inclined 3-15&#176</td>
+<td>Short Prisms / Needles</td>
+<td>Moderate to Large 40-100&#176</td>
+<td>Negative to Positive</td>
+<td>Igneous (Na-rch) / Metamorphic </td>
+<td>Heulandite Laumontite Stilbite</td>
+<td>Alkali Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='rutile' scope='row'>Rutile
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Rutile in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Rutile in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Deep Reddish Brown / Yellow Brown / Opaque</td>
+<td>Very High. 0.29</td>
+<td><strong>Very High</strong></td>
+<td>Occurs in coarse-grained, high pressure, metamorphic rocks (e.g. eclogites, or kyanite-bearing) / Occurs in Igneous rocks as tiny grains (may be opaque) /  May have radioactive haloes / Length Slow</td>
+<td>Good </td>
+<td>Straight (Not easy to see)</td>
+<td>Granules / Plates</td>
+<td>Uniaxial </td>
+<td>Positive</td>
+<td>Metamorphic (High-P) / Igneous</td>
+<td>Albite Apophyllite Calcite Chlorite Epidote Prehnite Quartz Zeolite</td>
+<td>Oxide</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='sanidine' scope='row'>Sanidine
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Sanidine in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Sanidine in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low. 0.006-0.008</td>
+<td>Low</td>
+<td>Small 2V is key / Carlsbad Twinning</td>
+<td>Perfect</td>
+<td>Straight</td>
+<td>Prisms </td>
+<td><strong>Small to Moderate 0-60&#176</strong> </td>
+<td><strong>Negative</strong></td>
+<td>Igneous</td>
+<td>Analcite Laumontite Quartz Stilbite</td>
+<td>Alkali Feldspar</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='sapphirine' scope='row'>Sapphirine
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Sapphirine in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Sapphirine in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Blue Pleochroic</td>
+<td>Very Low to Low. 0.005-0.009 anomalous</td>
+<td>High</td>
+<td>Often in Symplectite associations</td>
+<td>Moderate </td>
+<td>Straight or slightly Inclined</td>
+<td>Irregular</td>
+<td>Moderate to Large </td>
+<td>Negative</td>
+<td>Metamorphic</td>
+<td>Calcite Clay Minerals Heulandite Laumontite Quartz</td>
+<td>Pyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='scapolite' scope='row'>Scapolite Group
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Scapolite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Scapolite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Yellow</td>
+<td>Very Low (Na) to High (Ca)</td>
+<td>Low to Moderate</td>
+<td>May be cloudy / Fluid and mineral inclusions common / Scapolite group is a series between Marialite and Meionite</td>
+<td>Good. 2 sets</td>
+<td>Straight or symmetrical to cleavage</td>
+<td>Cubes / Prisms</td>
+<td>Uniaxial </td>
+<td>Negative</td>
+<td>Igneous / Metamorphic</td>
+<td>Chabazite Heulandite Laumontite Mordenite Scolecite Stilbite</td>
+<td>Framework</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='scolecite' scope='row'>Scolecite </th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Simple Twinning / Length Fast</td>
+<td>Good</td>
+<td>Inclined 15-18&#176</td>
+<td>Fibrous / Radial</td>
+<td>Moderate 36-58&#176</td>
+<td>Negative</td>
+<td>Igneous (Amygdules in basic to ultramafic magmatic rocks) / Metamorphic (Fracture filling)</td>
+<td>Analcite Calcite Chabazite Chalcedony Natrolite Thomsonite</td>
+<td>Natrolite Fibrous Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='sericite' scope='row'>Sericite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Sericite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Sericite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Moderate to High</td>
+<td>Low to Moderate</td>
+<td>From the hydrothermal alteration of Orthoclase or Plagioclase / Variety of Muscovite</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Flakes / Irregular Granules </td>
+<td>Moderate 30-50&#176</td>
+<td>Negative</td>
+<td>Metamorphic</td>
+<td>Feldspars Biotite Muscovite Ore Deposits Tin Copper Quartz Pyrite Fluorite Epidote Calcite </td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='serpentine' scope='row'>Serpentine Group
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Serpentine in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Serpentine in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low. 0.006-0.013</td>
+<td>Low Positive</td>
+<td>Mineral group with Lizardite, Chrysotile, Antigorite/ Mesh window texture / From the alteration of Olivine</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Fibrous / Flakes</td>
+<td>Uniaxial or Moderate </td>
+<td>Negative</td>
+<td>Igneous / Metamorphic</td>
+<td>Calcite Hyalophane Laumontite Natrolite</td>
+<td>Sheet</td>
+<td>Trigonal / Monoclinic / Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='siderite' scope='row'>Siderite</th>
+<td>Colourless to Pale Yellow Brown</td>
+<td>Very High</td>
+<td>Moderate to Very High</td>
+<td>Carbonates with the highest relief and birefringence / Simple Twinning / Length Fast</td>
+<td></td>
+<td>Straight</td>
+<td>Granular / Oolitic spheres / Needles / Dendritic Aggregates / Skeletal</td>
+<td>Uniaxial</td>
+<td>Negative</td>
+<td>Metamorphic (as gangue in ore body, as ore in metasomatic and hydrothermal deposits)</td>
+<td>Analcite Calcite Phillipsite Thomsonite</td>
+<td>Carbonate</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='sillimanite' scope='row'>Sillimanite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Sillimanite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Sillimanite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Rare Brown</td>
+<td>Moderate. 0.018-0.022 up to mid 2<sup>nd</sup> order.</td>
+<td>High</td>
+<td>Higher briefringence and relief than Andalusite / Fibrous texture often associated with Biotite / Needles often associated with Quartz / Length Slow</td>
+<td>Good </td>
+<td>Straight</td>
+<td><strong>Fibrous (Fibrolite) or Diamond</strong>/ Needles</td>
+<td>Small 20-30&#176</td>
+<td>Positive</td>
+<td>High T Metamorphic</td>
+<td>Aegirine-Augite Anorthoclase Arfvedsonite Riebeckite</td>
+<td>Al Silicate</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='smectite' scope='row'>Smectite Group</th>
+<td>Colourless / Pale Brown / Yellow / Olive-Green</td>
+<td>Moderate to High</td>
+<td>Low</td>
+<td>Group of Clay minerals / Fills pores / Main constituent of Bentonite</td>
+<td>Perfect</td>
+<td>-</td>
+<td>Irregular Plates</td>
+<td>-</td>
+<td>Negative</td>
+<td>Sedimentary</td>
+<td>Beryl Cassiterite Wolframite Fluorite Li-Mica Quartz Tourmaline</td>
+<td>Clay / Sheet</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='sodalite' scope='row'>Sodalite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Sodalite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Sodalite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Pale Gray</td>
+<td>Isotropic</td>
+<td><strong>Moderate Negative</strong></td>
+<td>Simple Twinning / Slight birefringence around inclusions</td>
+<td>Poor</td>
+<td>Isotropic</td>
+<td>Anhedral to Euhedral / Cubes / Hexagonal / Corroded-looking</td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Igneous (Mainly alkaline volcanic)</td>
+<td>Calcite Gypsum Halite Quartz</td>
+<td>Sodalite (Feldspathoid)</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='spessartine' scope='row'>Spessartine</th>
+<td>Pale Yellow</td>
+<td>Isotropic</td>
+<td>High</td>
+<td>with Almandine</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Metamorphic (Hornfels) / Sedimentary</td>
+<td>Anhydrite Calcite Halite Quartz</td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='sphene' scope='row'>Sphene / Titanite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Sphene in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Sphene in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Brown</td>
+<td><strong>Very High. 0.1-0.2 Extreme - pinky buff colours</strong></td>
+<td><strong>Very High</td>
+<td>Occurs in intermediate and acid igneous rocks / Occurs in metabasites / Low birefringence grains seldom go fully extinct, going from dull anomalous orange to dull blue</td>
+<td>Good </td>
+<td>Inclined 35-50&#176</td>
+<td><strong>Commonly Diamond / Lozenge shaped</strong></td>
+<td>Small to Moderate 17-55&#176</td>
+<td>Positive</td>
+<td>Igneous (Intermediate and Acidic, never in Gabbro or Basalts) / Metamorphic (Amphibolites, Marbles) </td>
+<td>Celestite Quartz</td>
+<td>Humite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='spinel' scope='row'>Spinel Group</th>
+<td>Colourless / Brown / Green / Pink / Pale Blue / Never Pleochroic</td>
+<td>Isotropic if translucent</td>
+<td>Very High</td>
+<td>Simple Twinning / Transparent Spinels mainly in metamorphic rocks / Colourless Spinels in marbles / Coloured Spinels in high-grade metapelites / Deep Brown, Cr-rich, Spinels in basic and ultrabasic rocks</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Cubes / Octahedral</td>
+<td>Isotropic </td>
+<td>Isotropic</td>
+<td>Metamorphic</td>
+<td>Hematite Lepidocrocite</td>
+<td>Oxide / Spinel</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='staurolite' scope='row'>Staurolite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Staurolite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Staurolite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td><strong>Honey Yellow / Pleochroic</strong></td>
+<td>Low. 0.011-0.014 up to 1<sup>st</sup> order Yellow</td>
+<td>High</td>
+<td>Only found in metapelites / Usually as porphyroblasts with quartz inclusions / Length Slow</td>
+<td>Moderate</td>
+<td>Straight </td>
+<td>Short Prisms / Tabular</td>
+<td>Large 80-90&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Metapelites)</td>
+<td>Kyanite Garnet Mica Biotite Sillimanite</td>
+<td>Staurolite</td>
+<td>Monoclinic / Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='stilbite' scope='row'>Stilbite</th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low</td>
+<td>Interpenetrating Twinning</td>
+<td></td>
+<td>Inclined 3-12&#176</td>
+<td>Radial / Fibrous / Bundled Aggregates / Skeletal / Plates</td>
+<td>Small to Moderate 30-49&#176</td>
+<td>Negative</td>
+<td>Igneous (Cavity and Fractures Filling in basic to acidic Volcanic rocks)</td>
+<td>Clinopyroxenes Arfvedsonite K-Feldspar Nepheline Riebeckite        </td>
+<td>Flaky Zeolite</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='stilpnomelane' scope='row'>Stilpnomelane
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Stilpnomelane in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Stilpnomelane in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Yellow / Green / Brown / Strongly Pleochroic</td>
+<td>High to Very High. 0.03-0.11</td>
+<td>Moderate to High</td>
+<td>Cleavage less perfect than Biotite / Length Slow</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Elongate Prisms / Laths / Needles / Radiating / Flaky</td>
+<td>Pseudo Uniaxial </td>
+<td>Negative</td>
+<td>Metamorphic (Phyllite, Schist, Quartzite, Blueschist)</td>
+<td>Biotite Chlorite Hornblende Muscovite Quartz         </td>
+<td>Sheet</td>
+<td>Triclinic / Monoclinic</td>
+</tr>
+
+<tr>
+<th id='talc' scope='row'>Talc
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Talc in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Talc in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Green</td>
+<td>High. 0.037-0.050</td>
+<td>Moderate</td>
+<td>Indisguishable from Sericite by microscope / Very soft clay / From the alteration of Mg Silicates / Length Slow</td>
+<td>Perfect</td>
+<td>Straight</td>
+<td>Fibrous / Scaly </td>
+<td>Small 0-30&#176</td>
+<td>Negative</td>
+<td>Metamorphic / Sedimentary</td>
+<td>             </td>
+<td>Clay / Sheet</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='thomsonite'  scope='row'>Thomsonite </th>
+<td>Colourless</td>
+<td>Very Low</td>
+<td>Very Low to Low</td>
+<td>Highest birefringence of all the Zeolites / May have Simple Twinning / Renamed in 1820 in honour of Scotsman Thomas Thomson, professor of chemistry at the University of Glasgow.</td>
+<td>Perfect</td>
+<td>Straight</td>
+<td>Radially / Fibrous / Columns / Elongate Prism / Flaky</td>
+<td>Moderate to Large 44-75&#176</td>
+<td>Positive</td>
+<td>Igneous (Amygdules in basic to ultramafic magmatic rocks) / Metamorphic (Fracture filling)</td>
+<td>Calcite Clay Minerals Quartz          </td>
+<td>Natrolite Fibrous Zeolite</td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='titanaugite' scope='row'>Titanaugite </th>
+<td>Brown / Purple / Brownish Yellow / Pleochroic</td>
+<td>Very High</td>
+<td>High</td>
+<td>Hourglass texture / Zoned / Anomalous Brown to Blue-Gray at extinction/ Twinning</td>
+<td>Good. 2 sets  at 87&#176</td>
+<td>Inclined 32-55&#176</td>
+<td>Short to Long Columns / Platy</td>
+<td>Moderate 42-65&#176</td>
+<td>Positive</td>
+<td>Igneous (Ti-rich alkali rocks)</td>
+<td>Alkali-Feldspar Volcanic Glass Tridymite Zeolite          </td>
+<td>Clinopyroxene</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='titanbiotite' scope='row'>Titanbiotite</th>
+<td>Orange / Red Brown</td>
+<td>Very Low</td>
+<td>Moderate to High</td>
+<td>Weathered grains are bleached / Pleochroic haloes around Zircon / Occurs as fine-speckled in extinction orientation / Length Slow</td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td>Platy / Flaky / Scaly / Columns</td>
+<td>Small to Moderate 5-38&#176</td>
+<td>Negative</td>
+<td>Igneous (Na-rich, Ti-rich magmatic rocks)</td>
+<td>Chlorite K-Feldspar Mica Plagioclase Quartz Rutile        </td>
+<td>Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='topaz' scope='row'>Topaz
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Topaz in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Topaz in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Very High</td>
+<td>Moderate</td>
+<td>Contains fluid inclusions / Length Slow / Named after Topasos Island in the Red Sea</td>
+<td>Perfect</td>
+<td>Straight</td>
+<td>Short Columns / Needles / Laths / Granular</td>
+<td>Moderate 48-68&#176</td>
+<td>Positive</td>
+<td>Metamorphic (Greisen and granitic contact metamorphism) / Igneous (Tin pegmatites)</td>
+<td>Apatite Calcite Diopside Vesuvianite Wollastonite Quartz Mica Feldspar Fluorite Cassiterite Tourmaline </td>
+<td></td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='tourmaline' scope='row'>Tourmaline
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Tourmaline in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Tourmaline in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Opaque / Blue / Green / Yellow / Brown / Strongly Pleochroic</td>
+<td>Moderate. 0.02-0.03 up to up 2<sup>nd</sup> order.</td>
+<td>Moderate</td>
+<td>Pleochroism darkest when N-S / Often colour zoned / Radioactive haloes around Zircon / Good indication that the rock is Boron rich / Distinguished from biotite and hornblende by the lack of cleavage / Length Fast</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Triangular / Prisms / Needle-like</td>
+<td>Uniaxial </td>
+<td>Negative</td>
+<td>Igneous / Metamorphic</td>
+<td>Topaz</td>
+<td>Epidote</td>
+<td>Trigonal</td>
+</tr>
+
+<tr>
+<th id='tremolite' scope='row'>Tremolite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Tremolite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Tremolite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Green Pleochroic</td>
+<td>Moderate. 0.027 up to mid 2<sup>nd</sup></td>
+<td>Moderate</td>
+<td>Colour more intense for Fe-rich Tremolites / Only found in carbonate-rich metamorphic rocks (e.g. marbles) / May have pleochroic haloes / Length Slow</td>
+<td>Good. 2 sets at 124&#176</td>
+<td>Inclined 30&#176 max typically 10-15&#176</td>
+<td><strong>Fine Prisms</strong> / Laths / Fibrous / Needle-like</td>
+<td>Large 80-90&#176</td>
+<td>Negative</td>
+<td>Metamorphic (Green and Blueschist, Serpentinite, Marbles)</td>
+<td>Apatite Calcite Phlogopite           </td>
+<td>Actinolite Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='tridymite' scope='row'>Tridymite</th>
+<td>Colourless</td>
+<td>Very Low. 0.002-0.004</td>
+<td><strong>Moderate Negative </strong></td>
+<td>Lines vesicles in high temperature lavas / High temperature polymorph of Quartz / Occurs in volcanic rocks / Fracture Filling / Twinning / Length Fast</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Radiating Rays / Platy</td>
+<td>Moderate to Large 40-90&#176</td>
+<td>Positive</td>
+<td>Igneous (Volcanic) Metamorphic (Sanidine facies contact met.)</td>
+<td>             </td>
+<td>Framework SiO<sub>2</sub></td>
+<td>Orthorhombic</td>
+</tr>
+
+<tr>
+<th id='tschermakite' scope='row'>Tschermakite Group</th>
+<td>Bright Green to Yellow Green / Pleochroic</td>
+<td>Very High</td>
+<td>Moderate to High</td>
+<td>May have pleochroic haloes / Use associated minerals to distinguish from other amphiboles / Alters to Actinolite, Antigorite, Chlorite / Length Slow</td>
+<td></td>
+<td>Inclined 15-22&#176</td>
+<td>Short to Long Columns / Needles</td>
+<td>Moderate to Large 65-90&#176</td>
+<td>Negative</td>
+<td>Igneous (Intermediate to acidic rocks and Lamprophyrs) / Metamorphic (Amphibolite and Amphibole Schists)</td>
+<td>Clinopyroxenes Leucite Nepheline Sanidine Sodalites       </td>
+<td>Green Hornblende Amphibole</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='uvarovite' scope='row'>Uvarovite</th>
+<td>Pale "Emerald" Green</td>
+<td>Isotropic (may be anomalous)</td>
+<td>Very High</td>
+<td>Zonal growth rings / Mottled colour texture</td>
+<td>None</td>
+<td>Isotropic</td>
+<td>Euhedral (Rhombic Dodecahedrons; like a Hexagon with more faces) / Anhedral Grains</td>
+<td>Isotropic</td>
+<td>Isotropic</td>
+<td>Found in Chromite rich rocks</td>
+<td>Tridymite Zeolite            </td>
+<td>Garnet</td>
+<td>Cubic</td>
+</tr>
+
+<tr>
+<th id='vesuvianite' scope='row'>Vesuvianite / Idocrase
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Vesuvianite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Vesuvianite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Yellow / Green / Brown / Weakly Pleochroic</td>
+<td>Low / May be anomalous Purple Blue or Leather Brown</td>
+<td>High</td>
+<td>May have zoned colour distribution / Hourglass texture</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Short Prisms / Granular / Needles / Spherulitic</td>
+<td>Uniaxial</td>
+<td>Positive / Negative</td>
+<td>Metamorphic (Contact metamorphism and marbles)</td>
+<td>Olivine Serpentine            </td>
+<td></td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='volcanic' scope='row'>Volcanic Glass</th>
+<td>Colourless / Yellow to Brown</td>
+<td>Opaque / Anomalous</td>
+<td>Very Low to Moderate</td>
+<td>Fluid textures / Contraction and Conchoidal fractures / Radial devitrification textures</td>
+<td></td>
+<td></td>
+<td>Amorphous</td>
+<td></td>
+<td></td>
+<td>Igneous (Volcanic rocks, dykes and sills)</td>
+<td>Carbonates Serpentine            </td>
+<td> -  </td>
+<td>-</td>
+</tr>
+
+<tr>
+<th id='wollastonite' scope='row'>Wollastonite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Wollastonite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Wollastonite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless</td>
+<td>Low. 0.013</td>
+<td>Moderate</td>
+<td>Refractive index &lt; Diopside / Twinning / Poikiloblastic</td>
+<td>Good. 3 sets at 84 and 70&#176</td>
+<td>Inclined 30-40&#176</td>
+<td>Prisms / Hexagonal / Needles</td>
+<td>Moderate 35-60&#176 </td>
+<td>Negative</td>
+<td>Metamorphic (Marbles)</td>
+<td>             </td>
+<td>Technically not a Pyroxene</td>
+<td>Triclinic</td>
+</tr>
+
+<tr>
+<th id='xenotime' scope='row'>Xenotime
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Xenotime in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Xenotime in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless / Yellow / Green / Red / Weakly Pleochroic</td>
+<td><strong>Very High</strong></td>
+<td>High</td>
+<td>May have Pleochroic haloes / Length Slow</td>
+<td>Good</td>
+<td>Straight</td>
+<td>Short Prisms / Granular</td>
+<td>Uniaxial</td>
+<td>Positive</td>
+<td>Igneous (Felsic rocks) / Metamorphic (Orthogneiss) / Sedimentary (Sandstones)</td>
+<td>             </td>
+<td>Phosphate</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='zeolite' scope='row'>Zeolite Group</th>
+<td>Colourless</td>
+<td>Low (1<sup>st</sup> order White)</td>
+<td><strong>Low to Moderate Negative</strong></td>
+<td><strong>Cavity filling in volcanic rocks</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Uniaxial or Biaxial </td>
+<td>Positive or Negative</td>
+<td>Igneous</td>
+<td>Olivine Phlogopite Pyroxene Serpentine          </td>
+<td>Feldspathoid</td>
+<td>-</td>
+</tr>
+
+<tr>
+<th id='zinnwaldite' scope='row'>Zinnwaldite
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Zinnwaldite in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Zinnwaldite in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Brown-grey / Weakly Blue Gray Pleochroic</td>
+<td>Very High</td>
+<td>Low to Moderate</td>
+<td>Occurs as fine-speckled in extinction orientation / Length Slow</td>
+<td>Perfect</td>
+<td>Straight (Parallel to Cleavage)</td>
+<td><strong>Fan Shaped</strong> / Radiating / Platy / Flaky / Scaly / Columns</td>
+<td>Small to Moderate 15-32&#176</td>
+<td>Negative</td>
+<td>Igneous (Granite Pegmatites) / Metamorphic (Greisen)</td>
+<td>Cassiterite Clino And Ortho Pyroxene Ilmenite Magnetite Olivine Plagioclase       </td>
+<td>Lithionite Series Mica</td>
+<td>Monoclinic</td>
+</tr>
+
+<tr>
+<th id='zircon' scope='row'>Zircon
+  <div class='tooltipe'onmouseover="PPL_image(this)" ><i class="far fa-images"></i>
+    <span class='tooltiptexte'>
+      <b></b>
+      <figcaption>Zircon in PPL.&nbsp;</figcaption>
+    </span>
+  </div>
+
+  <div class="tooltipe" onmouseover="XPL_image(this)"><i class="fas fa-images"></i>
+    <span class="tooltiptexte">
+      <b> </b>
+      <figcaption>Zircon in XP. &nbsp;</figcaption>
+    </span>
+  </div>
+</th>
+<td>Colourless to Pale Brown / Greenish or Pink / Weak or No Pleochroism</td>
+<td>High. 0.04-0.065 up to 3<sup>rd</sup> order</td>
+<td>Very High</td>
+<td>Often within biotite / May have pleochroic haloes / May be zoned / Rich in inclusions / Occurs as rare detrital grains in Quartzites and mature sedimentary rocks / Length Slow</td>
+<td>Poor</td>
+<td>Straight</td>
+<td>Prisms / Cubes / <strong>Small</strong> Euhedral crystals </td>
+<td>Uniaxial </td>
+<td>Positive</td>
+<td>Igneous (often in nepheline syenites) / Metamorphic / Sedimentary</td>
+<td></td>
+<td>Humite</td>
+<td>Tetragonal</td>
+</tr>
+
+<tr>
+<th id='zoisite' scope='row'>Zoisite / Thulite</th>
+<td>Colourless / Purple / Strongly Pleochroic</td>
+<td>Very Low / Anomalous Blue to Brown</td>
+<td>Moderate</td>
+<td>Length Fast</td>
+<td>Good. 2 sets</td>
+<td>Straight</td>
+<td>Prisms</td>
+<td>Uniaxial </td>
+<td>Positive</td>
+<td>Metamorphic (Low Grade)</td>
+<td>             </td>
+<td>Epidote</td>
+<td>Orthorhombic</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </tbody>
+ 
+    </table>
+  </div>
+ 
+<!-- Font template div closure --> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+<button id="suggested_toggle" style="display: none; border-color: #244F75;" onclick="datatable_resize('datatable_window')">
+	
+<svg id="suggested_chevron" style="color: #244F75;" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-bar-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M3.646 11.854a.5.5 0 0 0 .708 0L8 8.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708zM2.4 5.2c0 .22.18.4.4.4h10.4a.4.4 0 0 0 0-.8H2.8a.4.4 0 0 0-.4.4z"/>
+</svg>
+	
+</button>
+	
+
+<div class="header_text" id="suggested_minerals" style="display: none;" >
+  Suggested minerals - with fewer matching properties than selected
+</div>
+	
+
+<div id="suggested_datatable">
+
+</div>
+
+
+
+
+
+<!--Modals-->
+<div>
+  
+<!-- Toggle column display Modal -->
+<div id="TableModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+  <!-- Modal content -->
+    <div class="modal-content">
+          <div class="modal-body">
+  <!--		  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>  -->
+            <p>Click on the column header names for the columns you would like displayed. Then, press accept.</p>
+           
+              <button id="colour_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Colour</button>
+              <button id="biref_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Birefringence</button>
+              <button id="relief_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Relief</button>
+              <button id="nf_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Noteworthy Features</button>
+              <button id="cleavage_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Cleavage</button>
+              <button id="ext_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Extinction</button>
+
+           
+              <button id="habit_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Habit</button>
+              <button id="twoV_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">2V Angle</button>
+              <button id="twoVS_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Optic Sign</button>
+              <button id="rtype_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Found in</button>
+              <button id="assoc_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Associated Mineral</button>
+              <button id="group_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Mineral group</button>
+            
+			  <button id="csys_button_pressed" onclick="count_pressed(this.id)" type="button" class="btn btn-light" data-toggle="button" aria-pressed="false" value="0">Crystal System</button>
+			  
+			  <br>
+			  
+            <button onclick="column_toggle()"  data-dismiss="modal" aria-label="Close">Accept</button>
+			
+			<button onclick="column_toggle_reset()">Reset</button>
+			  
+          </div>
+    </div>
+   </div>
+   </div>  
+
+<!-- Colour Modal -->
+<div id="ColourModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+<!--		  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>  -->
+          <p>Colour here always refers to its colour in PPL (Plane Polarised Light)</p>
+			
+		<p>The colours here and the intereference colours next column over are for thin sections that are the standard 30 &mu;m thick.</p>
+        </div>
+  </div>
+ </div>
+ </div>
+
+<!-- Birefringence Modal -->
+<div id="BirModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+
+          <p>The colour and the colour vivacity of the mineral in crossed polars</p>
+			
+			<p>Strictly speaking, the colours noted are called <i>interference colours</i> that are the result of the mineral's birefringence property.</p>	
+			
+          <p>Very lows are grays, moderate is bright colours and high to very high shows pastel colours</p>
+          <p>		
+			  
+		  <p>The colour listed here is from the maximum birefringence. This means that a mineral marked as moderate may exhibit all colours up to moderate interference colours, but not above. So it can and may be gray, depending on how the mineral is cut.</p>
+			
+		  <a href="https://www.namethatmineral.com/definitions#birefringence" target="_blank" rel="noopener ">More on birefringence</a>
+		  </p>
+        </div>
+  </div>
+ </div>
+ </div>
+
+	<!-- Relief Modal -->
+<div id="ReliefModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+
+          <p>How high the mineral appears to be sticking out of the section and in comparison to minerals around it.</p> 
+		  <p>High relief minerals look very sharp, with distinct edges and bolder features. Low relief minerals look like they are blending into the background and their edges are very thin. 
+          </p>
+          <p><a href="https://www.namethatmineral.com/definitions#relief" target="_blank" rel="noopener ">More on relief</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- Cleavage Modal -->
+<div id="CleavageModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+	
+          <p>The sets of fractures that occur consistently and parallel in a mineral. They are straight, and not to be confused with curving cracks, which curve.</p>
+          <p>A mineral can have many sets of cleavages and the amount/orientation of them is dictated by the intrinsic crystal structure</p>
+          <p><a href="https://www.namethatmineral.com/definitions#cleavage" target="_blank" rel="noopener "   >More on cleavage</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- Extinction Modal -->
+<div id="ExtModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+
+          <p>When the mineral goes black in crossed polars. The extinction angle is the angle relative to the cleavage. </p>
+          <p>If it goes extinct when the cleavage runs North-South, then it is straight. If not, it is inclinded and the angle is the angle from North-South before it goes extinct.</p>
+          <p><a href="https://www.namethatmineral.com/definitions#extinction" target="_blank" rel="noopener "  >More on extinction</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- 2V angle Modal -->
+<div id="TwoVModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+
+          <p>The angle between the two optic axes in biaxial minerals. </p>
+          <p>It is determined by looking at the isogyres in an interference figure</p>
+<p><a href="https://www.namethatmineral.com/definitions#2v_angle"  target="_blank" rel="noopener " >More on 2V</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- 2V sign Modal -->
+<div id="TwoVSModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+	
+          <p>In an interference figure, if the top right is Blue, it is positive. If the top right is yellow, it is negative.</p>
+          <p>Remember B.U.R.P! Blue Upper Right Positive</p>
+  <p><a href="https://www.namethatmineral.com/definitions#optic_sign" target="_blank" rel="noopener "  >More optic sign</a></p>
+        </div>
+  </div>
+ </div>
+ </div>
+	
+<!-- Mineral Group Modal -->
+<div id="GroupModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<!-- Modal content -->
+  <div class="modal-content">
+        <div class="modal-body">
+
+          <p>Minerals get grouped together for having similar crystal structures and compositional elements/chemical formula</p>
+<p><a href="https://www.namethatmineral.com/definitions#group" target="_blank" rel="noopener "  >More on mineral groups</a></p>
+        </div>
+  </div>
+ </div>
+ </div>	
+</div>
+
+
+
+
+
+<footer>
+<div class="lepied">
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/" title="thin section mineral identification tool homepage">Home</a> 
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/about">About</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/contact">Contact</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener noreferrer" class= "footer-buttons" href="https://www.namethatmineral.com/sitemap">Sitemap</a>
+  
+  <br><br>
+</div>    
+  
+      <p style="text-align: center; font-size: 11px"><i>Disclaimer: While care has been taken to ensure the veracity of the information hosted on this website, we do not take responsibility for any damages or losses incurred or arisen from the usage of the content herein.</i>
+      </p>
+</footer> 
+
+
+
+
+
+
+
+	
+<!-- All the javascript links are placed at the end -->
+<div>
+
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
+<script type="text/javascript" src="transmitted.js"></script> 
+</div>
+
+
+
+
+
+</body>
+</html>
+
+

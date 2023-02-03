@@ -1,0 +1,211 @@
+/* Table Formatting */
+/* Table Formatting */
+/* Table Formatting */
+
+	table {
+    table-layout: fixed;
+}
+
+    table tr th:nth-child(1){
+    width: 150px;
+  }
+    table tr th:nth-child(2){
+    width: 180px;
+  }
+    table tr th:nth-child(3){
+    width: 120px;
+  }
+    table tr th:nth-child(4){
+    width: 205px;
+  }
+    table tr th:nth-child(5){
+    width: 140px;
+  }
+    table tr th:nth-child(6){
+    width: 116px;
+  }
+    table tr th:nth-child(7){
+    width: 175px;
+  }
+     table tr th:nth-child(8){
+    width: 175px;
+  }
+    table tr th:nth-child(9){
+    width: 200px;
+  }   
+    table tr th:nth-child(10){
+    width: 190px;
+  }   
+    table tr th:nth-child(11){
+    width: 190px;
+  }
+    table tr th:nth-child(12){
+    width: 150px;
+  }
+    table tr th:nth-child(13){
+    width: 120px;
+  }
+    table tr th:nth-child(14){
+    width: 150px;
+  }
+    table tr th:nth-child(15){
+    width: 200px;
+  }
+
+
+/* Hiding last 9 columns by default  */ 
+#datatable tr > *:nth-child(n+10) {
+    display: none;
+}
+#datatable tr > *:nth-child(2) {
+    display: none;
+}
+
+
+
+/* Alternating column colour stripes */ 
+  tbody tr td:nth-child(odd){
+    background-color: rgba(96, 191, 191, 0.3);
+  }
+
+
+
+
+/* Dropdowns */
+/* Dropdowns */
+/* Dropdowns */
+.SumoSelect>.CaptionCont>span.placeholder {
+  color: #495057;
+  font-style: normal;
+}
+
+.SumoSelect>.CaptionCont{
+color: #495057;
+border: 1px solid rgba(164,164,164,0.5);
+	
+}
+
+.SumoSelect>.optWrapper.multiple>.options li.opt.selected>span i,
+.SumoSelect .select-all.selected>span i,
+.SumoSelect .select-all.partial>span i {
+  background-color: #60BFBF;
+}
+
+
+
+/*styling for optgroups*/
+
+.SumoSelect>.optWrapper>.options li.optGroup {
+  padding-left: 5px;
+  text-decoration: underline;
+}
+
+.SumoSelect>.optWrapper>.options li.group {
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.SumoSelect>.optWrapper>.options li.group>ul {
+  background-color: white;
+}
+
+.SumoSelect>.optWrapper>.options li.group>label {
+  margin-left: 25px;
+  font-style: normal;
+}
+
+.SumoSelect>.optWrapper>.options li.group span i {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: whitesmoke;
+}
+
+.SumoSelect>.optWrapper>.options li.group.selected>span i {
+  background-color: whitesmoke;
+  box-shadow: none;
+  border-color: transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.SumoSelect>.optWrapper>.options li.group.selected.partial>span i {
+  background-color: whitesmoke;
+}
+
+.SumoSelect>.optWrapper>.options li.group span {
+  position: absolute;
+  display: block;
+  width: 30px;
+  top: 0;
+  bottom: 0;
+  margin-left: 0px;
+}
+
+
+/*Tooltips for mineral images*/
+
+
+
+.tooltipe {
+ position: relative; 
+  display: inline-block; 
+  z-index: 81;
+
+
+}
+
+.tooltip_image {
+	position:relative; 
+	width: 90%; 
+	height: auto;
+	text-align: center;
+	z-index: 81; 
+
+}
+
+.tooltiptexte {
+  visibility: hidden;
+  width: 60vw;
+  left: 105%;
+	
+	height:50vh;
+	overflow: scroll;
+
+	
+  background-color: #202020;
+  color: #fcfcfc;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+	
+  position: absolute; 
+  z-index: 79; 
+  top: -200%;
+
+  transition: .25s all ease;
+  transition-delay: 0s;
+
+}
+
+.tooltipe:hover .tooltiptexte {
+/*  position: absolute; */
+  visibility: visible;
+  transition: .25s all ease;
+  transition-delay: 0s;
+  z-index: 80;
+
+  display: inline-block;
+}
+
+video{
+	width:90%;
+	height: auto;
+}

@@ -1,0 +1,32 @@
+.fullscreen {
+  width: 90vw !important;
+ /* height: 100% !important; */
+  margin: 0;
+  top: 0;
+  left: 3.5%; 
+}
+
+.circle {
+  width: 15px;
+  height: 15px;  
+  border: 2px solid #ffa545;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.circle-active {
+  width: 15px;
+  height: 15px;  
+  border: 2px solid #ffa545;
+  border-radius: 100%;
+  background: #ffa545;
+  display: inline-block;
+}
+
+.lepied {
+	margin-bottom: 30px;
+	margin-top: 15px;
+	padding-top: -50px;
+}
+
+

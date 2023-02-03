@@ -1,0 +1,760 @@
+﻿<!DOCTYPE html>
+<html lang="en-GB">
+
+
+
+
+<head>
+<!-- Import various packages -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="template_Table.css" />
+<link rel="stylesheet" type="text/css" href="footer.css" />
+<link rel="stylesheet" type="text/css" href="tutorial.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+<!-- Bootstrap 4 formatting -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- meta about the website -->
+<title>How to use the mineral identification tools</title>
+<link rel="icon" href="biglogo.svg" type="image/gif" sizes="25x25">
+<meta name="author" content="Dylan Price">
+<meta name="author" content="Antoine de Saint Germain">
+<meta name="description" content="Quick tutorial on how to use this tool to identify your minerals under the microscope. Tips and tricks to maximise you efficiency">
+<meta name="keywords" content="minerals, identify, microscope, thin section, transmitted, light, property, table">
+</head>
+
+
+
+
+
+<body>
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+<!-- Page Body Begins -->
+
+	
+<!-- Top Navigation Bar -->	
+<div class="topnav" id="myTopnav">
+  <a href="https://www.namethatmineral.com/" rel="noopener" id="homebutton" ><img alt="home button" class="homebutton" src="tutorial_home.svg"></a>
+  <a href="https://www.namethatmineral.com/tutorial" rel="noopener" >Restart Tutorial</a>
+  <a href="https://www.namethatmineral.com/" rel="noopener"  title="tool for thin section mineral identification microscope"> Back to Home page</a>
+
+</div>
+
+
+
+<body style="background-color: #ffe6cc; text-align: center;">
+	<div style="display: inline-block;">
+		<a href="https://www.namethatmineral.com/transmitted"><img src="transmitted_home.svg" alt="transmitted thin section" style="width: 10vw"></a>
+	</div>
+	<div style="display: inline-block;">
+		<a href="https://www.namethatmineral.com/reflected"><img src="reflected_home.svg" alt="reflected thin section" style="width: 10vw"></a>
+	</div>	
+	<div style="display: inline-block;">
+		<a href="https://www.namethatmineral.com/definitions"><img src="definitions_home.svg" alt="definitions thin section properties" style="width: 10vw"></a>
+	</div>	
+	<div  id="site_title" style="height: 30vh;"><h1 class="header_text">Tutorial</h1></div>
+  
+  <button type="button" class="btn" data-toggle="modal" data-target="#Tutorial_1">Begin desktop tutorial</button>
+  <button type="button" class="btn" data-toggle="modal" data-target="#mobTutorial_1">Begin mobile tutorial</button>
+
+
+
+
+<!--Modal-->
+<div class="modal fade" id="Tutorial_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1_picture">
+          <figure>
+            <img alt="dashboard" class="tutorial" src="tutorial_dashboard.jpg" style="width: 45vw;" >
+            <figcaption>Click to enlarge</figcaption>
+          </figure>
+        </a>
+        </div>
+      </div>
+
+This section is the dashboard of the transmitted light datatable. This is composed of two main sections:
+<ul>
+  <li>The dropdown buttons: this is where you will input the observations of properties of the thin section you are observing under transmitted light,</li>
+  <li>The <i>Advanced settings</i> button and <i>Reset</i> button. The first contains settings for the datatable. The second allows you to reset your previous selections for the dropdowns to start anew.</li>
+</ul>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row" >
+          <div class="circle-active"></div>
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2" ><div class="circle"></div></a>
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2">Next</button>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="Tutorial_1_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="tutorial_dashboard.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="mobTutorial_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+        <a data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_1_picture">
+          <figure>
+            <img class="tutorial" alt="tutorial dashboard" src="mobtutorial_dashboard.jpg" style="width: 45vw;" >
+            <figcaption>Click to enlarge</figcaption>
+          </figure>
+        </a>
+        </div>
+      </div>
+
+This section is the dashboard of the transmitted light datatable. This is composed of two main sections:
+<ul>
+  <li>The dropdown buttons: this is where you will input the observations of properties of the thin section you are observing under transmitted light,</li>
+  <li>The <i>Advanced settings</i> button and <i>Reset</i> button. The first contains settings for the datatable. The second allows you to reset your previous selections for the dropdowns to start anew.</li>
+</ul>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_2">Next</button>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="mobTutorial_1_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img class="tutorial" alt="tutorial dashboard" src="mobtutorial_dashboard.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_1">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="Tutorial_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content" style="text-align: left;" >
+      <!--Body-->
+      <div class="modal-body" >
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2_picture">
+            <figure>
+              <img alt="suggested buttons" class="tutorial" src="tutorial_datatable.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+      </div>
+
+      This is the heart of the transmitted light page: the datatable. Each row corresponds to a single mineral, with each column intercepting that row corresponding to an observable property of that mineral. There are a few features in-built into the datatable:
+      <ul>
+        <li>The <i>Show more</i> button, on the top-right of the datatable, reveals a list of hidden columns; these are properties which are not so frequently useful and are therefore hidden by default,
+         </li>
+         <li>Hovering (or clicking on mobile) over each mineral name (in the first column) with make appear one or two pictures of that mineral, observed under transmitted light. (See below)</li>
+         <div style="text-align: center;">
+         <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2_picture2">
+          <figure>
+            <img alt="suggested buttons" class="tutorial" src="tutorial_datatable2.jpg" style="width: 45vw;" >
+            <figcaption>Click to enlarge</figcaption>
+          </figure>
+          </a>
+        </div>
+      </ul>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Picture modal-->
+<div class="modal fade" id="Tutorial_2_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="tutorial_datatable.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="Tutorial_2_picture2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="tutorial_datatable2.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="mobTutorial_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content" style="text-align: left;" >
+      <!--Body-->
+      <div class="modal-body" >
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_2_picture">
+            <figure>
+              <img class="tutorial" alt="tutorial table" src="mobtutorial_datatable.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+      </div>
+
+      This is the heart of the transmitted light page: the datatable. Each row corresponds to a single mineral, with each column intercepting that row corresponding to an observable property of that mineral. There are a few features in-built into the datatable:
+      <ul>
+        <li>The <i>Show more</i> button, on the top-right of the datatable, reveals a list of hidden columns; these are properties which are not so frequently useful and are therefore hidden by default,
+         </li>
+         <li>Hovering (or clicking on mobile) over each mineral name (in the first column) with make appear one or two pictures of that mineral, observed under transmitted light. </li>
+      </ul>
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_1">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_3">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Picture modal-->
+<div class="modal fade" id="mobTutorial_2_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img class="tutorial" alt="tutorial table" src="mobtutorial_datatable.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_2">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="Tutorial_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3_picture">
+            <figure>
+              <img alt="suggested buttons" class="tutorial" src="tutorial_modified_datatable.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+        Select the properties that you have observed: the datatable will automatically filter the minerals to show only minerals with the exact properties specified.
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2"><div class="circle"></div></a>
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="Tutorial_3_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="tutorial_modified_datatable.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Picture modal-->
+<div class="modal fade" id="mobTutorial_3_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="mobtutorial_modified_datatable.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_3">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="mobTutorial_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_3_picture">
+            <figure>
+              <img alt="suggested buttons" class="tutorial" src="mobtutorial_modified_datatable.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+        Select the properties that you have observed: the datatable will automatically filter the minerals to show only minerals with the exact properties specified.
+
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_2">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2"><div class="circle"></div></a>
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_4">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="Tutorial_4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4_picture">
+            <figure>
+              <img alt="suggested buttons" class="tutorial" src="tutorial_suggested.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+        Below the main datatable, there is a secondary datatable. Here will appear minerals which do not satisfy all of the specified properties exactly: the suggested minerals is based on how many properties are matching, along with a tolerance in case two properties are easily confused when observing the mineral under the microscope. 
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="Tutorial_4_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="tutorial_suggested.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="mobTutorial_4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_4_picture">
+            <figure>
+              <img alt="suggested buttons" class="tutorial" src="mobtutorial_suggested.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+        Below the main datatable, there is a secondary datatable. Here will appear minerals which do not satisfy all of the specified properties exactly: the suggested minerals is based on how many properties are matching, along with a tolerance in case two properties are easily confused when observing the mineral under the microscope. 
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_3">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <div class="circle-active"></div>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5"><div class="circle"></div></a>
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_5">Next</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="mobTutorial_4_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="mobtutorial_suggested.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_4">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="modal fade" id="Tutorial_5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5_picture">
+            <figure>
+              <img alt="suggested buttons" class="tutorial" src="tutorial_suggested_buttons.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+        The suggested minerals are displayed within a tab containing, from left to right:
+        <ul>
+          <li>A <i>colour</i> tag. There are three possible colours (see figure above): green, orange and red. They denote a mineral which respectively matches the searching criteria well, approximatively and badly,
+          </li> 
+          <li>A <i>mineral name</i>. This is the name of the suggested mineral,</li>
+          <li>An <i>Add to datatable</i> button (<i class='fa fa-plus'></i>). Clicking this will add this mineral into the datatable of matching minerals,</li>
+          <li>A <i>delete suggested mineral</i> button (<i class='fa fa-times-circle'></i>). Clicking this will remove the suggested mineral from the list of suggested minerals.</li>
+        </ul>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <div class="circle-active"></div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="Tutorial_5_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="tutorial_suggested_buttons.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_5">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="modal fade" id="mobTutorial_5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+        <div style="text-align: center;">
+          <a data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_5_picture">
+            <figure>
+              <img alt="tutorial_suggested_button" class="tutorial" src="mobtutorial_suggested_buttons.jpg" style="width: 45vw;" >
+              <figcaption>Click to enlarge</figcaption>
+            </figure>
+          </a>
+        </div>
+        The suggested minerals are displayed within a tab containing, from left to right:
+        <ul>
+          <li>A <i>colour</i> tag. There are three possible colours (see figure above): green, orange and red. They denote a mineral which respectively matches the searching criteria well, approximatively and badly,
+          </li> 
+          <li>A <i>mineral name</i>. This is the name of the suggested mineral,</li>
+          <li>An <i>Add to datatable</i> button (<i class='fa fa-plus'></i>). Clicking this will add this mineral into the datatable of matching minerals,</li>
+          <li>A <i>delete suggested mineral</i> button (<i class='fa fa-times-circle'></i>). Clicking this will remove the suggested mineral from the list of suggested minerals.</li>
+        </ul>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_4">Back</button>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_1" ><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_2"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_3"><div class="circle"></div></a>
+        <a data-toggle="modal" data-dismiss="modal" data-target="#Tutorial_4"><div class="circle"></div></a>
+        <div class="circle-active"></div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Picture modal-->
+<div class="modal fade" id="mobTutorial_5_picture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" style="overflow: scroll;">
+  <div class="modal-dialog fullscreen" role="document">
+    <!--Content-->
+    <div class="modal-content fullscreen" style="text-align: left;">
+      <!--Body-->
+      <div class="modal-body">
+          <img alt="suggested buttons" class="tutorial" src="mobtutorial_suggested_buttons.jpg" style="width:100%" >
+      </div>
+    
+      <div class="modal-footer justify-content-center flex-column flex-md-row">
+        <button type="button" class="btn btn-light btn-rounded btn-md ml-4"
+        data-toggle="modal" data-dismiss="modal" data-target="#mobTutorial_5">Back</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer>
+<div class="lepied">
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/" title="thin section mineral identification tool homepage">Home</a> 
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/about">About</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/contact">Contact</a>
+	  <a style="text-decoration: none; color:#495057;" class= "footer-buttons" href="https://www.namethatmineral.com/sitemap"  rel="noopener noreferrer" >Sitemap</a>
+  
+  <br><br>
+</div>    
+  
+      <p style="text-align: center; font-size: 11px"><i>Disclaimer: While care has been taken to ensure the veracity of the information hosted on this website, we do not take responsibility for any damages or losses incurred or arisen from the usage of the content herein.</i>
+      </p>
+</footer> 
+
+</body>
+
+
+
+
+
+	
+<!-- All the javascript links are placed at the end -->
+<div>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>	
+<script type="text/javascript" src="tutorial.js"></script> 
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
