@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+
+
+
+<head>
+<!-- Import various packages -->
+<div>
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+	
+<link rel="stylesheet" type="text/css" href="template.css" />
+<link rel="stylesheet" type="text/css" href="footer.css" />	
+<link rel="stylesheet" type="text/css" href="contact.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+</div>
+<!-- Bootstrap 4 formatting -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- meta about the website -->
+<title>Give us your thoughts</title>
+<link rel="icon" href="biglogo.svg" type="image/gif" sizes="16x16">
+<meta name="author" content="Dylan Price">
+<meta name="author" content="Antoine de Saint Germain">
+<meta name="description" content="Online tool for identifying thin sections under transmitted light, reflected light, or in plain eyesight">
+<meta name="keywords" content="minerals, identify, microscope, thin section, transmitted, reflected, light">
+	
+	
+	
+	
+	
+ <script src="https://www.google.com/recaptcha/api.js?render=6Lcp5LIZAAAAAH5pzAyBCC1C1omGPVJWB8EaaDYD"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Lcp5LIZAAAAAH5pzAyBCC1C1omGPVJWB8EaaDYD', { action: 'contact' }).then(function (token) {
+                var recaptchaResponse = document.getElementById('recaptchaResponse');
+                recaptchaResponse.value = token;
+            });
+        });
+    </script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<!-- Top Nav Bar -->
+<div class="topnav" id="myTopnav">
+  <a href="https://www.namethatmineral.com/" id="homebutton" ></a>
+	
+  <a href="https://www.namethatmineral.com/transmitted" rel="noopener" title="thin sections mineral property identification transmitted" style="width: 158px">Transmitted Light</a>
+  <a href="https://www.namethatmineral.com/reflected" rel="noopener" title="thin sections mineral property identification reflected" style="width: 142px">Reflected Light</a> 
+  <a href="https://www.namethatmineral.com/definitions" rel="noopener" title="thin sections mineral property and texture definition" style="width: 210px">Definitions of Properties</a>
+  <a href="https://www.namethatmineral.com/about" rel="noopener" title="thin section identification resources" style="width: 65px">About</a>
+  <a href="https://www.namethatmineral.com/contact" rel="noopener" style="width: 120px">Contact Us</a>
+  <a href="javascript:void(0);" class="icon" onclick="topbarFunction()">
+  <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="container-fluid">	
+	<p><h1 class="header_text">Get in touch</h1></p>		
+ <div id="forme" >
+	 
+  <form method="POST" action="send.php">	  
+    <label>Feel free to contact us, by filling this email form, if you have any remarks, feedback, comments or questions concerning the content of this website.</label>
+	  
+	  <div><textarea type="text" name="content" class="form-control" placeholder="Write your remarks here.." style="height:200px"></textarea> </div>
+	  
+	  <label>If you would like a reply, please enter your email below:</label>
+	  <div><input type="text" name="mel" class="form-control" placeholder="Your email (optional)"  /></div>
+	
+
+	  
+    <input type="submit" value="Submit" class="btn btn-primary" > 
+
+	  	  <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+	  
+  </form>
+
+</div> 
+</div>
+	
+
+
+
+
+
+<br><br>	
+	
+	
+<footer>
+<div class="lepied">
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/" title="thin section mineral identification tool homepage">Home</a> 
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/about">About</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/contact">Contact</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener noreferrer" class= "footer-buttons" href="https://www.namethatmineral.com/sitemap">Sitemap</a>
+	
+	<br><br>
+	
+</div>		
+	
+		  <p style="text-align: center; font-size: 11px"><i>Disclaimer: While care has been taken to ensure the veracity of the information hosted on this website, we do not take responsibility for any damages or losses incurred or arisen from the usage of the content herein.</i>
+		  </p>
+</footer> 
+
+
+
+
+<!-- All the javascript links are placed at the end -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script type="text/javascript" src="contact.js"></script> 
+
+
+
+
+
+ </body>
+
+
+</html>

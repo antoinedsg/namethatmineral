@@ -1,0 +1,54 @@
+/*Form Formatting */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+/* Submit button */
+input[type=submit] {
+  background-color: #295E63;
+  color: #F0F0F0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: slategray;
+}
+
+/* Add a background color and some padding around the form */
+#forme {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 3%;
+  padding-top: 1.5%;
+  margin-top: -6px;
+} 
+
+#homebutton {
+  background-image: url('biglogo.svg');
+  height: 32px;
+  width: 32px;
+  margin-right: 15px;
+  margin-left: 15px;
+
+}
+
+
+
+
+/*footer for this page, because it doesn't scroll */
+footer {margin-top: 6%;}
+
+
+	
