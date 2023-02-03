@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <title>Name that Mineral - Properties of minerals in thin sections</title>
+<!-- Import various packages -->
+<div>
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->	
+<link rel="stylesheet" type="text/css" href="index.css" /> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">		
+</div>
+	
+<script src="https://kit.fontawesome.com/85c5677f85.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	
+<!-- Bootstrap 4 formatting -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent">
+
+	
+	
+	
+	
+	
+	
+<!-- meta about the website -->
+<link rel="icon" href="biglogo.svg" type="image/gif" sizes="16x16">
+<meta property="og:title" content="Name that Mineral">
+<meta property="og:type" content="website">
+<meta property="og:image" content="banner2.jpg">
+<meta property="og:url" content="http://www.namethatmineral.com">
+<meta property="og:description" content="Name That Mineral contains a large dataset of minerals and their observable properties for identifying minerals in thin sections and polished mounts. These properties are categorised into transmitted light and reflected light microscopy.">
+
+<!-- <link rel="icon" href="biglogo.svg" type="image/gif" sizes="16x16"> -->
+<meta name="author" content="Dylan Price">
+<meta name="author" content="Antoine de Saint Germain">
+<meta name="description" content="Name That Mineral contains a large dataset of minerals and their observable properties for identifying minerals in thin sections and polished mounts. These properties are categorised into transmitted light and reflected light microscopy.">
+<meta name="keywords" content="garnet ppl, minerals, identify, microscope, thin section, transmitted, reflected, light, petrography">
+</head>
+
+
+<body onload="heightfunction()">
+
+	
+<!-- Banner -->	
+<!-- Banner -->	
+<div class="banner-image" id="banner">
+	
+	<div style="text-align: center; color: aliceblue">
+    <a href="https://www.namethatmineral.com/transmitted" rel="noopener" title= "transmitted light thin section properties" style="text-decoration: none; color: #fcfcfc;">Trans.</a>	&vert;
+  <a href="https://www.namethatmineral.com/reflected" rel="noopener" title="reflected light polished section properties" style="text-decoration: none; color: #fcfcfc;">Refl.</a> 
+      &vert;
+  <a href="https://www.namethatmineral.com/definitions" rel="noopener" title="definitions of thin section properties and mineral textures" style="text-decoration: none; color: #fcfcfc;">Def.</a>
+</div>
+	
+  <div class="banner-imageLQ" id="bannerlq">
+			
+  </div>
+	
+    <div class="banner-text" >
+
+      <h4 id="site_title" style="margin-top: 38%;">Name that mineral</h4>
+          <p id="slogan" style="margin-top: 35%; color: white;" ><i>Data-tables for identifying and comparing minerals in thin sections and polished mounts</i></p>
+      <a href="#menu" id="arrow"><i class="fa fa-angle-down" style="font-size:30px"></i></a>
+      </div>
+	
+
+		
+</div>
+
+<!-- Page 2 -->
+<!-- Page 2 -->
+<section id="menu" style="text-align: center;">
+  <br>	
+  <div class="abovebuttons">
+    <h1 id="welcome" class="header_text">Welcome to this specialised website all about mineral identification under the microscope</h1>
+  
+  <br>
+  
+    <p id="pick" class="body_text" style="margin-bottom: -5px;">Pick your microscope setup to bring up the correct mineral properties table:</p>
+    
+    <br>
+    <br>
+  
+  </div>
+  </section>
+
+  <!-- Menu -->
+  <!-- Menu -->
+<section class="strips" style="background-color: #4ca162">
+  <article class="strips__strip">
+    <div class="strip__content">
+      <h4 class="strip__title" data-name="Lorem">Transmitted Light Microscopy</h4>
+      <div class="strip__inner-text">
+        <h2>Transmitted Light Microscopy</h2>
+        <p>This setup is the most common for geological thin section viewings. The light source comes from below the sample, shines upwards through a polariser, then through the sample (hence the name "transmitted") before reaching the eye piece. </p><br>
+        <p>
+<a href="https://www.namethatmineral.com/transmitted" rel="noopener" title="transmitted light mineral thin section properties" style="text-decoration: none; color: #fcfcfc;"><h3>Thin sections <i class="fas fa-chevron-circle-right"></i></h3></a> 
+        </p>
+      </div>
+      
+    </div>
+  </article> 
+  <article class="strips__strip">
+    <div class="strip__content">
+      <h4 id="refl" class="strip__title" data-name="Ipsum">Reflected Light Microscopy</h4>
+      <div class="strip__inner-text">
+        <h2>Reflected Light Microscopy</h2>
+		<p>aka. incident light / epi-illumination / metallurgical microscopy</p>
+        <p>Used mainly to identify ore minerals. In this microscope setup, the light source comes from above the mineral, hits the mineral and bounces back up into the eye piece. Essentially like a super powerful magnifying glass with lots of light.</p>
+        <p><br>
+<a href="https://www.namethatmineral.com/reflected" rel="noopener" title="reflected light ore minerals section properties" style="text-decoration: none; color: #fcfcfc;"><h3>Polished sections <i class="fas fa-chevron-circle-right"></i></h3></a> 
+        </p>
+      </div>
+    </div>
+  </article>
+
+
+
+  <article class="strips__strip">
+    <div class="strip__content" >
+      <h4 class="strip__title" data-name="Dolor">I'm not sure</h4>
+      <div class="strip__inner-text" style="height: 70%; overflow-y:auto;">
+  
+    <h2 class="header_text">Why the buttons "Transmitted light" and "Reflected light" ?</h2>
+  <i> Hint: If you're not sure, you're most probably using transmitted light.</i>   
+    <p class="body_text">This specialised website aims at helping you correctly identify minerals based on the observation of properties seen under the microscope. The observable properties of a given mineral differ depending on the choice of optical path of the light generated by the telescope. This website contains datatables of properties of minerals under two possible paths: the <i>transmitted light</i> path and <i>reflected light</i> path. </p>
+    
+    <p class="body_text"> In order to bring up a meaningful table of mineral properties, you first need to choose the setup relevant to your observations.</p>
+      
+    <h2 class="header_text">What if I am not using a microscope to observe my minerals?</h2> 
+    <p class="body_text">As things stand, the properties listed in the table on this website are properties meaningful only to those observing the minerals under transmitted or reflected light. We also plan to add, in the near future, a section on correctly identifying minerals when seen under the naked eye. In the mean time, there are many other websites available which provide this service. See the <a href="https://www.namethatmineral.com/sources" rel="noopener" title="thin section identification resources" style="color: forestgreen">Sources and Resources</a> page within the about page for a list of such websites we have found useful. </p>
+      
+    <h2 class="header_text">Can I get anything out of this website if I'm not observing minerals?</h2>
+    <p class="body_text">The <a href="https://www.namethatmineral.com/definitions" rel="noopener" title="thin section properties definitions" style="color: forestgreen">Definitions page </a>is purely theoretical, so can be explored without observing minerals. In addition, the <a href="https://www.namethatmineral.com/about" rel="noopener" title="about the thin section identification website"  style="color: forestgreen">About</a> page has more details about the functions hosted on this website, including a page of <a href="https://www.namethatmineral.com/sources" title="thin section identification resources" style="color: forestgreen">Sources and Resources</a> valuable to anybody wanting to learn more about geology.</p>
+      
+    <h2 class="header_text">I don't understand how to use the datatables properly</h2>
+      
+    <p class="body_text">Try following our very short <a href="https://www.namethatmineral.com/tutorial" rel="noopener" title="tutorial how to identify thin sections under microscope" style="color: forestgreen">walkthrough</a> to learn the basic functionalities of the datatables. The tutorial will run supposing you have the Transmitted setup. 
+  </p>   
+    
+      </div>
+    </div>
+  </article>
+
+
+  <article class="strips__strip">
+    <div class="strip__content">
+      <h4 class="strip__title" data-name="Amet">Definitions</h4>
+      <div class="strip__inner-text">
+        <h2>Definitions</h2>
+        <p>If you're unsure of what a certain property means, or just simply want to browse different technical terms; the definitions page is for you. This should satisfy your curiosity from both a microscopy and geological point of view. </p>
+        <p><br>
+<a href="https://www.namethatmineral.com/definitions" rel="noopener" title="definitions thin section properties and mineral textures" style="text-decoration: none; color: #fcfcfc;"><h3>Go <i class="fas fa-chevron-circle-right"></i></h3></a> 
+        </p>
+      </div>
+    </div>
+    
+  </article>
+
+
+
+
+  <i class="fa fa-close strip__close"></i>
+	</section>
+
+<!-- Footer -->
+<footer>
+<div class="lepied">
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/" title="thin section mineral identification tool homepage">Home</a> 
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/about">About</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noopener" class= "footer-buttons" href="https://www.namethatmineral.com/contact">Contact</a>
+	  <a style="text-decoration: none; color:#495057;" rel="noreferrer noopener" class= "footer-buttons" href="https://www.namethatmineral.com/sitemap" >Sitemap</a>
+	
+	<br><br>
+</div>		
+	
+		  <p style="text-align: center; font-size: 11px"><i>Disclaimer: While care has been taken to ensure the veracity of the information hosted on this website, we do not take responsibility for any damages or losses incurred or arisen from the usage of the content herein.</i>
+		  </p>
+</footer> 
+
+
+<!-- All the javascript links are placed at the end -->
+<div>
+<script type="text/javascript" src="index.js"></script>  
+
+	
+	
+	
+</div>
+
+	
+ </body>
+
+</html>
